@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фонд исторической фотографии</title>
+
+    <!-- PACKAGES -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+
+    <!-- Youtube API webframe -->
+    <script type="text/javascript" src="js/youtube.js"></script>
+
+</head>
+
+<body class="fond-body">
+
+
+    <section class="main" id="main">
+
+        <div class="main-header" id="main-header">
+            <div class="main-header__btn-left-wrapper main-header__btn-wrapper">
+                <button class="button main-header__btn-left" type="button" onclick="goBack()">
+                    <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+                </button>
+            </div>
+            <div class="main-header__title">
+                <h1 class="main-header__title-text" id="header-title">
+                    ФОНД ИСТОРИЧЕСКОЙ ФОТОГРАФИИ ИМЕНИ КАРЛА БУЛЛЫ
+                </h1>
+                <div class="main-header__title-pattern">
+                    <img src="img/pattern-one-up.png" alt="Header pattern" class="main-header__title-pattern-img">
+                </div>
+            </div>
+            <div class="main-header__btn-right-wrapper main-header__btn-wrapper">
+                <!-- <button class="button main-header__btn-right" id="tip-button" type="button">
+                        <img src="img/tip.png" alt="Tip button icon" class="main-header__btn-right-icon" id="tip-img">
+                    </button> -->
+                <button class="button main-header__btn-right sound-button--off" id="sound-button"
+                    onclick="changeSoundImage()" type="button">
+                    <img src="img/soundoff.png" alt="Sound button icon" class="main-header__btn-right-icon"
+                        id="sound-img">
+                </button>
+            </div>
+        </div>
+
+        <div class="about 2">
+            <div class="about__img-wrapper">
+                <img src="img/logo.png" alt="About Logo" class="about__img">
+            </div>
+            <div class="about__wrapper">
+                <h1 class="about__title" id="about-1">
+                    О разделе
+                </h1>
+                <img src="img/pattern-two-up.png" alt="About pattern" class="about__pattern">
+                <div class="about__text-wrapper">
+                    <p class="about__text" id="about-2">
+                        В данном разделе содержится информация о Фонде Исторической Фотографии имени Карла Буллы, а
+                        также о его создателях.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="content">
+        <!-- 1 -->
+        <div class="content__item-wrapper item-one 3">
+            <div class="content__item">
+                <div class="content__desc">
+                    <!-- <h1 class="content__title">
+                        О разделе
+                    </h1> -->
+                    <div class="content__text-wrapper">
+                        <p class="content__text">
+                            К концу 1990-х годов помещения,
+                            где располагалась «Фотография № 1»,
+                            стали приходить в упадок, перекрытия здания находились
+                            в аварийном состоянии и нуждались в срочном ремонте.
+                            По инициативе и на средства генерального директора
+                            ЗАО «Невский, 54» Валентина Евгеньевича Эльбека была
+                            проведена капитальная реконструкция, позволившая сохранить
+                            для потомков мемориальное пространство фотоателье К. К. Буллы.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content__media">
+                    <div class="content__img-wrapper">
+                        <img src="img/musem-photo.jpg" alt="Content Img" class="content__img img-one">
+                    </div>
+                    <div class="content__capture">
+                        <h1 class="content__capture-text">
+                            Музей-фотосалон имени Карла Буллы
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="content__item-wrapper item-two 4">
+            <div class="content__item">
+
+                <div class="content__media">
+                    <div class="content__img-wrapper">
+                        <img src="img/photo-bulla.jpg" alt="Content Img" class="content__img img-two">
+                    </div>
+                    <div class="content__capture">
+                        <h1 class="content__capture-text">
+                            Памятник фотографу.
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="content__desc">
+                    <!-- <h1 class="content__title">
+                        О разделе
+                    </h1> -->
+                    <div class="content__text-wrapper">
+                        <p class="content__text">
+                            До середины ХХ века дом 54
+                            по Невскому проспекту имел и второй адрес:
+                            дом 3 по Малой Садовой улице. Возле этого входа
+                            в дом в 2001 году при активном участии В. Е. Эльбека
+                            установлена скульптура «Фотограф» (скульптор Б. А. Петров,
+                            архитекторы О. А. Харченко и Л. В. Канунникова).
+                            Сейчас она входит в десятку самых популярных петербургских
+                            памятников.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="content__item-wrapper item-three 5">
+            <div class="content__item">
+                <div class="content__desc">
+                    <!-- <h1 class="content__title">
+                        О разделе
+                    </h1> -->
+                    <div class="content__text-wrapper">
+                        <p class="content__text">
+                            В 2005 году в Санкт-Петербурге создан
+                            Фонд исторической фотографии имени Карла Буллы
+                            для изучения, сохранения и популяризации отечественной
+                            фотографии. Учредитель и президент Валентин Евгеньевич
+                            Эльбек с 1991 года формирует частную коллекцию снимков
+                            российских и зарубежных фотографов. Открытие воссозданного
+                            фотосалона имени Карла Буллы состоялось в мае 2003 года,
+                            во время празднования 300-летия Санкт-Петербурга.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content__media">
+                    <div class="content__img-wrapper">
+                        <img src="img/photo-elbek.jpg" alt="Content Img" class="content__img img-three">
+                    </div>
+                    <div class="content__capture">
+                        <h1 class="content__capture-text">
+                            Валентин Евгеньевич Эльбек
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+
+        <div class="map__img-wrapper">
+            <img src="img/decor-left.png" alt="Decor" class="map__img map__img-left">
+        </div>
+
+        <div class="map__wrapper 6">
+            <div class="map__border">
+                <iframe class="map__frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.8537167618945!2d30.334749316096865!3d59.93456948187471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631733c01349f%3A0xd465fb7b401ae498!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDU0LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMDIz!5e0!3m2!1sru!2sru!4v1621310515901!5m2!1sru!2sru"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <div class="map__capture">
+                <h3 class="map__text">Санкт-Петербург, Невский проспект 54.</h3>
+            </div>
+        </div>
+
+        <div class="map__img-wrapper">
+            <img src="img/decor-right.png" alt="Decor" class="map__img map__img-right">
+        </div>
+
+        <!-- https://developers.google.com/maps/gmp-get-started#api-key -->
+        <!-- The div element for the map -->
+        <!-- <div id="map">
+
+        </div> -->
+
+    </section>
+
+    <section class="end">
+        <div class="end__corner">
+            <img src="img/angle-left-down.png" alt="Decor" class="end__img-corner">
+        </div>
+        <div class="end__middle">
+            <div class="end__middle-item"> 
+                <img src="img/pattern-three-down.png" alt="Decor pattern" class="end__pattern">
+            </div>
+            <div class="end__middle-item"> 
+                <img src="img/flower-down.png" alt="Decor Flower" class="end__flower">
+            </div>
+        </div>
+        <div class="end__corner">
+            <img src="img/angle-right-down.png" alt="Decor" class="end__img-corner">
+        </div>
+    </section>
+
+    <section class="additional-info">
+        <div class="additional-info__header 7">
+            <div class="additional-info__title">
+                <h1 class="additional-info__text">
+                    Музеи Фонда
+                </h1>
+            </div>
+            <div class="additional-info__pattern">
+                <img src="img/pattern-four-down.png" alt="Pattern" class="additional-info__pattern-img">
+            </div>
+        </div>
+        <div class="additional-info__item">
+            <button class="additional-info__button"
+                onclick="window.location.href='http://www.bullafond.ru/museums/muzey-fotosalon/?ELEMENT_ID=456';">
+                <img src="img/button-one.jpg" alt="Button one" class="additional-info__img">
+            </button>
+        </div>
+        <div class="additional-info__item">
+            <button class="additional-info__button"
+            onclick="window.location.href='http://www.bullafond.ru/museums/dom-karla-bully/?ELEMENT_ID=462';">
+                <img src="img/button-two.jpg" alt="Button two" class="additional-info__img">
+            </button>
+        </div>
+        <div class="additional-info__item 8">
+            <button class="additional-info__button"
+            onclick="window.location.href='https://xn----htbbcgdlet9b1ag.xn--p1ai/';">
+                <img src="img/button-three.jpg" alt="Button three" class="additional-info__img">
+            </button>
+        </div>
+    </section>
+
+    <!-- HIDDEN CONTENT  -->
+    <!-- <div class="info-content" id="tip-content" style="display: none;">
+        <img src="img/tip-content.jpg" alt="Info content">
+    </div> -->
+
+    <!-- AOS Settings -->
+    <script type="text/javascript" src="../lib/AOS/dist/aos.js"></script>
+    <script>
+        // Global settings
+        AOS.init({
+            //  data-aos-anchor="#example-anchor"  - which element trigger
+            // offset: 200,   // data-aos-offset="500" in px when to trigger
+            // duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+            // once: false,
+            once: true,
+        });
+    </script>
+    <!-- AOS End -->
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDADvbljPx10bw2PY-Bl1BFWYnUwkxGbFw&callback=initMap&libraries=&v=weekly"
+        async>
+    </script> -->
+
+</body>
+
+</html>

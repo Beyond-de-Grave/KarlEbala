@@ -1,0 +1,17 @@
+.start{
+    height: 100vh;
+    // background: url("../img/start.jpg");
+    // background-size: 100% 100%;
+    &__image{
+        object-fit: cover;
+        // height: 100%;
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.main{
+    // height: 70vh;
+    position: relative;
+    // z-index: 1;
+}

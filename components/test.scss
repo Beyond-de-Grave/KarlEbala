@@ -1,0 +1,261 @@
+//  
+//    SASS  LEARNING
+
+//  Variable
+// They have local environment (can be re set inside a selector)
+$widths: 100px;
+$superblue: #2980b9;
+$blue: rgb(50, 9, 148);
+$text: 'Something';
+$array: vk, fb, tw;
+
+// Primesi' + vars
+
+@mixin addcolor ($width: 300px, $bg: #fff) {
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    width: $width;
+    background: $bg;
+
+    // if 
+    // == != <= 
+    @if $width > 100px {
+        text-align: left;
+    }
+    @else {
+        text-align: center;
+    }
+
+    @if $bg == rgb(0, 70, 139){
+        color: rgba($color: #ff0000, $alpha: 1.0)
+    }@else if $bg == #24a519{
+        color: rgba($color: #045474, $alpha: 1.0)
+    }@else{
+        color: black;
+    }
+
+
+}
+
+//  !!!!!!!!!!!!   add mixin   !!!!!!
+//   !!!!!!!!!!!!!!!!!!!!!!!
+.input{
+    @include addcolor($width: $widths + 1px, $bg: rgb(0, 70, 139));
+}
+
+.input + .input{
+    @include addcolor($width: $widths, $bg: #24a519);
+}
+
+.input + .input + .input{
+    @include addcolor($width: $widths, $bg: #00f7ff);
+    
+    // if after that is going this class
+    & + .input{
+        background: yellow;
+    }
+}
+
+
+@mixin button ($width: 600px, $bg: rgb(139, 0, 0)) {
+    border: 5px solid rgb(54, 13, 129);
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    width: $width;
+    background: $bg;
+}
+
+.btn1{
+    @include button(600px, rgb(139,0,0))
+}
+
+.btn{
+    // Наследование стилей
+    @extend .btn1;
+    width: 400px important;
+}
+
+// nesting + math
+.block{
+    width: 300px + 50px;
+    height: 50px - 3px;
+    margin-bottom: 5px;
+    background: $superblue;
+    .one{
+        width: 50%;
+        height: 50%;
+        background: red;
+    }
+    &__one{
+        color:rgb(31, 4, 182)
+    }
+    &__two{
+        color:rgb(139, 0, 0)
+    }
+}
+
+//   !!!!!!!!!     ampersand &   !!!!!
+//   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.btn1{
+    &:hover{
+        background: blue;
+    }
+    // &:after{
+    //     content: "Ты еще не нажал???";
+    // }
+    &:active{
+        opacity: 50%;
+    }
+}
+
+
+.vk-logo{
+    width: 50px;
+    height: 50px;
+    // fill: #b3b3b3;
+    &:hover{
+        // filter: brightness(0) invert(1);
+        filter: invert(1);
+        // fill: #292929;
+    }
+}
+
+.f-logo, .in-logo, .tv-logo{
+    @extend .vk-logo
+}
+
+// // black-green
+//     filter: invert(43%) sepia(96%) saturate(1237%) hue-rotate(88deg) brightness(128%) contrast(119%);
+// black-red
+//     filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(135%);
+// black-blue
+//     filter: invert(12%) sepia(83%) saturate(5841%) hue-rotate(244deg) brightness(87%) contrast(153%);
+// black-purple
+//     filter: invert(18%) sepia(98%) saturate(2657%) hue-rotate(289deg) brightness(121%) contrast(140%);
+
+//    !!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!
+//                    Placeholders
+
+// The big advantage here is you can use
+// internal naming schemes that don’t effect
+// your external naming schemes.
+// Grid classes are a good example of this.
+// Names like “grid-1-2” and “grid-1-3”
+// are great names internally, but 
+// not great actual HTML class names. 
+// With placeholders you can keep them internal.
+
+%grid-1-2 {
+    float: left;
+    width: 50%;
+}
+.main-content {
+    @extend %grid-1-2;
+}
+
+// Filter Function
+// filter: drop-shadow($<offset-x> <offset-y> $blur-radius $spread-radius $color)
+
+// brightness(<number-percentage>);
+// contrast(<number-percentage>);
+// grayscale(<number-percentage>);
+// invert(<number-percentage>);
+// opacity(<number-percentage>);
+// saturate(<number-percentage>);
+// sepia(<number-percentage>);
+// hue-rotate(<angle>);
+// blur(<length>);
+// drop-shadow(<length><color>);
+
+
+// Cycles
+
+// @each $social in (fb, vk, tv){
+//     // create div.class with
+//     .class{
+//         // Interpolation
+//         content: #{$social};
+//     }
+// }
+.socials{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items:center;
+    justify-items:stretch;
+}
+// @each $social in (f, vk, tv, in){
+//     // create div.class with
+//     .socials__#{$social}-logo{
+//         // Interpolation
+//         // background: url("./test/#{$social}.png") center center no-repeat;
+//         &:hover{
+//             filter: invert(1);
+//             fill: black;
+//         }
+//     }
+// }
+@each $social in (f, vk, tv, in){
+    // create div.class with
+    .socials__#{$social}-logo{
+        width: 50px;
+        height: 50px;
+        // Interpolation
+        path{
+            fill: rgb(139, 0, 0);
+        }
+        &:hover{
+            path{
+                fill: black;
+            }
+        }
+    }
+}
+.socialss{
+    width: 500px;
+    margin-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row; //row, row-reverse, column, column-reverse
+    flex-wrap: nowrap; //nowrap, wrap, wrap-reverse - обтекание
+    justify-content: center; // flex-start, flex-end, center, space-around, space-between
+    // justify-content: space-around;
+    align-items: center; // stretch (default), baseline, center, flex-start, flex-end
+    align-content: stretch; // stretch (default), 
+
+    li{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+// third approach - delete all fill in svg and set outer fill="currentColor"
+@each $social in (f, vk, tv, in){
+    // create div.class with
+    .socialss__#{$social}-logo{
+        width: 50px;
+        height: 50px;
+        // Interpolation
+        color:rgb(0, 113, 219);
+
+        //unvisited link
+        &:link{
+            filter: grayscale(60%);
+        }
+        //unvisited link
+        &:visited{
+            filter: saturate(30%) blur(20%) drop-shadow(32px 16px 20px blue);
+        }
+        &:hover{
+            color:green;
+        }
+        &:active{
+            filter: blur(30%) drop-shadow(0px 0px 50px rgb(0, 0, 95));
+            
+        }
+    }
+}

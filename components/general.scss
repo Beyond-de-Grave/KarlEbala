@@ -1,0 +1,144 @@
+$htmlWidth: 100vw;
+
+html {
+    // scroll-behavior: smooth;
+    // width: $htmlWidth;
+    width: 100%;
+    max-width: $htmlWidth;
+    // width: auto;
+    
+    // Cursor Firefox 128px 128px - other 32x32
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
+    cursor: url("/img/cursor.png"), auto;
+    // cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;
+    // cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png"), auto;
+    // cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;	
+    overflow-x: hidden;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+body{
+    max-width: $htmlWidth;
+
+    margin: 0;
+    padding: 0;
+    
+    // overflow: hidden;
+    // width: 100vw;
+    // z-index: 1;
+    // animation: background-scroll 5s linear 0s infinite reverse;
+    // overflow: visible;
+}
+
+.main-body{
+    animation: scroll 70s linear infinite;
+    background: url("../img/texture-background.png"), url("/img/textureofshit.jpg");
+    // background-image: url("/img/textureofshit.png"); 
+    background-size: $htmlWidth auto;
+    background-repeat: repeat-y;
+    // background-size: cover; //cover
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-blend-mode: multiply;
+    // background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity;
+    // background-repeat: no-repeat; 
+    // background-size: 1920px 9100px; 
+}
+
+.wrapper{
+    // @include flexbox();
+    // .item     
+    // @include flex(1 1000px);
+    // @include order(2);
+
+    // display: flex;
+    // flex-flow: row wrap;
+    width: 100%;
+    // max-width: 100%;
+    // padding-left: 10vw;
+    // padding-right: 10vw;
+    // position: relative;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* unvisited link */
+a:link {
+    // text-decoration: none;
+    color: black;
+}
+  
+  /* visited link */
+a:visited {
+    // text-decoration: none;
+    color: black;
+}
+
+// a:visited, a:focus, a:hover {
+//     border-bottom: 1px solid;
+// }
+
+// a:link:hover {background-color:red}
+// a:visited:hover {background-color:blue}
+
+section{
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper{
+    // @include flexbox();
+    // .item     
+    // @include flex(1 1000px);
+    // @include order(2);
+
+    // display: flex;
+    // flex-flow: row wrap;
+    width: 80%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+}
+
+// div{
+//     margin: 0;
+//     padding: 0;
+// }
+
+button, a{
+    cursor: url("/img/cursor.png"), auto;
+    &:hover{
+        cursor: url("/img/cursor-hover.png"), auto;
+    }
+}
+
+button{
+    @include buttonFrameBackground();
+    margin: 0;
+    padding: 0;
+}
+
+//   Custom duration for AOS
+body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{
+    transition-duration: 4000ms;
+}
+
+// :root{
+//     --offset-distance: 500%;
+// }
+
+// .animate__slideInRight{
+//     overflow: visible !important;
+// }

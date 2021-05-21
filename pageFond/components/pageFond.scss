@@ -1,0 +1,15 @@
+$backgroundLength: 400vh;
+
+.fond-body{
+
+    // font-family: "B52";
+    font-family: 'Colatemta';
+    height: $backgroundLength;
+    background: url("../img/texture-background.jpg");
+    background-size: 100% auto;
+    position: relative;
+}
+
+.main-header button{
+    @include buttonHover();
+}

@@ -1,0 +1,326 @@
+$mainCoverWidth: 100vw;
+
+.main-cover{
+    // width: $mainCoverWidth;
+    width: 100%;
+    // overflow: hidden;
+    // height: 100vh;
+    // max-height: 70%;
+    // background: url("/img/background-part-2.png");
+    // position: relative;
+    // &::before{
+    //     // position: absolute;
+    //     // content: url("/img/city-of-shit.png");
+    //     // top: 0;
+    //     // left: 0;
+    //     // transform: translate(-50%, -50%);
+    // }
+}
+
+.main-city{
+    // position: absolute;
+    
+    
+    // content: url("/img/city-of-shit.png");
+    // background-image: url("/img/city-of-shit.png");
+    background: url("../img/city-of-shit.png") no-repeat;// center no-repeat;
+    // background-size: cover;
+    background-size: $mainCoverWidth auto;
+    // background-repeat: no-repeat;
+    // resize: both;
+    // background-size: 1920px 1226px;
+    // max-width: 100%;
+    // width: 100%;
+    // height: 100%;
+    // height: 100vh;
+    transform: translateY(-2%);
+    z-index: 100;
+    position: relative;
+    // mix-blend-mode: multiply;
+    // left: 0;
+    // transform: translate(-50%, -50%);
+}
+
+.main-city__menu-container{
+    height: 20vh;
+    z-index: 130;
+    position: relative;
+}
+
+.main-city__navigation-container{
+    height: 100vh;
+    margin-top: 5%;
+    // mix-blend-mode: multiply;
+}
+
+.main-city__menu{
+
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: stretch;
+    padding-top: 1%;
+    position: relative;
+    // &::after{
+    //     position: absolute;
+    //     // position: fixed;
+    //     content: url("/img/menu-pattern-1.png");
+    //     transform: scale(0.7);
+    //     bottom: -15%;
+    //     left: 20%;
+    // }
+}
+
+.main-city__menu-bar{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1%;
+    &:hover{
+        transform: scale(1.3);
+        filter: brightness(1) invert(1);  
+    }
+}
+
+.main-city__menu-bar-link{
+    @include buttonFrameBackground();
+
+    // &:hover{
+    //     transform: scale(1.3);
+    //     filter: brightness(1) invert(1);  
+    // }
+}
+
+.main-city__menu-bar-icon{
+    width: 80%;
+    // &:hover{
+    //     transform: scale(1.3);
+    //     filter: brightness(1) invert(1);  
+    // }
+}
+
+.main-city__menu-info{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-right: 1%;
+}
+
+.main-city__menu-info-link{
+    @include buttonFrameBackground();
+}
+
+.main-city__menu-info-icon{
+    width: 80%;
+    &:hover{
+        transform: scale(1.2);
+        filter: brightness(0) invert(1);  
+    }
+}
+
+.main-city__title{
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.main-city__title-text{
+    
+    font-family: 'English Rose';
+
+    // https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+    // https://github.com/sass-mq/sass-mq
+    // https://www.easeout.co/blog/2020-08-27-setup-media-queries-with-sass-mixins/
+    font-size: calc(10vh); 
+    @include for-phone-only {    
+        font-size: 4vh; 
+    }
+
+    margin: 5% 0 0 0;
+    font-weight: normal;
+    align-self: center;
+}
+
+.main-city__title-pattern-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-city__title-pattern{
+    width: 50%;
+}
+
+//      N A V I G A T I O N
+
+.main-city__navigation{
+    height: 100vh;
+    width: $mainCoverWidth;
+    // overflow: hidden;
+    // overflow: overlay;
+
+    // margin-bottom: 10%;
+    // Здесь произошел факап с mixblend inheritance
+
+    // background: url("/img/menu-navigation.png") no-repeat;// center no-repeat;
+    // background-size: cover;
+    // transform: translateY(-15%);
+    // background-blend-mode: multiply;
+    // // background-blend-mode: normal;
+    // // background-blend-mode: hard-light;
+    // // opacity: .85; 
+    // mix-blend-mode: multiply;
+    // z-index: 120;
+    // transform: translateZ(0px);
+    // position: relative;
+}
+.main-city__navigation-img{
+    height: 130vh;
+    width: 123vw;
+    background: url("/img/menu-navigation.png") no-repeat center center;// center no-repeat;
+    // background-size: cover;
+    // background-size: contain;
+    // background-size: auto 112vh;
+
+    // Menu side parts overlay
+    background-size: 100% 100vh;
+    // background-size: 120vw 100vh;
+
+    transform: translate(-20%, -25%);
+    // margin-top: 10vh;
+    // overflow: hidden;
+    
+
+    // background-blend-mode: multiply;
+    // background-blend-mode: normal;
+    // background-blend-mode: hard-light;
+    // opacity: .85; 
+    // transform: translateZ(0px);
+
+    // mix-blend-mode: multiply;
+    // mix-blend-mode: difference;
+
+    // isolation: isolate;
+    z-index: 120;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // // Alternative
+
+    // // position: absolute;
+    // &::before{
+    //     position: absolute;
+    //     // position: relative;
+    //     // isolation: isolate;
+    //     content: "";
+    //     top: 50%;
+    //     left: 50%;
+    //     // width: 100%;
+    //     background-image: url("/img/menu-navigation.png") center center no-repeat;
+    //     z-index: 120;
+    //     mix-blend-mode: multiply;
+    //     transform: scale(0.8) translateY(-15%);
+    //     max-width: 100%;
+    // }
+}
+
+.main-city__navigation-column{
+    height: 60vh;
+    width: 70%;
+    // width: 125%;
+    display: flex;
+    flex-direction: column;
+    // align-content: space-between;
+    align-content: stretch;
+    // justify-content: stretch;
+    justify-content: center;
+    // padding-top: 5%;
+    position: relative;
+    // position: absolute;
+    // padding-top: 5vh;
+    padding-left: 25%;
+    // padding-bottom: 5%;
+    transform: rotate(-2.5deg);
+    z-index: 120;
+    // flex-wrap: wrap;
+    // transform: translateY(-175%) rotate(-2.5deg);
+}
+
+.main-city__navigation-row{
+    display: flex;
+    z-index: 120;
+    position: relative;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-right: 1%;
+    flex-wrap: wrap;
+}
+
+.main-city__navigation-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.main-city__navigation-link{
+    isolation: isolate;
+    align-self: center;
+    text-decoration: none;
+    // filter: invert(1) brightness(0) invert(1);
+    // &:visited{
+    //     color: green; 
+    // }
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.main-city__navigation-text{
+    font-family: 'Colatemta';
+    height: 100%;
+    font-size: calc(8pt + 2vw);
+    // font-size: 6vh;
+    // color: rgb(255, 2552 255);
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    z-index: 120;
+    color: white;
+    position: relative; // To ignore mix-blend-mode;
+    width: 100%;
+    height: 100%;
+    
+    // position: absolute;
+
+    // Option for Text stretching
+
+    // font-stretch: ultra-condensed;
+    // align-self: center;
+    // display:inline-block;
+    // -webkit-transform:scale(0.5, 1); /* Safari and Chrome */
+    // -moz-transform:scale(0.5, 1); /* Firefox */
+    // -ms-transform:scale(0.5, 1); /* IE 9 */
+    // -o-transform:scale(0.5, 1); /* Opera */
+    // transform:scale(0.5, 1); /* W3C */
+    letter-spacing: 0.1px;
+}
+
+.make-me-smaller{
+    font-size: calc(4pt + 2vw);
+}

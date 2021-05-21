@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+
+    <!-- PACKAGES -->
+
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- https://github.com/sachinchoolur/lightgallery.js -->
+    <!-- <link rel="stylesheet" href="css/lightgallery.css"> -->
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+
+    <!-- <script type="text/javascript" src="../js/scroll.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/animate.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/modal.js"></script> -->
+
+    <!-- Youtube API webframe -->
+    <script type="text/javascript" src="js/youtube.js"></script>
+
+</head>
+
+<body class="gallery-body">
+    <section class="start-picture">
+        <img class="start-picture__img" src="img/cover-gallery.jpg" alt="Gallery cover">
+    </section>
+    <section class="main">
+        <div class="main-header" id="main-header">
+            <div class="main-header__btn-left-wrapper">
+                <button class="button main-header__btn-left" type="button" onclick="goBack()">
+                    <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+                </button>
+            </div>
+            <div class="main-header__title">
+                <h1 class="main-city__title-text">
+                    Галерея
+                </h1>
+            </div>
+            <div class="main-header__btn-right-wrapper">
+                <button class="button main-header__btn-right" id="tip-button" type="button">
+                    <img src="img/tip-button-white.png" alt="Tip button icon" class="main-header__btn-right-icon"
+                        id="tip-img">
+                </button>
+                <button class="button main-header__btn-right sound-button--off" id="sound-button"
+                    onclick="changeSoundImage()" type="button">
+                    <img src="img/soundoff.png" alt="Tip button icon" class="main-header__btn-right-icon"
+                        id="sound-img">
+                </button>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="gallery-row gallery-row-one 2">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="classic-button">
+                            <img src="img/lived-classic.jpg" alt="Lived Classic" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="classic-text">
+                        Ожившая классика
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="spb-button">
+                            <img src="img/saint-petersburg.jpg" alt="Saint-Petersburg" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="spb-text">
+                        Образ Санкт-Петербурга
+                    </h1>
+                </div>
+            </div>
+            <div class="gallery-row gallery-row-two 3">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="revolution-button">
+                            <img src="img/revolution.jpg" alt="Revolution" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="revolution-text">
+                        Революция 1906-1907
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="culture-button">
+                            <img src="img/culture-people.jpg" alt="Culture People" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="culture-text">
+                        Деятели русской культуры
+                    </h1>
+                </div>
+            </div>
+            <div class="gallery-row gallery-row-three 4">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="tzar-button">
+                            <img src="img/tsarskaya-semia.jpg" alt="Tzar Family" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="tzar-text">
+                        Царская семья
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="photo-art-button">
+                            <img src="img/photo-reporter.jpg" alt="Photo reporter" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="photo-art-text">
+                        Фоторепортаж
+                    </h1>
+                </div>
+            </div>
+            <div class="gallery-row gallery-row-four 5">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="sasha-button">
+                            <img src="img/sasha.jpg" alt="Alexander Bulla" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="sasha-text">
+                        Александр Булла
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="victor-button">
+                            <img src="img/victor.jpg" alt="Victor Bulla" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text" id="victor-text">
+                        Виктор Булла
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="about">
+        <div class="about-wrapper">
+            <div class="about__text-wrapper 6">
+                <h1 class="about__title" id="about-1">
+                    О разделе
+                </h1>
+                <p class="about__text" id="about-2">
+                    Этот раздел содержит все фотографии, представленные на экспозиции в музее.
+                </p>
+                <p class="about__text" id="about-3">
+                    А также уникальную пост-обработку при помощи нейросетей.
+                </p>
+            </div>
+            <div class="about__image-wrapper">
+                <img src="img/camera-object.png" alt="Camera" class="about__img">
+            </div>
+        </div>
+        <div class="main-footer 7" id="main-footer">
+            <div class="main-footer__btn-right-wrapper">
+                <button class="button main-footer__btn-right" id="lang-button" onclick="" type="button">
+                    <img src="img/language.png" alt="Lang button icon" class="main-footer__btn-right-icon"
+                        id="lang-img">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--           H I D D E N    C O N T E N T           -->
+
+    <div class="info-content" id="info-content" style="display: none;">
+        <img src="img/tip-contain.jpg" alt="Info content">
+    </div>
+
+    <!--   C A P T I O N    S E C T I O N -->
+
+    <!-- C A P T I O N   C U L T U R E -->
+
+    <div class="caption caption-culture caption-culture-1" style="display:none">
+        <h3 class="ru">Фёдор Шаляпин и Илья Репин</h3>
+        <h3 class="eng">Feodor Chaliapin and Ilya Repin</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-2" style="display:none">
+        <h3 class="ru">Лев Толстой</h3>
+        <h3 class="eng">Leo Tolstoy</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-3" style="display:none">
+        <h3 class="ru">Лев Толстой. Прогулка на любимом коне Демире</h3>
+        <h3 class="eng">Riding his favorite horse, Demir</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-4" style="display:none">
+        <h3 class="ru">Семейный обед</h3>
+        <h3 class="eng">Family dinner</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-5" style="display:none">
+        <h3 class="ru">Партия в шахматы с М. С. Сухотиным</h3>
+        <h3 class="eng">A game of chess with M. Sukhotin</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-6" style="display:none">
+        <h3 class="ru">В рабочем кабинете</h3>
+        <h3 class="eng">In the study</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-7" style="display:none">
+        <h3 class="ru">С сестрой Марией Николаевной, монахиней Шамординского женского монастыря</h3>
+        <h3 class="eng">With sister Maria Nikolayevna, nun at the Shamordino Convent.</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-8" style="display:none">
+        <h3 class="ru">С дочерью Александрой</h3>
+        <h3 class="eng">With his daughter Alexandra</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-9" style="display:none">
+        <h3 class="ru">Художник Илья Репин читает газетное сообщение о смерти Льва Толстого.</h3>
+        <h3 class="ru">Слева писатель Корней Чуковский. Справа их жёны Наталья и Мария. Ноябрь 1910</h3>
+        <h3 class="eng">Painter Ilya Repin reading a notice on Leo Tolstoy’s death in a newspaper.
+            <h3 class="eng">Their wives to the right: Natalia and Maria. November 1910</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-10" style="display:none">
+        <h3 class="ru">И. Е. Репин в своём имении Куоккала. 1908</h3>
+        <h3 class="eng">I. Repin at his Kuokkala mansion. 1908</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-11" style="display:none">
+        <h3 class="ru">Писатель Максим Горький, актриса Мария Андреева позируют Илье Репину. Куоккала. 18 августа 1904
+        </h3>
+        <h3 class="eng">Writer Maxim Gorky and actress Maria Andreyeva posing for Ilya Repin. Kuokkala. August 18, 1904
+        </h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-12" style="display:none">
+        <h3 class="ru">Илья Репин с семьёй</h3>
+        <h3 class="eng">Ilya Repin with family</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-13" style="display:none">
+        <h3 class="ru">Банкир и предприниматель Е. Г. Шайкевич, критик В. В. Стасов, писатель А. М. Горький, И. Е.
+            Репин.</h3>
+        <h3 class="ru">Куоккала. 18 августа 1904</h3>
+        <h3 class="eng">Banker and entrepreneur E. Shaikevich, literary critic V. Stasov, writer A. Gorky, I. Repin.
+        </h3>
+        <h3 class="eng">Kuokkala. August 18, 1904</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-14" style="display:none">
+        <h3 class="ru">В. В. Стасов в рабочем кабинете. Начало 1900-х</h3>
+        <h3 class="eng">V. Stasov in his study. Early 1900s</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-15" style="display:none">
+        <h3 class="ru">Музыкальный вечер у В. В. Стасова. Поёт Фёдор Шаляпин.</h3>
+        <h3 class="ru">Среди гостей композиторы Александр Глазунов, Цезарь Кюи, Николай Римский-Корсаков, актриса Мария
+            Савина. 1904</h3>
+        <h3 class="eng">A musical night at V. Stasov. Feodor Chaliapin singing.</h3>
+        <h3 class="eng">Guests include composers Alexander Glazunov, César Cui, Nikolai Rimsky-Korsakov, actress Maria
+            Savina. 1904</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-16" style="display:none">
+        <h3 class="ru">Певец Фёдор Шаляпин. 1913</h3>
+        <h3 class="eng">Singer Feodor Chaliapin. 1913</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-17" style="display:none">
+        <h3 class="ru">Фёдор Шаляпин с сыном Фёдором. 1911</h3>
+        <h3 class="eng">Feodor Chaliapin with his son Feodor. 1911</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-18" style="display:none">
+        <h3 class="ru">Вперёд! Ф. Шаляпин. Март 1914</h3>
+        <h3 class="eng">Onwards! F. Chaliapin. March 1914</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-19" style="display:none">
+        <h3 class="ru">Шаляпин на репетиции. 1913</h3>
+        <h3 class="eng">Chaliapin rehearsing. 1913</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-20" style="display:none">
+        <h3 class="ru">Шаляпин на катке.</h3>
+        <h3 class="eng">Chaliapin on a skating rink.</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-21" style="display:none">
+        <h3 class="ru">Художник Николай Рерих в своей мастерской. 1910-е</h3>
+        <h3 class="eng">Painter Nicholas Roerich in his workshop. 1910s</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-22" style="display:none">
+        <h3 class="ru">Актриса Вера Комиссаржевская.</h3>
+        <h3 class="eng">Actress Vera Komissarzhevskaya.</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-23" style="display:none">
+        <h3 class="ru">Балерина Тамара Карсавина.</h3>
+        <h3 class="eng">Ballerina Tamara Karsavina</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-24" style="display:none">
+        <h3 class="ru">Скульптор А. М. Опекушин. 1908</h3>
+        <h3 class="eng">Sculptor A. Opekushin. 1908</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-25" style="display:none">
+        <h3 class="ru">Писатель Аркадий Аверченко. 1913</h3>
+        <h3 class="eng">Writer Arkady Averchenko. 1913</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-26" style="display:none">
+        <h3 class="ru">Поэт Сергей Городецкий</h3>
+        <h3 class="eng">Poet Sergey Gorodetskiy</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-27" style="display:none">
+        <h3 class="ru">Историк, коллекционер Н. П. Лихачёв</h3>
+        <h3 class="eng">Historian, collector N. Likhachev</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-28" style="display:none">
+        <h3 class="ru">Поэт Осип Мандельштам, писатель Корней Чуковский, художник Юрий Анненков, поэт Бенедикт Лившиц.
+            Август 1914</h3>
+        <h3 class="eng">Poet Osip Mandelstam, writer Kornei Chukovsky, painter Yuri Annenkov, poet Benedikt Livshits.
+            August 1914</h3>
+    </div>
+
+    <div class="caption caption-culture caption-culture-29" style="display:none">
+        <h3 class="ru">Философ, пропагандист марксизма Георгий Валентинович Плеханов. 1917</h3>
+        <h3 class="eng">Philosopher, promoter of Marxism, Georgi Plekhanov. 1917</h3>
+    </div>
+
+    <!-- C A P T I O N    C L A S S I C -->
+
+    <div class="caption caption-classic caption-classic-1" style="display:none">
+        <h3 class="ru">Николай II, императрицы Мария Фёдоровна и Александра Фёдоровна. Майский парад 1901 года</h3>
+        <h3 class="eng">Nicholas II, Empresses Maria Feodorovna and Alexandra Feodorovna. May parade of 1901</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-2" style="display:none">
+        <h3 class="ru">Наводнение в Санкт-Петербурге 12 октября 1903.Возле Академии художеств</h3>
+        <h3 class="eng">Flood in St. Petersburg. Near the Academy of Arts. October 12, 1903</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-3" style="display:none">
+        <h3 class="ru">Лев Толстой</h3>
+        <h3 class="eng">Leo Tolstoy</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-4" style="display:none">
+        <h3 class="ru">Художник Исаак Бродский пишет портрет актёра Владимира Хенкина.</h3>
+        <h3 class="ru">1913</h3>
+        <h3 class="eng">Painter Isaac Brodsky painting a portrait of actor Vladimir Henkin.</h3>
+        <h3 class="eng">1913</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-5" style="display:none">
+        <h3 class="ru">Балерина Тамара Карсавина.</h3>
+        <h3 class="eng">Ballerina Tamara Karsavina</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-6" style="display:none">
+        <h3 class="ru">Император Николай II и цесаревич Алексей.</h3>
+        <h3 class="ru">1913</h3>
+        <h3 class="eng">Emperor Nicholas II and Tsesarevich Alexei.</h3>
+        <h3 class="eng">1913</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-7" style="display:none">
+        <h3 class="ru">Императорская семья на Петровской набережной. Август 1912</h3>
+        <h3 class="eng">Imperial family on Petrovskaya Embankment. August, 1912</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-8" style="display:none">
+        <h3 class="ru">Аэроплан, потерпевший аварию во время Второй авианедели.</h3>
+        <h3 class="eng">The airplane that crashed during the Second Aviation Week. 1910</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-9" style="display:none">
+        <h3 class="ru">Лев Толстой. Прогулка на любимом коне Демире</h3>
+        <h3 class="eng">Riding his favorite horse, Demir</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-10" style="display:none">
+        <h3 class="ru">Карл Булла. Автопортрет.</h3>
+        <h3 class="eng">Karl Bullla autoportrait.</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-11" style="display:none">
+        <h3 class="ru">Велотрек в саду Буфф. 1904</h3>
+        <h3 class="eng">Bicycle race track at the Buff garden. 1904</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-12" style="display:none">
+        <h3 class="ru">Тушение пожара в Апраксином дворе. 3 июля 1914</h3>
+        <h3 class="eng">Fighting the Apraksin Yard fire. July 3, 1914</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-13" style="display:none">
+        <h3 class="ru">Банкир и предприниматель Е. Г. Шайкевич, критик В. В. Стасов, писатель А. М. Горький, И. Е.
+            Репин.</h3>
+        <h3 class="ru">Куоккала. 18 августа</h3>
+        <h3 class="eng">Banker and entrepreneur E. Shaikevich, literary critic V. Stasov, writer A. Gorky, I. Repin.
+        </h3>
+        <h3 class="eng">Kuokkala. August 18, 1904</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-14" style="display:none">
+        <h3 class="ru">Карл Булла и его сыновья Александр и Виктор. 1910-е</h3>
+        <h3 class="eng">Karl Bulla and his sons.</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-15" style="display:none">
+        <h3 class="ru">В. В. Стасов в рабочем кабинете. Начало 1900-х</h3>
+        <h3 class="eng">V. Stasov in his study. Early 1900s</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-16" style="display:none">
+        <h3 class="ru">Певец Фёдор Шаляпин. 1913</h3>
+        <h3 class="eng">Singer Feodor Chaliapin. 1913</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-17" style="display:none">
+        <h3 class="ru">Фёдор Шаляпин с сыном Фёдором. 1911</h3>
+        <h3 class="eng">Feodor Chaliapin with his son Feodor. 1911</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-18" style="display:none">
+        <h3 class="ru">Император Николай II</h3>
+        <h3 class="eng">Emperor Nicholas II</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-19" style="display:none">
+        <h3 class="ru">Крушение поезда с императором Александром III возле станции Борки Южной железной дороги. 29
+            октября 1888</h3>
+        <h3 class="eng">The wreck of Alexander III’s train near Borki station of the Southern Railway. October 29, 1888
+        </h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-20" style="display:none">
+        <h3 class="ru">Карл Булла и Лев Толстой в Ясной Поляне. Фото Виктора Буллы. 1908</h3>
+        <h3 class="eng">Karl Bulla and Leo Tolstoy at Yasnaya Polyana. Photo by Viktor Bulla. 1908</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-21" style="display:none">
+        <h3 class="ru">Сварщики завода Людвига Нобеля. 1905</h3>
+        <h3 class="eng">Welders at the Ludvig Nobel factory. 1905</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-22" style="display:none">
+        <h3 class="ru">Бани Егорова. Мытьё посетителей. 1910-е</h3>
+        <h3 class="eng">Yegorov bathhouse. Washing customers.1910s</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-23" style="display:none">
+        <h3 class="ru">Освящение колокола перед поднятием на колокольню Петропавловского собора. 1911</h3>
+        <h3 class="eng">Consecrating a bell before hoisting it up the Peter and Paul Cathedral bell tower. 1911</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-24" style="display:none">
+        <h3 class="ru">Летний сад</h3>
+        <h3 class="eng">Summer Garden</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-25" style="display:none">
+        <h3 class="ru">Вид со стороны Садовой улицы на Николо-Богоявленский морской собор. 1913</h3>
+        <h3 class="eng">St. Nicholas Naval Cathedral, looking from Sadovaya Street. 1913</h3>
+    </div>
+
+    <div class="caption caption-classic caption-classic-26" style="display:none">
+        <h3 class="ru">Вид на Адмиралтейство. 1900-е</h3>
+        <h3 class="eng">Admiralty view. 1900s</h3>
+    </div>
+
+    <!--    C A P T I O N     S P B -->
+
+    <div class="caption caption-spb caption-spb-1" style="display:none">
+        <h3 class="ru">Свято-Исидоровская церковь эстонского православного братства.</h3>
+        <h3 class="ru">1912</h3>
+        <h3 class="eng">St. Isidorus church of Estonian Orthodox fraternity.</h3>
+        <h3 class="eng">1912</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-2" style="display:none">
+        <h3 class="ru">Верейка (вёсельная лодка) Петра I на палубе баржи в день 200-летия Санкт-Петербурга.</h3>
+        <h3 class="ru">May 16, 1903</h3>
+        <h3 class="eng">Vereika (row boat) of Peter I on top of a barge during the 200th anniversary of St.Petersburg.
+        </h3>
+        <h3 class="eng">May 16, 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-3" style="display:none">
+        <h3 class="ru">Петропавловская крепость. Полуденный выстрел сигнальной пушки.</h3>
+        <h3 class="eng">Peter and Paul Fortress. Signal gun fi ring at noon.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-4" style="display:none">
+        <h3 class="ru">Дом 16 по Невскому проспекту, украшенный флагами в честь коронации императора Николая II.</h3>
+        <h3 class="ru">May 4, 1896</h3>
+        <h3 class="eng">16 Nevsky Prospect decorated with flags to celebrate the coronation of Nicholas II.</h3>
+        <h3 class="eng">May 4, 1896</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-5" style="display:none">
+        <h3 class="ru">Невский проспект возле Большого Гостиного двора утром в день 200-летия Санкт-Петербурга.</h3>
+        <h3 class="ru">Май 16, 1903</h3>
+        <h3 class="eng">Nevsky Prospect near the Great Gostiny Dvor, on the morning of 200th anniversary of Saint
+            Petersburg.</h3>
+        <h3 class="eng">May 16, 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-6" style="display:none">
+        <h3 class="ru">Городская дума, украшенная в честь 200-летия Санкт-Петербурга.</h3>
+        <h3 class="ru">Май 1903</h3>
+        <h3 class="eng">City Duma decorated for the 200th anniversary of St. Petersburg.</h3>
+        <h3 class="eng">May 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-7" style="display:none">
+        <h3 class="ru">Река Фонтанка возле Аничкова моста. Начало 1900-х.</h3>
+        <h3 class="eng">Fontanka river near Anichkov Bridge. Early 1900s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-8" style="display:none">
+        <h3 class="ru">Летний сад.</h3>
+        <h3 class="eng">Summer Garden.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-9" style="display:none">
+        <h3 class="ru">Собор Воскресения Христова (Спас на Крови).</h3>
+        <h3 class="eng">Resurrection Cathedral (Savior on Spilled Blood).</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-10" style="display:none">
+        <h3 class="ru">Зимний дворец, вид с Невы.</h3>
+        <h3 class="eng">Winter Palace, as seen from the Neva.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-11" style="display:none">
+        <h3 class="ru">Река Мойка. Немецкая реформатская церковь. 1910-е.</h3>
+        <h3 class="eng">Moyka river. German Reformed church. 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-12" style="display:none">
+        <h3 class="ru">Дом Вавельберга (Торговый банк). 1910-е.</h3>
+        <h3 class="eng">Wawelberg Building (Trade Bank). 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-13" style="display:none">
+        <h3 class="ru">Невский проспект, 21. Начало 1910-х.</h3>
+        <h3 class="eng">21 Nevsky Prospect. Early 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-14" style="display:none">
+        <h3 class="ru">Вид со стороны Садовой улицы на Николо-Богоявленский морской собор.</h3>
+        <h3 class="ru">1913</h3>
+        <h3 class="eng">St. Nicholas Naval Cathedral, looking from Sadovaya Street.</h3>
+        <h3 class="eng">1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-15" style="display:none">
+        <h3 class="ru">Владимирский собор.</h3>
+        <h3 class="eng">Our Lady of Vladimir Cathedral.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-16" style="display:none">
+        <h3 class="ru">Николаевская набережная.</h3>
+        <h3 class="eng">Nicholas Embankment.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-17" style="display:none">
+        <h3 class="ru">Сенная площадь. Успенская церковь.</h3>
+        <h3 class="ru">1902</h3>
+        <h3 class="eng">Sennaya Square. Assumption Church.</h3>
+        <h3 class="eng">1902</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-18" style="display:none">
+        <h3 class="ru">Обуховский мост через Фонтанку.</h3>
+        <h3 class="ru">1913</h3>
+        <h3 class="eng">Obukhovsky Bridge across Fontanka.</h3>
+        <h3 class="eng">1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-19" style="display:none">
+        <h3 class="ru">Императорский дворец на Елагином острове.</h3>
+        <h3 class="eng">Imperial Palace on Yelagin Island.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-20" style="display:none">
+        <h3 class="ru">Французская набережная у Летнего сада.</h3>
+        <h3 class="eng">French Embankment near the Summer Garden.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-21" style="display:none">
+        <h3 class="ru">Городок Товарищества борьбы с жилищной нуждой на Васильевском острове.</h3>
+        <h3 class="ru">1906</h3>
+        <h3 class="eng">Campus of the Partnership for eliminating homelessness on Vasilyevsky Island.</h3>
+        <h3 class="eng">1906</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-22" style="display:none">
+        <h3 class="ru">Троице-Петровский собор.</h3>
+        <h3 class="ru">Октябрь 26, 1909</h3>
+        <h3 class="eng">Peter’s Trinity Cathedral.</h3>
+        <h3 class="eng">October 26, 1909</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-23" style="display:none">
+        <h3 class="ru">Церковь святых Симеона и Анны.</h3>
+        <h3 class="eng">Sts. Simeon and Anne Church.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-24" style="display:none">
+        <h3 class="ru">Вид на Адмиралтейство.</h3>
+        <h3 class="ru">1900е</h3>
+        <h3 class="eng">Admiralty view.</h3>
+        <h3 class="eng">1900s</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-25" style="display:none">
+        <h3 class="ru">Памятник императору Николаю I на Исаакиевской площади.</h3>
+        <h3 class="ru">1913</h3>
+        <h3 class="eng">Monument to Emperor Nicholas I in St. Isaac’s Square.</h3>
+        <h3 class="eng">1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-26" style="display:none">
+        <h3 class="ru">Автомобилисты возле памятника Петру I у Михайловского замка.</h3>
+        <h3 class="eng">Motorists near the monument to Peter I at St. Michael’s Castle.</h3>
+    </div>
+
+    <!-- C A P T I O N    R E V O L U T I O N -->
+
+    <div class="caption caption-revolution caption-revolution-1" style="display:none">
+        <h3 class="ru">Студенческая демонстрация в Петербурге. 1905</h3>
+        <h3 class="eng">Students rally in St. Petersburg. 1905</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-2" style="display:none">
+        <h3 class="ru">Убийство министра внутренних дел В. К. Плеве. 15 июля 1904</h3>
+        <h3 class="eng">The murder of V. Plehve, Minister of Interior. July 15, 1904</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-3" style="display:none">
+        <h3 class="ru">Вооружённый грабёж казённых денег. 1906</h3>
+        <h3 class="eng">Armed robbery of treasury money. 1906</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-4" style="display:none">
+        <h3 class="ru">Трагический конец Георгия Гапона. 1906</h3>
+        <h3 class="eng">Tragic demise of Georgy Gapon. 1906</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-5" style="display:none">
+        <h3 class="ru">Трагический конец Георгия Гапона. 1906</h3>
+        <h3 class="eng">Tragic demise of Georgy Gapon. 1906</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-6" style="display:none">
+        <h3 class="ru">Взрыв на даче председателя Совета министров П. А. Столыпина. 12 августа 1906</h3>
+        <h3 class="eng">Explosion at the dacha of P. Stolypin, President of the Council of Ministers. August 12, 1906
+        </h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-7" style="display:none">
+        <h3 class="ru">Взрыв на даче председателя Совета министров П. А. Столыпина. 12 августа 1906</h3>
+        <h3 class="eng">Explosion at the dacha of P. Stolypin, President of the Council of Ministers. August 12, 1906
+        </h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-8" style="display:none">
+        <h3 class="ru">Шлиссельбургская тюрьма. 1910-е</h3>
+        <h3 class="eng">Shlisselburg prison. 1910s</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-9" style="display:none">
+        <h3 class="ru">Николай II с семьёй на Дворцовой набережной после окончания приёма депутатов Думы. 27 апреля 1906
+        </h3>
+        <h3 class="eng">Nicholas II with family on the Palace Embankment aft er receiving deputies of the Duma.</h3>
+        <h3 class="eng">April 27, 1906</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-10" style="display:none">
+        <h3 class="ru">Обрушение потолка в зале Заседаний Таврического nдворца. 2 марта 1907</h3>
+        <h3 class="eng">Ceiling collapse in the session hall of the Taurida Palace. March 2, 1907</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-11" style="display:none">
+        <h3 class="ru">Император Николай II и великий князь Николай Николаевич. 1914</h3>
+        <h3 class="eng">Emperor Nicholas II and Grand Duke Nicholas Nikolayevich. 1914</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-12" style="display:none">
+        <h3 class="ru">Заседание III Государственной Думы в Таврическом дворце. 15 октября 1911</h3>
+        <h3 class="eng">Session of the third State Duma at the Taurida Palace. October 15, 1911</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-13" style="display:none">
+        <h3 class="ru">Слушатели Манифеста императора Николая II о вступлении России в войну.</h3>
+        <h3 class="ru"> Дворцовая площадь. 20 июля 1914</h3>
+        <h3 class="eng">The crowd listening to the Manifesto of Emperor Nicholas II on Russia’s entry into war.</h3>
+        <h3 class="eng">Palace Square. July 20, 1914</h3>
+    </div>
+
+    <div class="caption caption-revolution caption-revolution-14" style="display:none">
+        <h3 class="ru">Дворцовая площадь. 20 июля 1914</h3>
+        <h3 class="eng">Palace Square. July 20, 1914</h3>
+    </div>
+
+    <!-- C A P T I O N     T Z A R  -->
+
+    <div class="caption caption-tzar caption-tzar-1" style="display:none">
+        <h3 class="ru">Николай II, императрицы Мария Фёдоровна и Александра Фёдоровна. Майский парад 1901 года</h3>
+        <h3 class="eng">Nicholas II, Empresses Maria Feodorovna and Alexandra Feodorovna. May parade of 1901</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-2" style="display:none">
+        <h3 class="ru">Николай II прибыл на заседание Сената. 1911</h3>
+        <h3 class="eng">Nicholas II arrives at a Senate session. 1911</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-3" style="display:none">
+        <h3 class="ru">Императорская семья на Петровской набережной. Август 1912</h3>
+        <h3 class="eng">Imperial family on Petrovskaya Embankment. August, 1912</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-4" style="display:none">
+        <h3 class="ru">Императрица Александра Фёдоровна, шеф лейб-гвардии Уланского полка.</h3>
+        <h3 class="ru">Петергоф. 11 сентября 1903 </h3>
+        <h3 class="eng">Empress Alexandra Feodorovna, colonel-in-chief of the Imperial Guard Uhlan Regiment.</h3>
+        <h3 class="eng">Peterhof. September 11, 1903</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-5" style="display:none">
+        <h3 class="ru">Император Николай II и цесаревич Алексей. 1913</h3>
+        <h3 class="eng">Emperor Nicholas II and Tsesarevich Alexei. 1913</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-6" style="display:none">
+        <h3 class="ru">Крещение великой княжны Анастасии Николаевны. Выезд в Новый дворец. 1901</h3>
+        <h3 class="eng">Baptism of Princess Anastasia Nikolayevna. Procession to the New Palace. 1901</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-7" style="display:none">
+        <h3 class="ru">Великая княгиня Елизавета Фёдоровна </h3>
+        <h3 class="eng">Grand Duchess Elizaveta Feodorovna</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-8" style="display:none">
+        <h3 class="ru">Императрица Александра Фёдоровна с дочерьми ассистирует княгине Вере Гедройц в операционной</h3>
+        <h3 class="eng">Empress Alexandra Feodorovna with daughters assisting Duchess Vera Gedroitz in an operating room
+        </h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-9" style="display:none">
+        <h3 class="ru">Графиня Матильда Витте</h3>
+        <h3 class="eng">Countess Matilda Witte</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-10" style="display:none">
+        <h3 class="ru">Председатель Совета министров С. Ю. Витте. 1905</h3>
+        <h3 class="eng">Chairman of Council of Ministers S. Witte. 1905</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-11" style="display:none">
+        <h3 class="ru">Члены Правительствующего Сената. 17 января 1914</h3>
+        <h3 class="eng">Members of the Governing Senate. January 17, 1914</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-12" style="display:none">
+        <h3 class="ru">Николай II и цесаревич Алексей обходят строй лейб-гвардии Егерского полка.</h3>
+        <h3 class="ru">Новый Петергоф. 17 августа 1912</h3>
+        <h3 class="eng">Nicholas II and Tsesarevich Alexei inspecting the formation of the Egersky Lifeguard regiment.
+        </h3>
+        <h3 class="eng">New Peterhof. August 17, 1912</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-13" style="display:none">
+        <h3 class="ru">Николай II и германский кайзер Вильгельм II на императорской яхте «Штандарт».</h3>
+        <h3 class="ru">Ревель. Июль 1912</h3>
+        <h3 class="eng">Nicholas II and German Kaiser Wilhelm II on the Imperial yacht the Standard.</h3>
+        <h3 class="eng">Reval. July 1912</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-14" style="display:none">
+        <h3 class="ru">Японский принц Ишимото с супругой в Петропавловском соборе. 6 мая 1909</h3>
+        <h3 class="eng">Japanese prince Ishimoto with spouse at the Peter and Paul Cathedral. May 6, 1909</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-15" style="display:none">
+        <h3 class="ru">Император Николай II</h3>
+        <h3 class="eng">Emperor Nicholas II</h3>
+    </div>
+
+    <div class="caption caption-tzar caption-tzar-16" style="display:none">
+        <h3 class="ru">Прибытие Николая II для участия в праздновании 300-летия Дома Романовых. </h3>
+        <h3 class="ru">Февраль 1913</h3>
+        <h3 class="eng">Arrival of Nickolay II </h3>
+        <h3 class="eng">February 1913</h3>
+    </div>
+
+    <!-- C A P T I O N    P H O T O - A R T  -->
+
+    <div class="caption caption-photo-art caption-photo-art-1" style="display:none">
+        <h3 class="ru">Наводнение в Санкт-Петербурге. Вид на Неву с Университетской набережной.</h3>
+        <h3 class="ru">12 октября 1903</h3>
+        <h3 class="eng">Flood in St. Petersburg. View of the Neva looking from University embankment.</h3>
+        <h3 class="eng">October 12, 1903</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-2" style="display:none">
+        <h3 class="ru">Возле Академии художеств</h3>
+        <h3 class="eng">Near the Academy of Arts</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-3" style="display:none">
+        <h3 class="ru">Наводнение в Санкт-Петербурге. 12 октября 1903</h3>
+        <h3 class="eng">October 12, 1903, fl ood in St. Petersburg</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-4" style="display:none">
+        <h3 class="ru">Большой проспект Васильевского острова</h3>
+        <h3 class="eng">Bolshoi Prospect of Vasilyevsky Island</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-5" style="display:none">
+        <h3 class="ru">Садовая улица, Никольский рынок</h3>
+        <h3 class="eng">Sadovaya Street, Nikolsky market</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-6" style="display:none">
+        <h3 class="ru">Аэроплан, потерпевший аварию во время Второй авианедели.</h3>
+        <h3 class="eng">The airplane that crashed during the Second Aviation Week. 1910</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-7" style="display:none">
+        <h3 class="ru">Электрический трамвай на льду Невы (на заднем плане плашкоутный мост). 1900-е</h3>
+        <h3 class="eng">Electric tramway on Neva ice (boat bridge in the background). 1900s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-8" style="display:none">
+        <h3 class="ru">Обрушение Египетского моста через Фонтанку. 16 апреля 1905</h3>
+        <h3 class="eng">Collapse of the Egyptian bridge over Fontanka. April 16, 1905</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-9" style="display:none">
+        <h3 class="ru">Пожар в строящемся доме. 1913</h3>
+        <h3 class="eng">Construction site on fire. 1913</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-10" style="display:none">
+        <h3 class="ru">Смотр пожарных частей</h3>
+        <h3 class="eng">Inspection of fire brigades</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-11" style="display:none">
+        <h3 class="ru">Пожарный обоз</h3>
+        <h3 class="eng">Fire brigade vehicles</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-12" style="display:none">
+        <h3 class="ru">Тушение пожара в Апраксином дворе. 3 июля 1914</h3>
+        <h3 class="eng">Fighting the Apraksin Yard fire. July 3, 1914</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-13" style="display:none">
+        <h3 class="ru">Читальный зал Императорского женского педагогического института.</h3>
+        <h3 class="ru">1910-е</h3>
+        <h3 class="eng">Reading room of the Imperial Women’s Pedagogical Institute.</h3>
+        <h3 class="eng">1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-14" style="display:none">
+        <h3 class="ru">Большой зал Императорской публичной библиотеки. 1895</h3>
+        <h3 class="eng">Great Hall of the Imperial Public Library. 1895</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-15" style="display:none">
+        <h3 class="ru">Зоологический музей. Скелет полярного кита. 1901</h3>
+        <h3 class="eng">Zoological Museum. Bowhead whale skeleton. 1901</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-16" style="display:none">
+        <h3 class="ru">Пожар в Малом театре. 20 августа 1901</h3>
+        <h3 class="eng">Fire at the Maly Th eatre. August 20, 1901</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-17" style="display:none">
+        <h3 class="ru">Санитарный поезд имени императрицы Марии Фёдоровны</h3>
+        <h3 class="eng">Hospital train of Empress Maria Feodorovna</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-18" style="display:none">
+        <h3 class="ru">Военные медики перед отправкой на Балканскую войну. 1912</h3>
+        <h3 class="eng">Military medics awaiting dispatch to the Balkan War. 1912</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-19" style="display:none">
+        <h3 class="ru">Эпидемия азиатской холеры в Санкт-Петербурге.</h3>
+        <h3 class="ru">Дезинфекция вещей больных. 1908</h3>
+        <h3 class="eng">Asian cholera epidemic in St.Petersburg.</h3>
+        <h3 class="eng">Disinfecting personal belongings of the patients. 1908</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-20" style="display:none">
+        <h3 class="ru">Анатомический зал, в центре профессор Вейнберг (в чёрном халате)</h3>
+        <h3 class="eng">Anatomy hall, Professor Weinberg (center, in black smock)</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-21" style="display:none">
+        <h3 class="ru">Ёлка для бедных детей в доме градоначальника. 28 декабря 1907</h3>
+        <h3 class="eng">Christmas party for poor children at the Governor’s house. December 28, 1907</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-22" style="display:none">
+        <h3 class="ru">Ёлка для раненых в палате 71-го лазарета. 1914–1917</h3>
+        <h3 class="eng">Christmas party for the wounded at a ward of the 71st infirmary. 1914–1917</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-23" style="display:none">
+        <h3 class="ru">Император Николай II</h3>
+        <h3 class="eng">Emperor Nicholas II</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-24" style="display:none">
+        <h3 class="ru">Прибытие Николая II для участия в праздновании 300-летия Дома Романовых. </h3>
+        <h3 class="ru">Февраль 1913</h3>
+        <h3 class="eng">Nicholas II arriving to take part in the celebration of 300th anniversary of the House of
+            Romanov.</h3>
+        <h3 class="eng">February 1913</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-25" style="display:none">
+        <h3 class="ru">Старт автопробега Петербург — Париж — Венеция — Петербург.</h3>
+        <h3 class="eng">1908 Start of the St. Petersburg — Paris — Venice — St.Petersburg car rally. 1908</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-26" style="display:none">
+        <h3 class="ru">Жена А. П. Нагеля</h3>
+        <h3 class="eng">A. Nagel’s wife</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-27" style="display:none">
+        <h3 class="ru">Автопробег Петербург — Рим. За рулём А. П. Нагель, издатель журнала «Автомобиль». 1901</h3>
+        <h3 class="eng">St. Petersburg — Rome car rally. Behind the wheel is A. Nagel, publisher of the Automobile
+            magazine. 1901</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-28" style="display:none">
+        <h3 class="ru">Скейтинг-ринг на Марсовом поле. 1911</h3>
+        <h3 class="eng">Skating rink at the Field of Mars. 1911</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-29" style="display:none">
+        <h3 class="ru">Велотрек в саду Буфф. 1904</h3>
+        <h3 class="eng">Bicycle race track at the Buff garden. 1904</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-30" style="display:none">
+        <h3 class="ru">Репетиция пантомимы «Гамилькар» в цирке Чинизелли. Начало 1910-х</h3>
+        <h3 class="eng">Rehearsal of “Hamilcar” pantomime, Cinizelli’s Circus. Early 1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-31" style="display:none">
+        <h3 class="ru">Соревнования по плаванию</h3>
+        <h3 class="eng">Swimming competition</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-32" style="display:none">
+        <h3 class="ru">Гимнастическое общество «Польский сокол». 1907</h3>
+        <h3 class="eng">Polish Sokół gymnastic society. 1907</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-33" style="display:none">
+        <h3 class="ru">Градоначальник Санкт-Петербурга Д. В. Драчевский с женой и дочерью. 1903</h3>
+        <h3 class="eng">D. Drachevsky, Governor of St. Petersburg, with spouse and daughter. 1903</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-34" style="display:none">
+        <h3 class="ru">Женская группа на занятиях</h3>
+        <h3 class="eng">Women’s group exercising</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-35" style="display:none">
+        <h3 class="ru">Члены Петербургского велосипедно-атлетического общества. Сидит справа А. Ф. Краевский. 1900-е
+        </h3>
+        <h3 class="eng">Members of St. Petersburg Bicycle and Athletics Society. A. Kraevsky seated, right. 1900s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-36" style="display:none">
+        <h3 class="ru">Атлет Георг Лурих</h3>
+        <h3 class="eng">Georg Lurich, athlete</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-37" style="display:none">
+        <h3 class="ru">Бани Егорова. Мытьё посетителей. 1910-е</h3>
+        <h3 class="eng">Yegorov bathhouse. Washing customers.1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-38" style="display:none">
+        <h3 class="ru">Велосипедисты общества «Маяк». 1906</h3>
+        <h3 class="eng">Cyclists of the Mayak Society. 1906</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-39" style="display:none">
+        <h3 class="ru">Масленичное гулянье на Семёновском плацу. 1890-е </h3>
+        <h3 class="eng">Maslenitsa festivities on the Semenovsky drill ground. 1890s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-40" style="display:none">
+        <h3 class="ru">Завод для производства приборов беспроводной связи. Кронштадт. 1902</h3>
+        <h3 class="eng">Wireless communication device factory. Kronstadt. 1902</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-41" style="display:none">
+        <h3 class="ru">Мастерские для обучения калек ремёслам при ортопедическом отделении Максимилиановской лечебницы.
+            1902</h3>
+        <h3 class="eng">Workshops for teaching craft s to cripples at orthopedic department of the Maximilian hospital.
+            1902</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-42" style="display:none">
+        <h3 class="ru">Дежурный Лиговской пожарной команды. 1908</h3>
+        <h3 class="eng">Firewatcher of the Ligovka fire brigade. 1908</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-43" style="display:none">
+        <h3 class="ru">Приказчик магазина тканей. 1900-е</h3>
+        <h3 class="eng">Clerk at a drapery store. 1900s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-44" style="display:none">
+        <h3 class="ru">Внутренний вид Пассажа. 1900-е</h3>
+        <h3 class="eng">Interior of the Passage. 1900s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-45" style="display:none">
+        <h3 class="ru">Экспозиция ликёрного и водочного завода ≪К. Ланге и Ко≫ на Всероссийской гигиенической выставке.
+            1893</h3>
+        <h3 class="eng">K. Lange and Co. Liquor factory exhibit at the All-Russian Hygiene Expo. 1893</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-46" style="display:none">
+        <h3 class="ru">Цех печатного отделения</h3>
+        <h3 class="eng">Printing shop</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-47" style="display:none">
+        <h3 class="ru">Учащиеся женского училища принцессы Терезии Ольденбургской укладывают детей спать. 1910-е</h3>
+        <h3 class="eng">Students at Th erese of Oldenburg women’s school putting children to bed. 1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-48" style="display:none">
+        <h3 class="ru">Общественные работы для безработных. 1906</h3>
+        <h3 class="eng">Public works for the unemployed. 1906</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-49" style="display:none">
+        <h3 class="ru">Вырубка льда на Неве. 1910-е</h3>
+        <h3 class="eng">Extracting ice on the Neva. 1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-50" style="display:none">
+        <h3 class="ru">Женская аптека А. Б. Лесневской. 1914</h3>
+        <h3>A. Lesnevskaya’s Women’s Pharmacy. 1914</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-51" style="display:none">
+        <h3 class="ru">Укладка канализационных труб. 1910-е</h3>
+        <h3 class="eng">Laying of sewage pipes. 1910s</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-52" style="display:none">
+        <h3 class="ru">Бронирование автомобилей на Ижорском заводе. Колпино. 1914–1917</h3>
+        <h3 class="eng">Armoring cars at the Izhora Plant. Kolpino. 1914–1917</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-53" style="display:none">
+        <h3 class="ru">Обучение устной речи в школе глухонемых в деревне Мурзинка. 1907</h3>
+        <h3 class="eng">Teaching oral language at the deaf and mute school in Murzinka village. 1907</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-54" style="display:none">
+        <h3 class="ru">Перестройка Аничкова места. 1906–1907</h3>
+        <h3 class="eng">Rebuilding the Anichkov Bridge. 1906–1907</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-55" style="display:none">
+        <h3 class="ru">Курсанты водолазной школы на практических занятиях в бассейне. Кронштадт. 1913</h3>
+        <h3 class="eng">Cadets of the diving school practicing in a pool. Kronstadt. 1913</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-56" style="display:none">
+        <h3 class="ru">Празднование дня открытия навигации на Неве. Май 1903</h3>
+        <h3 class="eng">Celebrating the start of navigation on the Neva. May 1903</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-57" style="display:none">
+        <h3 class="ru">Пожар на Галерном острове. Обломки от сгоревшего броненосца «Витязь».</h3>
+        <h3 class="ru">У берега эскадренный броненосец «Паллада». 1 июня 1901</h3>
+        <h3 class="eng">Fire on the Galerny Island. Wreckage of the battleship Vityaz that burned down. </h3>
+        <h3 class="eng">Battleship Pallada near the shore. June 1, 1901</h3>
+    </div>
+
+    <div class="caption caption-photo-art caption-photo-art-58" style="display:none">
+        <h3 class="ru">Подъём торпеды на борт корабля. 1913</h3>
+        <h3 class="eng">Hauling a torpedo on board a ship. 1913</h3>
+    </div>
+
+    <!-- C A P T I O N     S A S H A  -->
+
+    <div class="caption caption-sasha caption-sasha-1" style="display:none">
+        <h3 class="ru">Александр с дочерью Ирмгард-Марианной и женой Бертой-Эмилией. Начало 1910-х </h3>
+        <h3 class="eng">Alexander with his daughter Irmgard-Marianna and wife Bertha-Emilia. Early 1910s</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-2" style="display:none">
+        <h3 class="ru">Живописные работы Александра Буллы </h3>
+        <h3 class="eng">Paintings by Alexander Bulla</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-3" style="display:none">
+        <h3 class="ru">Великий князь Михаил Александрович с участниками Второй фотографической выставки.</h3>
+        <h3 class="ru">Третий справа в третьем ряду Александр Булла. 26.04.1912. </h3>
+        <h3 class="eng">Grand Duke Mikhail Alexandrovich with participants of the Second Photography Exhibition.</h3>
+        <h3 class="eng">April 26, 1912. Alexander Bulla third from the right in the third row </h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-4" style="display:none">
+        <h3 class="ru">Александр Булла берёт интервью у борца Николая Вахтурова, чемпиона в тяжёлом весе. 1912</h3>
+        <h3 class="eng">Alexander Bulla interviews heavyweight champion wrestler Nikolai Vakhturov. 1912</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-5" style="display:none">
+        <h3 class="ru">А. Булла с комсоставом пожарной службы Ленинграда. 08.08.1925 </h3>
+        <h3 class="eng">A. Bulla with officers of Leningrad firefighting service. August 08, 1925</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-6" style="display:none">
+        <h3 class="ru">Александр Булла. 1934</h3>
+        <h3 class="eng">Alexander Bulla. 1934</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-7" style="display:none">
+        <h3 class="ru">Петропавловская крепость. Июль 1917</h3>
+        <h3 class="eng">Peter-Pavel's Fortress. July 1917 </h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-8" style="display:none">
+        <h3 class="ru">Ф. И. Шаляпин в сцене из спектакля «Мефистофель» А. Бойто. 1914</h3>
+        <h3 class="eng">F. I. Shalyapin in a scene from the play "Mephistopheles" by A. Boito. 1914 </h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-9" style="display:none">
+        <h3 class="ru">Император с великими князьями выходят из Мраморного дворца. Петропавловской крепости. Июль 1911
+        </h3>
+        <h3 class="ru">Фоторепортаж А. Буллы На похоронах великой княгини Александры Иосифовны.</h3>
+        <h3 class="eng">The Emperor and the Grand Dukes leave the Marble Palace. Peter and Paul Fortress. July 1911</h3>
+        <h3 class="eng">Photo report by A. Bulla At the funeral of Grand Duchess Alexandra Iosifovna. </h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-10" style="display:none">
+        <h3 class="ru">Император Николай II. 1915</h3>
+        <h3 class="eng">Imperror Nickolay II. 1915</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-11" style="display:none">
+        <h3 class="ru">Участие А. Ф. Керенского в похоронах казаков, погибших на улицах Петрограда.</h3>
+        <h3 class="ru">Фоторепортаж Александра Буллы. Июль 1917</h3>
+        <h3 class="eng">AF Kerensky's participation in the funeral of the Cossacks who died on the streets of Petrograd.
+        </h3>
+        <h3 class="eng">Photo reportage by Alexander Bulla. July 1917</h3>
+    </div>
+
+    <div class="caption caption-sasha caption-sasha-12" style="display:none">
+        <h3 class="ru">Дирижабль «Ястреб». 1913</h3>
+        <h3 class="eng">Airship "Hawk". 1913</h3>
+    </div>
+
+    <!--  C A P T I O N     V I C T O R -->
+
+    <div class="caption caption-victor caption-victor-1" style="display:none">
+        <h3 class="ru">«Расстрел петроградской публики 4 июля на Невском проспекте». </h3>
+        <h3 class="ru">Фотография В. Буллы, опубликованная без подписи автора в журнале L`Illustration. 1917</h3>
+        <h3 class="eng">"The shooting of the Petrograd public on July 4 on Nevsky Prospect."</h3>
+        <h3 class="eng">Photo of V. Bulla, published without the author's signature in the magazine L`Illustration. 1917
+        </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-2" style="display:none">
+        <h3 class="ru">Демонстрация инвалидов с лозунгами «Война до победного конца!». Апрель 1917</h3>
+        <h3 class="eng">Demonstration of disabled people with the slogans "War to the victorious end!". April 1917 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-3" style="display:none">
+        <h3 class="ru">Император Николай II с балкона Зимнего дворца провозглашает Манифест о вступлении России в войну.
+        </h3>
+        <h3 class="eng">Emperor Nicholas II from the balcony of the Winter Palace proclaims the Manifesto on Russia's
+            entry into the war.</h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-4" style="display:none">
+        <h3 class="ru">В.И. Ленин на II конгрессе Коминтерна. 1920 Орден Ленина образца 1930 года</h3>
+        <h3 class="eng">V.I. Lenin at the Second Congress of the Comintern. 1920 Order of Lenin, sample 1930 year </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-5" style="display:none">
+        <h3 class="ru">Агитационный автомобиль. 01.05.1925</h3>
+        <h3 class="eng">Spiel truck. 05.01.1925 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-6" style="display:none">
+        <h3 class="ru">Поэт Владимир Маяковский. 1927</h3>
+        <h3 class="eng">Poet Vladimir Mayakovsky. 1927</h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-7" style="display:none">
+        <h3 class="ru">Карл Булла и Лев Толстой в Ясной Поляне. 1908 </h3>
+        <h3 class="eng">Karl Bulla and Leo Tolstoy in Yasnaya Polyana. 1908 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-8" style="display:none">
+        <h3 class="ru">Обложка журнала «Огонёк», посвящённого кончине Л. Н. Толстого. 1910</h3>
+        <h3 class="eng">Cover of the magazine "Ogonyok" dedicated to the death of L. N. Tolstoy. 1910 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-9" style="display:none">
+        <h3 class="ru">В.И. Ленин на смертном одре. 1924</h3>
+        <h3 class="eng">V.I. Lenin on his deathbed. 1924 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-10" style="display:none">
+        <h3 class="ru">С.Киров на Ленинградской партийной конференции</h3>
+        <h3 class="eng">S.Kirov at the Leningrad Party Conference </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-11" style="display:none">
+        <h3 class="ru">Сталин у гроба Кирова</h3>
+        <h3 class="eng">Stalin at the tomb of Kirov </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-12" style="display:none">
+        <h3 class="ru">Сергей Есенин среди сослуживцев. 1916. </h3>
+        <h3 class="ru">Фото А.Функа, сотрудника ателье Булла.</h3>
+        <h3 class="eng">Sergei Yesenin among his colleagues. 1916.</h3>
+        <h3 class="eng">Photo by A.Funk, employee of the Bulla atelier. </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-13" style="display:none">
+        <h3 class="ru">Полковник Д.Н.Ломан (слева) Г.Е.Распутин, генерал-майор князь М.С.Путятин</h3>
+        <h3 class="eng">Colonel D.N.Loman (left) G.E.Rasputin, Major General Prince M.S.Putyatin </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-14" style="display:none">
+        <h3 class="ru">Поездка Г.Е.Зиновьева на Восточный фронт. </h3>
+        <h3 class="ru">Справа с кинокамерой В.К.Булла. Ноябрь 1918</h3>
+        <h3 class="eng">G.E.Zinoviev's trip to the Eastern Front.</h3>
+        <h3 class="eng">On the right with a movie camera V.K.Bulla. November 1918 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-15" style="display:none">
+        <h3 class="ru">В.К. Булла за работой. Ленинград, площадь Урицкого.</h3>
+        <h3 class="eng">V.C. Bulla at work. Leningrad, Uritsky Square. </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-16" style="display:none">
+        <h3 class="ru">Виктор Булла с отцом. 1918</h3>
+        <h3 class="eng">Victor Bulla with his father. 1918 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-17" style="display:none">
+        <h3 class="ru">Фотография президиума Ленинградского совета, Невский проспект, 54 (бывшее ателье Булла).</h3>
+        <h3 class="ru">1930-е</h3>
+        <h3 class="eng">Photo of the Presidium of the Leningrad Council, Nevsky Prospect, 54 (former Bull's studio).
+        </h3>
+        <h3 class="eng">1930s </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-18" style="display:none">
+        <h3 class="ru">Слева направо: Валентина, Вера Константиновна, Тамара, Юрий, Виктор Карлович, Константин.</h3>
+        <h3 class="ru">1927</h3>
+        <h3 class="eng">From left to right: Valentina, Vera Konstantinovna, Tamara, Yuri, Viktor Karlovich, Konstantin.
+        </h3>
+        <h3 class="eng">1927 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-19" style="display:none">
+        <h3 class="ru">Виктор Карлович Булла</h3>
+        <h3 class="eng">Victor Karlovich Bulla </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-20" style="display:none">
+        <h3 class="ru">Пулемётчики. 1904</h3>
+        <h3 class="eng">Machine gunners. 1904 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-21" style="display:none">
+        <h3 class="ru">Солдаты возле Таврического дворца. Март 1917</h3>
+        <h3 class="eng">Soldiers near the Tauride Palace. March 1917 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-22" style="display:none">
+        <h3 class="ru">Парад на Дворцовой площади 28.04.1904. Фото К. К. Буллы</h3>
+        <h3 class="eng">Parade on Palace Square 04.28.1904. Photo by K.K.Bulla </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-23" style="display:none">
+        <h3 class="ru">Отправка мобилизованных на лагерный сбор. 6.09.1923</h3>
+        <h3 class="eng">Sending those mobilized for a camp gathering. 09.06.1923 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-24" style="display:none">
+        <h3 class="ru">Знамя от петроградского пролетариата, возложенное на гроб Ленина. 1924</h3>
+        <h3 class="eng">Banner from the Petrograd proletariat laid on Lenin's coffin. 1924 </h3>
+    </div>
+
+    <div class="caption caption-victor caption-victor-25" style="display:none">
+        <h3 class="ru">Колонна участников пионерского похода в противогазах. 1935</h3>
+        <h3 class="eng">A column of participants in the pioneer campaign in gas masks. 1935 </h3>
+    </div>
+
+
+    <!-- <div id="lightgallery">
+        <a class="lg-img" href="content/Saint-petersburg/1-min.jpg" data-sub-html=".caption">
+            <img class="lg-thumbnail" src="content/Saint-petersburg/1-thumb.jpg">
+            <div class="caption" style="display:none">
+                <h3>Свято-Исидоровская церковь эстонского православного братства.</h3>
+                <h3>St. Isidorus church of Estonian Orthodox fraternity.</h3>
+                <h3>1912</h3>
+            </div>
+        </a>
+        <a class="lg-img" href="content/Saint-petersburg/2-min.jpg">
+            <img class="lg-thumbnail" src="content/Saint-petersburg/2-thumb.jpg">
+            <div class="caption" style="display:none">
+                <h3>Свято-Исидоровская церковь эстонского православного братства.</h3>
+                <h3>St. Isidorus church of Estonian Orthodox fraternity.</h3>
+                <h3>1912</h3>
+            </div>
+        </a>
+    </div>
+
+    <div id="image_container">
+        <img src="content/Saint-petersburg/1-thumb.jpg" data-bp="content/Saint-petersburg/1-min.jpg" data-caption="Example of an optional caption."/>
+        <img src="content/Saint-petersburg/2-thumb.jpg" data-bp="content/Saint-petersburg/2-min.jpg" data-caption="Example of an optional caption."/>
+    </div> -->
+
+    <!-- Light Gallery -->
+
+    <!-- <script type="text/javascript" src="js/lightgallery.min.js"></script> -->
+    <!-- <script src="../lib/lightgallery.js/src/js/lightgallery.js"></script> -->
+
+    <!--  lightgallery plugins -->
+    <!-- <script type="text/javascript" src="js/lg-thumbnail.min.js"></script> -->
+    <!-- <script src="../lib/lg-thumbnail.js/src/lg-thumbnail.js"></script> -->
+    <!-- <script type="text/javascript" src="js/lg-fullscreen.min.js"></script> -->
+    <!-- <script src="../lib/lg-fullscreen.js/src/lg-fullscreen.js"></script> -->
+
+
+
+    <!-- BIG PICTURE -->
+    <!-- https://github.com/henrygd/bigpicture -->
+    <script type="text/javascript" src="js/BigPicture.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+
+    <!-- Require JS -->
+    <!-- https://requirejs.org/docs/start.html -->
+    <!-- <script type="text/javascript" src="js/require.js"></script> -->
+
+    <!-- AOS Settings -->
+    <script type="text/javascript" src="../lib/AOS/dist/aos.js"></script>
+    <script>
+        // Global settings
+        AOS.init({
+            //  data-aos-anchor="#example-anchor"  - which element trigger
+            // offset: 200,   // data-aos-offset="500" in px when to trigger
+            // duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+            // once: false,
+            once: true,
+        });
+    </script>
+    <!-- AOS End -->
+</body>
+
+</html>

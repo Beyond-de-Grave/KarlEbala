@@ -1,0 +1,90 @@
+.bulla-header-wrapper{
+    height: 40vh;
+    background-image: url("../img/head.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90% 40vh;
+    position: relative;
+}
+
+.main-header{
+    // width: 100vw;
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+    // padding-top: 1vh;
+
+    align-content: space-between;
+    justify-content: stretch;
+}
+
+.main-header__btn-left-wrapper,
+.main-header__btn-right-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 10%;
+}
+
+
+.main-header__btn-left-wrapper{
+    padding-right: 5vw;
+}
+
+.main-header__title{
+    display: flex;
+    width: 85%;
+    // flex: 1;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-header__btn-left{
+    &:hover{
+        transform: scale(1.2);
+        filter: brightness(0) invert(1);  
+    }
+}
+
+.main-header__btn-right{
+    width: 70%;
+    &:hover{
+      transform: scale(1.2);
+      filter: brightness(0) invert(1);  
+    }
+}
+
+.main-header__btn-left-icon{
+    width: 50%;
+}
+
+// .main-header__btn-left-icon,
+// .main-header__btn-right-icon{
+//     width: 50%;
+// }
+
+#lang-btn{
+    margin-top: 5%;
+}
+
+#tip-img{
+    width: 50%;
+}
+
+#lang-img{
+    width: 70%;
+}
+
+// /* The sticky class is added to the header with JS when it reaches its scroll position */
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     width: 100%
+//   }

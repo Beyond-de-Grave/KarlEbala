@@ -1,0 +1,61 @@
+.main-header{
+    // width: 100vw;
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    // background-color: white;
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
+
+    align-content: space-between;
+    justify-content: stretch;
+}
+
+.main-header__btn-left-wrapper,
+.main-header__btn-right-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-header__title{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-city__title-text{
+    // height: 80%;
+    margin: 0;    
+    font-family: 'Arkadia';
+
+    // https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+    // https://github.com/sass-mq/sass-mq
+    // https://www.easeout.co/blog/2020-08-27-setup-media-queries-with-sass-mixins/
+    font-size: calc(10vh); 
+    @include for-phone-only {    
+        font-size: 4vh; 
+    }
+    color: white;
+    font-weight: normal;
+    align-self: center;
+}
+
+.main-header__btn-left-icon,
+.main-header__btn-right-icon{
+    width: 50%;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }

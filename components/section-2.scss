@@ -1,0 +1,80 @@
+
+.video-intro{
+    display: flex;
+    align-items:stretch;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin-top: 22%;
+    margin-bottom: 20%;
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.video-intro__frame{
+    // position: relative;
+    // // position: fixed;
+    position: absolute;
+    width: 101vw;
+    // width: 100%;
+    height: 100vh;
+    left: -15%;
+    top: 0;
+    // right: 0;
+    // bottom: 0;
+    z-index: 100;
+
+    background-image: url("/img/light.gif");
+    background-color: black;
+    background-size: 100vw 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 10s; /* don't forget to set a duration! */
+
+}
+
+iframe{
+    //  G U I D E    R O T A T E 3 D
+    // https://developer.mozilla.org/ru/docs/Web/CSS/transform-function/rotate3d()
+    transform: rotate3d(0.5, 1, 0, -10deg);
+    // transform: rotate(1deg);
+    border: solid 3px;
+    border-radius: 50px;
+    overflow: visible;
+}
+
+.video-intro__item{
+    // display: none;
+    // content: none;
+    position: relative;
+    // position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    // right: 0;
+    // bottom: 0;
+    z-index: 10;
+}
+
+
+// .video-intro__hat{
+//     max-width: 100%;
+//     height: auto;
+//     width: 55%;
+//     transform: scaleX(1.2);
+// }
+
+// .video-frame{
+//     transform: scale(0.8);
+// }
+
+/* .video-intro__list{
+
+} */

@@ -1,0 +1,68 @@
+.gallery-body{
+    background-image: url("../img/texture-gallery.jpg");
+    position: relative;
+    background-color: black;
+    
+}
+
+.start-picture{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    // position: absolute;
+    // background-color: black;
+    // background-image: url("../pageGallery/img/cover-gallery.jpg");
+    // background-size: 100% 100%;
+}
+
+.start-picture__img{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    // width: 100vw;
+    // height: 220vh;
+    height: 280vh;
+    position: relative;
+    // position: absolute;
+    z-index: 1;
+}
+
+.about{
+    // width: 100vw;
+    height: 100vh;
+    position: relative;
+    // z-index: 1;
+}
+
+.button{
+    transition: transform 0.6s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.main-footer{
+    // width: 100vw;
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    // background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.main-footer__btn-right-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.main-footer__btn-right-icon{
+    width: 50%;
+}

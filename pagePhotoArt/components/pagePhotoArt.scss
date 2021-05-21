@@ -1,0 +1,45 @@
+$backgroundLength: 280vh;
+
+.photo-art-body{
+    font-family: "B52";
+    height: $backgroundLength;
+    // height: 400vh;
+    background: url("../img/background-texture.jpg");
+    background-size: 100% auto;
+    // background-size: 100% $backgroundLength;
+    position: relative;
+    z-index: 1;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    // height: 100%;
+    height: 100vh;
+}
+
+.video-wrapper{
+    position: relative;
+    width: 100%;
+    height: 76vh;
+    overflow: hidden;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#video-background {
+    // height: 100%;
+    width: 100%;
+    // height: 100vh;
+    // position: fixed;
+    position: absolute;
+    // position: relative;
+    // right: 0;
+    // bottom: 0;
+    // min-width: 100%;
+    // min-height: 100%;
+}
+
+
+.main-header button{
+    @include buttonHover();
+}

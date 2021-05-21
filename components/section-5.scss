@@ -1,0 +1,391 @@
+.main-content{
+    // 2 options for 
+    // height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    // content: url("/img/tree-roots.png");
+    background: url("/img/tree-roots.png") no-repeat center center;
+    // background-size: cover;
+    background-size: 100% auto;
+    // background-size: contain;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-10vh);
+    // transform: translateY(-12%);
+}
+
+// https://www.w3schools.com/css/css3_transitions.asp
+.main-content-img{
+    position: relative;
+    z-index: 100;
+    border: solid 20px white;
+    filter: grayscale(1);
+    // transition: filter 2s;
+    transition: filter 2s, transform 2s, border 2s;
+    &:hover{
+        overflow: visible;
+        border: solid 40px white;
+        transform: scale(1.05);
+        filter: none;
+    }
+}
+
+.main-content-btn-shadow{
+    // box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+.main-content__title-img{
+    position: relative;
+    overflow: visible;
+    z-index: 200 !important;
+    transform: translateY(-35%);
+}
+
+// .main-content-container{
+//     margin-left: 2%;
+//     // transition: width 2s;
+//     // &:hover{
+//     //     width: 120%;
+//     //     transform: scale(1.2);
+//     // }
+// }
+.main-content-karl-bulla{
+    margin-left: 5%;
+}
+
+
+.main-content-flex{
+    flex-wrap: wrap;
+}
+
+//    P A R T   1
+
+.main-content-part-one{
+    // padding-top: 25vw;
+    padding-top: 15vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 120;
+}
+
+//    K A R L   B U L L A
+
+.main-content-karl-bulla{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 120;
+    // padding-top: 5%;
+    padding-right: 5vw;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-5vh);
+    overflow: visible;
+}
+
+.main-content-karl-bulla__preview
+{
+    position: relative;
+    z-index: 130;
+    width: 26vw;
+    overflow: visible;
+
+}
+
+.main-content-karl-bulla__title{
+    width: 100%;
+    position: relative;
+    z-index: 140;
+    overflow: visible;
+    transform: translateY(-7vh) translateX(1.5vw);
+}
+
+.main-content-karl-bulla__preview-img
+{
+    position: relative;
+    z-index: 130;
+    width: 26vw;
+    overflow: visible;
+
+}
+
+.main-content-karl-bulla__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+}
+
+//    G A L L E R Y 
+
+.main-content-gallery{
+    display: flex;
+    position: relative;
+    z-index: 120;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    // padding-top: 5%;
+    padding-left: 8vw;
+    padding-right: 3vw;
+    // margin-left: 10%;
+}
+
+.main-content-gallery__preview
+{
+    position: relative;
+    z-index: 130;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-gallery__title{
+    width: 100%;
+    position: relative;
+    z-index: 140;
+    overflow: visible;
+    transform: translateY(-7vh) translateX(2vw);
+}
+
+.main-content-gallery__preview-img
+{
+    position: relative;
+    z-index: 130;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-gallery__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+}
+
+//      P A R T  2
+
+.main-content-part-two{
+    margin-top: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    position: relative;
+    z-index: 120;
+    transform: translateY(-5vh);
+}
+
+// T I M E    T R A V E L
+
+.main-content-time-travel{
+    display: flex;
+    flex: 1;
+    position: relative;
+    z-index: 150;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    // padding-left: 4vw;
+}
+
+.main-content-time-travel__preview
+{
+    position: relative;
+    z-index: 160;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-time-travel__title{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+    transform: translateY(-7vh) translateX(2vw);
+}
+
+.main-content-time-travel__preview-img
+{
+    position: relative;
+    z-index: 150;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-time-travel__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+}
+
+//    M U S E U M
+
+.main-content-museum{
+    display: flex;
+    flex: 1;
+    position: relative;
+    z-index: 150;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8vw;
+    padding-right: 3vw;
+    transform: translateY(-5vh);
+}
+
+.main-content-museum__preview
+{
+    position: relative;
+    z-index: 160;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-museum__title{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+    transform: translateY(-15vh) translateX(2vw);
+}
+
+.main-content-museum__preview-img
+{
+    position: relative;
+    z-index: 150;
+    width: 40vw;
+    overflow: visible;
+    // transform: scaleY(0.85);
+
+}
+
+.main-content-museum__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+}
+
+
+// P A R T   T H R E E 
+
+.main-content-part-three{
+    margin-top: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    position: relative;
+    z-index: 120;
+    transform: translateY(-5vh);
+}
+
+//    P H O T O    A R T
+
+.main-content-photo-art{
+    display: flex;
+    flex: 1;
+    position: relative;
+    z-index: 150;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    // padding-left: 4vw;
+}
+
+.main-content-photo-art__preview
+{
+    position: relative;
+    z-index: 160;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-photo-art__title{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+    transform: translateY(-7vh) translateX(2vw);
+}
+
+.main-content-photo-art__preview-img
+{
+    position: relative;
+    z-index: 150;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-photo-art__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+}
+
+//    F O N D
+
+.main-content-fond{
+    display: flex;
+    flex: 1;
+    position: relative;
+    z-index: 150;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8vw;
+    padding-right: 3vw;
+    transform: translateY(-5vh);
+}
+
+.main-content-fond__preview
+{
+    position: relative;
+    z-index: 160;
+    width: 40vw;
+    overflow: visible;
+
+}
+
+.main-content-fond__title{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+    transform: translateY(-15vh) translateX(2vw);
+}
+
+.main-content-fond__preview-img
+{
+    position: relative;
+    z-index: 150;
+    width: 40vw;
+    overflow: visible;
+    // transform: scaleY(0.85);
+
+}
+
+.main-content-fond__title-img{
+    width: 100%;
+    position: relative;
+    z-index: 170;
+    overflow: visible;
+}

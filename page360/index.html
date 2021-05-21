@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Виртуальная экскурсия</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="css/main.css">
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+	<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+
+	<div class="main-header" id="main-header">
+		<div class="main-header__btn-left-wrapper main-header__btn-wrapper">
+			<button class="button main-header__btn-left" type="button" onclick="goBack()">
+				<img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+			</button>
+		</div>
+		<div class="main-header__title">
+			<h1 class="main-header__title-text" id="header-title">
+				Виртуальная экскурсия
+			</h1>
+			<div class="main-header__title-pattern">
+				<img src="img/pattern.png" alt="Header pattern" class="main-header__title-pattern-img">
+			</div>
+		</div>
+		<div class="main-header__btn-right-wrapper main-header__btn-wrapper">
+			<button class="button main-header__btn-right" id="lang-button" type="button">
+				<img src="img/lang.png" alt="Lang button icon" class="main-header__btn-right-icon" id="lang-img">
+			</button>
+			<button class="button main-header__btn-right sound-button--off" id="sound-button"
+				onclick="changeSoundImage()" type="button">
+				<img src="img/soundoff.png" alt="Sound button icon" class="main-header__btn-right-icon" id="sound-img">
+			</button>
+		</div>
+	</div>
+
+	<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+
+	<script type="text/javascript" src="js/pano2vr_player.js">
+	</script>
+	<script type="text/javascript" src="js/skin.js">
+	</script>
+	<div id="container" style="width:100%;height:100%;overflow:hidden;">
+		<br>Loading...<br><br>
+	</div>
+	<script type="text/javascript">
+
+		// create the panorama player with the container
+		pano = new pano2vrPlayer("container");
+		// add the skin object
+		skin = new pano2vrSkin(pano);
+		// load the configuration
+
+		window.addEventListener("load", function () {
+			pano.readConfigUrlAsync("pano.xml");
+		});
+	</script>
+	<noscript>
+		<p><b>Please enable Javascript!</b></p>
+	</noscript>
+	<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+	<!-- Hack needed to hide the url bar on iOS 9, iPhone 5s -->
+	<div style="width:1px;height:1px;"></div>
+</body>
+
+</html>

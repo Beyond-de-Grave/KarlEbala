@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'English Rose';
+    src: url('EnglishRose.woff2') format('woff2'),
+        url('EnglishRose.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

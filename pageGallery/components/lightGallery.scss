@@ -1,0 +1,71 @@
+
+
+
+#bp_container button{
+    cursor: url("/img/cursor-hover.png"), auto !important;
+}
+
+
+// Color of X button
+#bp_container .bp-xc{
+    background: rgb(92, 27, 27) !important;
+}
+
+// BIG PIC
+
+#bp_container img{
+    filter: grayscale(1);
+    transition: filter 2s !important;
+    &:hover{
+        filter: none;
+    }
+}
+
+.bp-lr{
+    padding-top: 0; 
+    padding-bottom: 0 !important;
+}
+
+//  Subtext gallery
+h3{
+    // font-family: 'Aragonia Modern';
+    // font-family: 'Italiano Decor';
+    font-family: 'Columbina';
+    font-size: 3.8vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+
+
+
+
+
+
+
+
+
+// #lightgallery{
+//     height: 100vh;
+//     width: 100%;
+//     position: relative;
+// }
+
+// .lg-img{
+//     width: 50%;
+// }
+
+// .lg-thumbnail{
+//     width: 1%;
+// }
+
+// // .caption{
+// //     font-family: 'Columbina';
+// //     // font-family: 'Aragonia Modern';
+// // }
+
+// .lg-sub-html{
+//     font-size: 10vh;
+//     // font-family: 'Columbina';
+//     // font-family: 'Aragonia Modern';
+// }

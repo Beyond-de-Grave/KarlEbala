@@ -1,0 +1,153 @@
+@keyframes clock {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes contraclock {
+    from {transform: rotate(3600deg);}
+    to {transform: rotate(0deg);}
+}
+
+// @keyframes wiggleY {
+//     from {transform: translateY(-20%);}
+//     to {transform: translateY(20%);}
+// }
+@keyframes wiggleY{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(0,10%);
+    }
+    100%{
+        transform: translate(0,-10%);
+    }
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    // 10% { transform: translate(0,-5%) }
+    // 20% { transform: translate(0,-10%) }
+    // 30% { transform: translate(0,-15%) }
+    // 40% { transform: translate(0,-20%) }
+    // 50% { transform: translate(0,-25%) }
+    // 60% { transform: translate(0,-30%) }
+    // 70% { transform: translate(0,-40%) }
+    // 80% { transform: translate(0,-45%) }
+    // 90% { transform: translate(0,-50%) }
+    100% { transform: translate(0,-100%) }
+}
+
+@keyframes scroll {
+    100%{
+     background-position:0px -3000px;
+   }
+ }
+ 
+ @media (prefers-reduced-motion) {
+   .wrapper {
+     animation: scroll 200s linear infinite;
+   }
+ }
+
+// https://html5book.ru/css3-animation/
+
+// Point of start
+// https://css-tricks.com/almanac/properties/t/transform-origin/
+
+
+@keyframes rotateX_InPlane {
+    0% { 
+        // transform: rotateX(30deg);
+        // transform: rotate3d(1, 0, 0, 0deg);
+        // transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% { 
+        // transform: rotateX(30deg);
+        // transform: rotate3d(1, 0, 0, 30deg);
+        // transform: rotate3d(0, 1, 0, 30deg);
+        transform: rotate3d(0, 0, 1, 3deg);
+    }
+    50% { 
+        // transform: rotateX(-30deg);
+        // transform: rotate3d(1, 0, 0, -20deg);
+        // transform: rotate3d(0, 1, 0, -20deg);
+        transform: rotate3d(0, 0, 1, -2deg);
+    }
+    // 70% { 
+    //     // transform: rotateX(15deg);
+    //     // transform: rotate3d(1, 0, 0, 15deg);
+    //     // transform: rotate3d(0, 1, 0, 15deg);
+    //     transform: rotate3d(0, 0, 1, 7deg);
+    // }
+    // 80% {
+    //     //  transform: rotateX(-15deg);
+    //     //  transform: rotate3d(1, 0, 0, -10deg);
+    //     //  transform: rotate3d(0, 1, 0, -10deg);
+    //      transform: rotate3d(0, 0, 1, -6deg);
+        // }
+    // 90% {
+    //     //  transform: rotateX(5deg);
+    //     //  transform: rotate3d(1, 0, 0, 5deg);
+    //     //  transform: rotate3d(0, 1, 0, 5deg);
+    //      transform: rotate3d(0, 0, 1, 2deg);
+    //     }
+    100% {
+        //  transform: rotateX(0deg);
+        //  transform: rotate3d(1, 0, 0, 0deg);
+        //  transform: rotate3d(0, 1, 0, 0deg);
+         transform: rotate3d(0, 0, 1, 0deg);
+        }
+}
+
+
+
+
+ // @keyframes background-scroll {
+    
+//     from {
+//         position: relative;
+
+//         // position: absolute;
+//         z-index: 1;
+//         background-image: url("/img/textureofshit.png"); 
+//         overflow: visible;
+//         // content: url("../img/texture-background.png");
+//         // background-image: url("../img/texture-background.png"); // Make titry
+//         // top: 0;
+//         // left: 0;
+//         // mask-image: url("../img/texture-background.png");
+//         // // mask-size: 100% 100%;
+//         // mask-composite: add; //add substract
+//         &::before{
+//             position: absolute;
+//             content: url("../img/texture-background.png");
+//             // background-image: url("../img/texture-background.png"); // Make titry
+//             top: 0;
+//             left: 0;
+//         }
+//     }
+//     to {
+//         position: relative;
+
+//         // position: absolute;
+//         z-index: 1;
+//         background-image: url("/img/textureofshit.png"); 
+//         overflow: visible;
+//         // content: url("../img/texture-background.png");
+//         // mask-image: url("../img/texture-background.png");
+//         // // mask-size: 100% 100%;
+//         // mask-composite: add;
+//         // background-image: url("../img/texture-background.png");
+//         top: -100%;
+//         left: 0;
+//         &::before{
+//             position: absolute;
+//             content: url("../img/texture-background.png");
+//             // background-image: url("../img/texture-background.png");
+//             top: -100%;
+//             left: 0;
+//         }
+//     }
+
+// }

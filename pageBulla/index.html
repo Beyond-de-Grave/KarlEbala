@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карл Булла</title>
+
+    <!-- PACKAGES -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+
+
+    <!-- https://github.com/blasten/turn.js -->
+    <script src="../lib/turn.js/turn.js"></script>
+    <script src="js/page-flip.js" defer></script>
+
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+
+    <!-- <script type="text/javascript" src="../js/scroll.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/animate.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/modal.js"></script> -->
+
+    <!-- Youtube API webframe -->
+    <script type="text/javascript" src="js/youtube.js"></script>
+
+</head>
+
+<body class="bulla-body">
+
+    <section class="bulla-intro">
+        <!-- HEADER -->
+        <div class="bulla-header-wrapper">
+            <div class="main-header" id="main-header">
+                <div class="main-header__btn-left-wrapper">
+                    <button class="main-header__btn-left" type="button" onclick="goBack()">
+                        <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+                    </button>
+                </div>
+                <div class="main-header__title">
+                    <!-- EMPTY -->
+                </div>
+                <div class="main-header__btn-right-wrapper">
+                    <button class="main-header__btn-right" id="tip-button" type="button">
+                        <img src="img/tip.png" alt="Tip button icon" class="main-header__btn-right-icon" id="tip-img">
+                    </button>
+                    <button class="main-header__btn-right" id="lang-btn" type="button">
+                        <img src="img/language.png" alt="Language button icon" class="main-header__btn-right-icon"
+                            id="lang-img">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bulla-content">
+            <div class="bulla-content__text">
+                <h1 class="bulla-content__text-title">
+                    О разделе:
+                </h1>
+                <img src="img/pattern-one-up.png" alt="pattern-one-up" class="bulla-content__text-pattern">
+                <h2 class="bulla-content__text-desc">
+                    В данном разделе содержится информация о биографии, жизни и творчестве Карла Буллы и
+                    его сыновей.
+                </h2>
+            </div>
+            <div class="bulla-content__music">
+                <button class="bulla-content__music-btn" type="button">
+                    <img class="bulla-content__music-img" src="img/music.png" alt="Music bulla">
+                    <img class="bulla-content__music-title-img" src="img/music-title.png" alt="Music title bulla">
+                </button>
+            </div>
+        </div>
+        <div class="bulla-button-panel">
+            <div class="bulla-button-panel__item">
+                <button class="bulla-button-panel__button" type="button" id="book-start">
+                    <!-- <h1 class="button-button-panel__text">
+                        Начало пути
+                    </h1> -->
+                    <img src="img/button-1.png" alt="Button 1" class="button-panel__img">
+                </button>
+            </div>
+            <div class="bulla-button-panel__item">
+                <button class="bulla-button-panel__button" type="button" id="book-middle">
+                    <!-- <h1 class="button-button-panel__text">
+                        Расцвет карьеры
+                    </h1> -->
+                    <img src="img/button-2.png" alt="Button 2" class="button-panel__img">
+                </button>
+            </div>
+            <div class="bulla-button-panel__item">
+                <button class="bulla-button-panel__button" type="button" id="book-end">
+                    <!-- <h1 class="button-button-panel__text">
+                        Эмиграция
+                    </h1> -->
+                    <img src="img/button-3.png" alt="Button 3" class="button-panel__img">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book 2" id="book">
+        <div id="zoom-viewport">
+            <div id="magazine">
+                <!-- FILLED WITH CODE -->
+            </div>
+        </div>
+
+    </section>
+
+    <section class="video-version 3">
+        <div class="frame">
+            <div class="video-intro__frame" id="video-frame">
+                <div class="video-intro__item" id="video-item">
+                  <!-- Youtube API video FRAME -->
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- HIDDEN CONTENT  -->
+    <div class="info-content" id="info-content" style="display: none;">
+        <img src="img/tip-content.jpg" alt="Info content">
+    </div>
+
+    <!-- AOS Settings -->
+    <script type="text/javascript" src="../lib/AOS/dist/aos.js"></script>
+    <script>
+        // Global settings
+        AOS.init({
+            //  data-aos-anchor="#example-anchor"  - which element trigger
+            // offset: 200,   // data-aos-offset="500" in px when to trigger
+            // duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+            // once: false,
+            once: true,
+        });
+    </script>
+    <!-- AOS End -->
+</body>
+
+</html>

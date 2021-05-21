@@ -1,0 +1,68 @@
+$videoSectionH: 90vh;
+$videoFrame: 80%;
+
+.video-version{
+    width: 100%;
+    // height: $videoSectionH;
+    height: 70vh;
+    position: relative;
+    z-index: 9999;
+    // margin-top: 5vh;
+    // transform: translateY(-25%);
+}
+
+.frame{
+    margin-top: 2vh;
+    height: $videoSectionH;
+    width: 100%;
+    // position: relative;
+    position: absolute;
+    top: -30%;
+    // background: url("../img/video-frame.png");
+    // background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.video-intro__frame{
+    position: relative;
+    // // position: fixed;
+    // position: absolute;
+    width: 100%;
+    // width: 100%;
+    height: $videoSectionH;
+    // left: -15%;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 10s; /* don't forget to set a duration! */
+}
+
+iframe{
+    //  G U I D E    R O T A T E 3 D
+    // https://developer.mozilla.org/ru/docs/Web/CSS/transform-function/rotate3d()
+    transform: rotate3d(0.5, 1, 0, -10deg);
+    // transform: rotate(1deg);
+    border: solid 10px black;
+    // border-radius: 50px;
+    overflow: visible;
+}
+
+.video-intro__item{
+    // display: none;
+    // content: none;
+    position: relative;
+    // position: absolute;
+    width: $videoFrame;
+    height: $videoFrame;
+    // z-index: 10;
+}

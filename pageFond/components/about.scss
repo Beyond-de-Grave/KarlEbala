@@ -1,0 +1,64 @@
+.about{
+    height: 60vh;
+    width: 100%;
+    // position: absolute;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "B52";
+}
+
+.about__wrapper{
+    width: 60%;
+    height: 100%;
+    background: url("../img/frame-one.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-right: 2%;
+    margin-left: 3%;
+}
+
+.about__title{
+    font-size: 7vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: uppercase;
+    // font-family: 'Algeria One';
+}
+
+.about__pattern{
+    width: 50%;
+    // margin-bottom: 10%;
+}
+
+.about__text-wrapper{
+    width: 90%;
+    text-align: center;
+    margin-top: 3%;
+    // margin-bottom: 15%;
+}
+
+.about__text{
+    font-family: "B52";
+    font-size: 5vh;
+
+    text-align: center;
+}
+
+.about__img-wrapper{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.about__img{
+    width: 100%;
+}

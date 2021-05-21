@@ -1,0 +1,86 @@
+
+// https://transfonter.org/
+
+@font-face {
+    font-family: 'Colatemta';
+    src:url('/font/webfonts_Colatemta/Colatemta.ttf.woff') format('woff'),
+        url('/font/webfonts_Colatemta/Colatemta.ttf.svg#Colatemta') format('svg'),
+        url('/font/webfonts_Colatemta/Colatemta.ttf.eot'),
+        url('/font/webfonts_Colatemta/Colatemta.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}   
+
+@font-face {
+    font-family: 'Wooden Ship Decorated';
+    src: url('/font/WoodenShip/WoodenShipDecorated.woff2') format('woff2'),
+        url('/font/WoodenShip/WoodenShipDecorated.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'English Rose';
+    src: url('/font/English-rose/EnglishRose.woff2') format('woff2'),
+        url('/font/English-rose/EnglishRose.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arkadia';
+    src: url('/font/Arkadia/Arkadia.woff2') format('woff2'),
+        url('/font/Arkadia/Arkadia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Columbina';
+    src: url('/font/Columbina/Columbina.woff2') format('woff2'),
+        url('/font/Columbina/Columbina.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aragonia Modern';
+    src: url('/font/Aragonia/AragoniaModern.woff2') format('woff2'),
+        url('/font/Aragonia/AragoniaModern.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Italiano Decor';
+    src: url('/font/ItalianoDecor/ItalianoDecor.woff2') format('woff2'),
+        url('/font/ItalianoDecor/ItalianoDecor.woff') format('woff'),
+        url('/font/ItalianoDecor/ItalianoDecor.ttf') format('truetype'),
+        url('/font/ItalianoDecor/ItalianoDecor.svg#ItalianoDecor') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'B52';
+    src: url('/font/B52/B52.woff2') format('woff2'),
+        url('/font/B52/B52.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Algeria One';
+    src: url('/font/AllegriaOne/AlgeriaOne.woff2') format('woff2'),
+        url('/font/AllegriaOne/AlgeriaOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

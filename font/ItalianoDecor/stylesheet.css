@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Italiano Decor';
+    src: url('ItalianoDecor.woff2') format('woff2'),
+        url('ItalianoDecor.woff') format('woff'),
+        url('ItalianoDecor.ttf') format('truetype'),
+        url('ItalianoDecor.svg#ItalianoDecor') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

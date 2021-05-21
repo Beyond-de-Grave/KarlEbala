@@ -1,0 +1,20 @@
+$backgroundLength: 850vh;
+
+.travel-body{
+    height: $backgroundLength;
+    font-family: "B52";
+    // background: url("../img/texture.jpg");
+    // background-size: 100% auto;
+    // background-position: bottom -30% center;
+}
+.background{
+    height: $backgroundLength;
+    background: url("../img/texture.jpg");
+    background-size: 100% auto;
+    position: relative;
+    z-index: 1;
+    // background-position: bottom -30% center;
+}
+.main-header button{
+    @include buttonHover();
+}

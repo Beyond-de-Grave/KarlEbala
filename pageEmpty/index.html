@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+
+    <!-- PACKAGES -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- https://github.com/sachinchoolur/lightgallery.js -->
+    <link rel="stylesheet" href="css/lightgallery.css">
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script>
+      // Hide everything
+      // $(document).ready(function(){
+      //   $("#scroll-button").click(function(){
+      //     $("*").hide();
+      //   });
+      // });
+      // Scrolling
+      // $(document).ready(function(){
+      //   $('html, body').animate({
+      //     scrollTop: $("#main-city__title").offset().top
+      //   }, 10000);
+      // });
+    </script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+
+    <!-- <script type="text/javascript" src="../js/scroll.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/animate.js"></script> -->
+    <!-- <script defer type="text/javascript" src="../js/modal.js"></script> -->
+
+    <!-- Youtube API webframe -->
+    <script type="text/javascript" src="../js/youtube.js"></script>
+
+</head>
+
+<body class="gallery-body">
+    <section class="start-picture">
+        <img class="start-picture__img" src="img/cover-gallery.jpg" alt="Gallery cover">
+    </section>
+    <section class="main">
+        <div class="main-header" id="main-header">
+            <div class="main-header__btn-left-wrapper">
+                <button class="main-header__btn-left" type="button" onclick="goBack()">
+                    <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+                </button>
+            </div>
+            <div class="main-header__title">
+
+                <h1 class="main-city__title-text">
+                    Галерея
+                </h1>
+            </div>
+            <div class="main-header__btn-right-wrapper">
+                <button class="main-header__btn-right sound-button--off" id="sound-button" onclick="changeSoundImage()"
+                    type="button">
+                    <img src="img/soundoff.png" alt="Tip button icon" class="main-header__btn-right-icon"
+                        id="sound-img">
+                </button>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="gallery-row gallery-row-one 2">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="classic-button">
+                            <img src="img/lived-classic.jpg" alt="Lived Classic" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Ожившая классика
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="spb-button">
+                            <img src="img/saint-petersburg.jpg" alt="Saint-Petersburg" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Образ Санкт-Петербурга
+                    </h1>
+                </div>
+            </div>
+            <div class="gallery-row gallery-row-two 3">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="revolution-button">
+                            <img src="img/revolution.jpg" alt="Revolution" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Революция 1906-1907
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="culture-button">
+                            <img src="img/culture-people.jpg" alt="Culture People" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Деятели русской культуры
+                    </h1>
+                </div>
+            </div>
+            <div class="gallery-row gallery-row-three 4">
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="tzar-button">
+                            <img src="img/tsarskaya-semia.jpg" alt="Tzar Family" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Царская семья
+                    </h1>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item__image-wrapper">
+                        <button class="gallery-item__button" id="report-button">
+                            <img src="img/photo-reporter.jpg" alt="Photo reporter" class="gallery-item__image">
+                        </button>
+                    </div>
+                    <h1 class="gallery-item__text">
+                        Фоторепортаж
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="about">
+        <div class="about-wrapper">
+            <div class="about__text-wrapper 5">
+                <h1 class="about__title">
+                    О разделе
+                </h1>
+                <p class="about__text">
+                    Этот раздел содержит все фотографии, представленные на экспозиции в музее.
+                </p>
+                <p class="about__text">
+                    А также уникальную пост-обработку при помощи нейросетей.
+                </p>
+            </div>
+            <div class="about__image-wrapper">
+                <img src="img/camera-object.png" alt="Camera" class="about__img">
+            </div>
+        </div>
+        <div class="main-footer 6" id="main-footer">
+            <div class="main-footer__btn-right-wrapper">
+                <button class="main-footer__btn-right" id="lang-button" onclick="" type="button">
+                    <img src="img/language.png" alt="Lang button icon" class="main-footer__btn-right-icon"
+                        id="lang-img">
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--   C A P T I O N    S E C T I O N -->
+
+    <!--    C A P T I O N     S P B -->
+
+    <div class="caption caption-spb caption-spb-1" style="display:none">
+        <h3>Свято-Исидоровская церковь эстонского православного братства.</h3>
+        <h3>St. Isidorus church of Estonian Orthodox fraternity.</h3>
+        <h3>1912</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-2" style="display:none">
+        <h3>Верейка (вёсельная лодка) Петра I на палубе баржи в день 200-летия Санкт-Петербурга.</h3>
+        <h3>Vereika (row boat) of Peter I on top of a barge during the 200th anniversary of St.Petersburg.</h3>            
+        <h3>May 16, 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-3" style="display:none">
+        <h3>Петропавловская крепость. Полуденный выстрел сигнальной пушки.</h3>
+        <h3>Peter and Paul Fortress. Signal gun fi ring at noon.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-4" style="display:none">
+        <h3>Дом 16 по Невскому проспекту, украшенный флагами в честь коронации императора Николая II.</h3>
+        <h3>16 Nevsky Prospect decorated with flags to celebrate the coronation of Nicholas II.</h3>
+        <h3>May 4, 1896</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-5" style="display:none">
+        <h3>Невский проспект возле Большого Гостиного двора утром в день 200-летия Санкт-Петербурга.</h3>
+        <h3>Nevsky Prospect near the Great Gostiny Dvor, on the morning of 200th anniversary of Saint Petersburg.</h3>
+        <h3>May 16, 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-6" style="display:none">
+        <h3>Городская дума, украшенная в честь 200-летия Санкт-Петербурга.</h3>
+        <h3>City Duma decorated for the 200th anniversary of St. Petersburg.</h3>
+        <h3>May 1903</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-7" style="display:none">
+        <h3>Река Фонтанка возле Аничкова моста. Начало 1900-х.</h3>
+        <h3>Fontanka river near Anichkov Bridge. Early 1900s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-8" style="display:none">
+        <h3>Летний сад.</h3>
+        <h3>Summer Garden.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-9" style="display:none">
+        <h3>Собор Воскресения Христова (Спас на Крови).</h3>
+        <h3>Resurrection Cathedral (Savior on Spilled Blood).</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-10" style="display:none">
+        <h3>Зимний дворец, вид с Невы.</h3>
+        <h3>Winter Palace, as seen from the Neva.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-11" style="display:none">
+        <h3>Река Мойка. Немецкая реформатская церковь. 1910-е.</h3>
+        <h3>Moyka river. German Reformed church. 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-12" style="display:none">
+        <h3>Дом Вавельберга (Торговый банк). 1910-е.</h3>
+        <h3>Wawelberg Building (Trade Bank). 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-13" style="display:none">
+        <h3>Невский проспект, 21. Начало 1910-х.</h3>
+        <h3>21 Nevsky Prospect. Early 1910s.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-14" style="display:none">
+        <h3>Вид со стороны Садовой улицы на Николо-Богоявленский морской собор.</h3>
+        <h3>St. Nicholas Naval Cathedral, looking from Sadovaya Street.</h3>
+        <h3>1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-15" style="display:none">
+        <h3>Владимирский собор.</h3>
+        <h3>Our Lady of Vladimir Cathedral.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-16" style="display:none">
+        <h3>Николаевская набережная.</h3>
+        <h3>Nicholas Embankment.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-17" style="display:none">
+        <h3>Сенная площадь. Успенская церковь.</h3>
+        <h3>Sennaya Square. Assumption Church.</h3>
+        <h3>1902</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-18" style="display:none">
+        <h3>Обуховский мост через Фонтанку.</h3>
+        <h3>Obukhovsky Bridge across Fontanka.</h3>
+        <h3>1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-19" style="display:none">
+        <h3>Императорский дворец на Елагином острове.</h3>
+        <h3>Imperial Palace on Yelagin Island.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-20" style="display:none">
+        <h3>Французская набережная у Летнего сада.</h3>
+        <h3>French Embankment near the Summer Garden.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-21" style="display:none">
+        <h3>Городок Товарищества борьбы с жилищной нуждой на Васильевском острове.</h3>
+        <h3>Campus of the Partnership for eliminating homelessness on Vasilyevsky Island.</h3>
+        <h3>1906</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-22" style="display:none">
+        <h3>Троице-Петровский собор.</h3>
+        <h3>Peter’s Trinity Cathedral.</h3>
+        <h3>October 26, 1909</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-23" style="display:none">
+        <h3>Церковь святых Симеона и Анны.</h3>
+        <h3>Sts. Simeon and Anne Church.</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-24" style="display:none">
+        <h3>Вид на Адмиралтейство.</h3>
+        <h3>Admiralty view.</h3>
+        <h3>1900s</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-25" style="display:none">
+        <h3>Памятник императору Николаю I на Исаакиевской площади.</h3>
+        <h3>Monument to Emperor Nicholas I in St. Isaac’s Square.</h3>
+        <h3>1913</h3>
+    </div>
+
+    <div class="caption caption-spb caption-spb-26" style="display:none">
+        <h3>Автомобилисты возле памятника Петру I у Михайловского замка.</h3>
+        <h3>Motorists near the monument to Peter I at St. Michael’s Castle.</h3>
+    </div>
+
+    <!-- <div id="lightgallery">
+        <a class="lg-img" href="content/Saint-petersburg/1-min.jpg" data-sub-html=".caption">
+            <img class="lg-thumbnail" src="content/Saint-petersburg/1-thumb.jpg">
+            <div class="caption" style="display:none">
+                <h3>Свято-Исидоровская церковь эстонского православного братства.</h3>
+                <h3>St. Isidorus church of Estonian Orthodox fraternity.</h3>
+                <h3>1912</h3>
+            </div>
+        </a>
+        <a class="lg-img" href="content/Saint-petersburg/2-min.jpg">
+            <img class="lg-thumbnail" src="content/Saint-petersburg/2-thumb.jpg">
+            <div class="caption" style="display:none">
+                <h3>Свято-Исидоровская церковь эстонского православного братства.</h3>
+                <h3>St. Isidorus church of Estonian Orthodox fraternity.</h3>
+                <h3>1912</h3>
+            </div>
+        </a>
+    </div>
+
+    <div id="image_container">
+        <img src="content/Saint-petersburg/1-thumb.jpg" data-bp="content/Saint-petersburg/1-min.jpg" data-caption="Example of an optional caption."/>
+        <img src="content/Saint-petersburg/2-thumb.jpg" data-bp="content/Saint-petersburg/2-min.jpg" data-caption="Example of an optional caption."/>
+    </div> -->
+
+    <!-- Light Gallery -->
+
+    <!-- <script type="text/javascript" src="js/lightgallery.min.js"></script> -->
+    <!-- <script src="../lib/lightgallery.js/src/js/lightgallery.js"></script> -->
+
+    <!--  lightgallery plugins -->
+    <!-- <script type="text/javascript" src="js/lg-thumbnail.min.js"></script> -->
+    <!-- <script src="../lib/lg-thumbnail.js/src/lg-thumbnail.js"></script> -->
+    <!-- <script type="text/javascript" src="js/lg-fullscreen.min.js"></script> -->
+    <!-- <script src="../lib/lg-fullscreen.js/src/lg-fullscreen.js"></script> -->
+
+
+
+    <!-- BIG PICTURE -->
+    <!-- https://github.com/henrygd/bigpicture -->
+    <script type="text/javascript" src="js/BigPicture.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+
+    <!-- Require JS -->
+    <!-- https://requirejs.org/docs/start.html -->
+    <!-- <script type="text/javascript" src="js/require.js"></script> -->
+
+    <!-- AOS Settings -->
+    <script type="text/javascript" src="../lib/AOS/dist/aos.js"></script>
+    <script>
+        // Global settings
+        AOS.init({
+            //  data-aos-anchor="#example-anchor"  - which element trigger
+            // offset: 200,   // data-aos-offset="500" in px when to trigger
+            // duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+            // once: false,
+            once: true,
+        });
+    </script>
+    <!-- AOS End -->
+</body>
+
+</html>

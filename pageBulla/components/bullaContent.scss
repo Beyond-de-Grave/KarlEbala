@@ -1,0 +1,76 @@
+.bulla-content{
+    // height: 72vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // padding: 0 2% 0 5%;
+    position: relative;
+}
+
+.bulla-content__text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "B52";
+    background: url("../img/frame-up.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 0 5% 0 5%;
+    position: relative;
+}
+
+.bulla-content__text-title{
+    font-size: 7vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    font-family: 'Algeria One';
+}
+
+.bulla-content__text-pattern{
+    width: 70%;
+    margin-bottom: 10%;
+}
+
+.bulla-content__text-desc{
+    font-size: 5vh;
+    margin-top: 0;
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+.bulla-content__music{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bulla-content__music-btn{
+    // width: 35%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s;
+    overflow: visible;
+    &:hover{
+        // filter: none;
+        transform: scale(1.2);
+    }
+}
+
+// COPY TO MAIN PAGE
+
+.bulla-content__music-img{
+    width: 100%;
+    position: relative;
+}
+
+.bulla-content__music-title-img{
+    width: 80%;
+    position: relative;
+    transform: translateY(-50%);
+}

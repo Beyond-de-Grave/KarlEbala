@@ -1,0 +1,99 @@
+$headerHeight: 30vh;
+
+.main-header {
+    // width: 100vw;
+    width: 100%;
+    height: $headerHeight;
+    position: relative;
+    z-index: 9999;
+    // background: url("../img/header.png");
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    // background-position-y: bottom 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vh;
+    // align-items: flex-start;
+    // justify-content: stretch;
+}
+
+.main-header__btn-left-wrapper,
+.main-header__btn-right-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // padding-top: 2vh;
+}
+
+// Give em borders
+
+.main-header__btn-left-wrapper {
+    width: 15%;
+    height: 100%;
+    background: url("../img/angle-left-up.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-left: 1vh;
+}
+
+.main-header__btn-right-wrapper {
+    // width: 20%; // For Tip
+    width: 15%; // For Sound only
+    height: 100%;
+    background: url("../img/angle-right-up.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-right: 1vh;
+}
+
+.main-header__title {
+    width: 70%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header__title-text{
+    font-size: 6vh;
+    text-align: center;
+}
+
+.main-header__title-pattern-img{
+    width: 100%;
+}
+
+.main-header__btn-wrapper{
+    padding-top: 2vh;
+}
+
+.main-header__btn-right {
+    width: 50%;
+    padding-left: 15%;
+    &:last-child{
+        padding-left: 0;
+    }
+}
+
+.main-header__btn-left-icon {
+    width: 50%;
+}
+
+.main-header__btn-right-icon {
+    width: 65%;
+}
+
+#tip-img {
+    width: 65%;
+}
+
+// /* The sticky class is added to the header with JS when it reaches its scroll position */
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+// }

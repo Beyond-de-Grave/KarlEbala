@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.86">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
+  <title>Наследие Карла Буллы</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- AOS CSS Settings before closing body tag-->
+  <!-- https://michalsnik.github.io/aos/ -->
+  <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+  <link rel="stylesheet" href="/lib/AOS/dist/aos.css">
+  <!-- Aimate CSS -->
+  <!-- https://animate.style/ -->
+  <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+  <link rel="stylesheet" href="/lib/animate.css-main/animate.css"/>
+  <!-- Favicon Icon of the cite-->
+  <link rel="shortcut icon" href="img/cursor-hover.png" type="image/x-icon">
+  <link rel="icon" href="img/cursor-hover.png" type="image/x-icon">
+
+  <!-- JS Scripts -->
+
+  <script src="/js/jquery-3.6.0.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script>
+    // Hide everything
+    // $(document).ready(function(){
+    //   $("#scroll-button").click(function(){
+    //     $("*").hide();
+    //   });
+    // });
+    // Scrolling
+    // $(document).ready(function(){
+    //   $('html, body').animate({
+    //     scrollTop: $("#main-city__title").offset().top
+    //   }, 10000);
+    // });
+  </script>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script defer type="text/javascript" src="js/animate.js"></script>
+  <script defer type="text/javascript" src="js/modal.js"></script>
+
+  <!-- WOW JS rely on Animate CSS -->
+  <!-- https://wowjs.uk/  https://wowjs.uk/docs.html -->
+  <!-- class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10" -->
+  <!-- <script src="./lib/WOWJS/dist/wow.min.js"></script>
+  <script> wow = new WOW(
+    {
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         true        // default
+    })
+    wow.init();
+  </script> -->
+
+
+
+  <!-- Youtube API webframe -->
+  <script type="text/javascript" src="js/youtube.js"></script>
+
+</head>
+
+<body id="start-box" class="main-body">
+  <div class="wrapper">
+    <!-- 1 BUTTONS AND LANGUAGE-->
+    <div class="content-wrapper">
+      <section class="start">
+        <!-- MODAL BUTTON -->
+        <div class="start-info">
+          <button class="start-info-link">
+            <img src="/img/menu-info.png" alt="Start info icon" class="main-city__menu-info-icon">
+          </button>
+        </div>
+        <!-- MODAL BUTTON -->
+        <!-- MODAL WINDOW -->
+        <div id="modal-start" class="modal modal-start">
+          <div id="close_modal-start">+</div>
+            <!-- CONTENT  -->
+        </div>
+        <!-- MODAL WINDOW -->
+        <div class="start__header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <h1 class="start__title">
+            to start scroll down
+          </h1>
+          <h1 class="start__title">
+            Чтобы начать проскрольте вниз
+          </h1>
+        </div>
+        <div class="start__img-wrap">
+          <ul class="start__list">
+            <li class="start__item" data-aos="zoom-out-up" data-aos-duration="1500">
+              <button class="start__item-fullscreen" id="fullscreen-button" type="button">
+                <img src="./img/f11.png" alt="Button F11" class="start__img">
+              </button>
+            </li>
+            <li class="start__item" data-aos="zoom-out-up" data-aos-duration="1500">
+              <button class="start__item-scroll" id="scroll-button" type="button">
+                <!-- <a href="#move-here-1"> onclick="handleButtonClick()" -->
+                <img src="./img/scrollbutton.png" alt="Button Scroll" class="start__img scroll-button">
+                <!-- </a> -->
+              </button>
+            </li>
+            <li class="start__item" data-aos="zoom-out-up" data-aos-duration="1500">
+              <button class="start__item-sound sound-button--off" id="sound-button" type="button"
+                onclick="changeSoundImage()">
+                <img src="./img/soundoff.png" alt="Button Sound" class="start__img" id="sound-img">
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="start__lang-list 2" id="lang-list">
+          <li class="start__lang-item">
+            <h1 class="start__lang-text">
+              выберите язык
+            </h1>
+            <h1 class="start__lang-text">
+              choose language
+            </h1>
+          </li>
+          <li class="start__lang-item">
+            <h1 class="start__lang-text__chose">
+              <a href="#" class="lang lang-rus">Русский</a>
+            </h1>
+            <h1 class="start__lang-text__chose">
+              <a href="#" class="lang lang-eng">English</a>
+            </h1>
+          </li>
+
+          <!--  B U T T O N S    O V E R L A Y -->
+          <!-- <button class="start__item-scroll-2" id="scroll-button-2" type="button">
+            <img src="./img/arrow-button.png" alt="Button Scroll 2" class="start__img scroll-button-2">
+          </button>
+          <button class="start__item-scroll-3" id="scroll-button-3" type="button">
+            <img src="./img/arrow-button.png" alt="Button Scroll 3" class="start__img scroll-button-3">
+          </button> -->
+
+        </ul>
+      </section>
+      <!-- 2 VIDEO-->
+      <section class="video-intro 3">
+
+        <div class="video-intro__frame" id="video-frame">
+          <div class="video-intro__item" id="video-item">
+            <!-- Youtube API video FRAME -->
+          </div>
+        </div>
+
+      </section>
+      <!-- 3  TREE  -->
+      <section class="tree">
+        <div class="tree-container">
+          <img src="/img/tree-main.png" alt="Tree That Your Don't Want to be" id="tree">
+        </div>
+      </section>
+    </div>
+    <!-- 4 MAIN MENU -->
+    <section class="main-cover 4">
+      <div class="main-city">
+        <div class="main-city__menu-container">
+          <div class="main-city__menu">
+            <!-- NAVI BUTTON -->
+            <div class="main-city__menu-bar">
+              <!-- Default Menu is hidden -->
+              <button class="main-city__menu-bar-link menu-bar--on" type="button" id="menu-bar"
+                onclick="ShowNavigation()">
+                <img src="/img/menu-bar.png" alt="Menu bar icon" class="main-city__menu-bar-icon">
+              </button> <!-- <a href="#" <button-->
+            </div>
+            <!-- NAVI BUTTON -->
+            <!-- TITLE -->
+            <div class="main-city__title" id="main-city__title">
+              <h1 class="main-city__title-text">
+                Наследие Карла Буллы
+              </h1>
+              <div class="main-city__title-pattern-container">
+                <img src="img/menu-pattern-1.png" alt="Pattern" class="main-city__title-pattern">
+              </div>
+            </div>
+            <!-- INFO BUTTON -->
+            <div class="main-city__menu-info">
+              <button class="main-city__menu-info-link">
+                <img src="/img/menu-info.png" alt="Menu info icon" class="main-city__menu-info-icon">
+              </button>
+            </div>
+            <!-- INFO BUTTON -->
+          </div>
+        </div>
+        <!-- NAVIGATION  -->
+        <div class="main-city__navigation-container">
+          <div class="main-city__navigation" id="menu-navigation">
+            <div class="main-city__navigation-img">
+              <div class="main-city__navigation-column">
+                <!-- row 1 3 item -->
+                <div class="main-city__navigation-row">
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-main-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text">
+                        Главная
+                      </h1>
+                    </button>
+                  </div>
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-karl-bulla-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text">
+                        Карл Булла
+                      </h1>
+                    </button>
+                  </div>
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-gallery-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text">
+                        Галерея
+                      </h1>
+                    </button>
+                  </div>
+                </div>
+                <!-- row 2 2 item -->
+                <div class="main-city__navigation-row">
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-time-travel-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text make-me-smaller">
+                        Путешествие в прошлое
+                      </h1>
+                    </button>
+                  </div>
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-photo-art-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text make-me-smaller">
+                        Искусство фотографии
+                      </h1>
+                    </button>
+                  </div>
+                </div>
+                <!-- row 3 1 item -->
+                <div class="main-city__navigation-row">
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-museum-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text make-me-smaller">
+                        Виртуальная экскурсия
+                      </h1>
+                    </button>
+                  </div>
+                  <div class="main-city__navigation-item">
+                    <button type="button" id="content-fond-btn" class="main-city__navigation-link">
+                      <h1 class="main-city__navigation-text make-me-smaller">
+                        Фонд Карла Буллы
+                      </h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MODAL WINDOW -->
+          <div id="modal-info" class="modal modal-info">
+            <div id="close_modal-info">+</div>
+            <!-- CONTENT  -->
+          </div>
+          <!-- MODAL WINDOW -->
+        </div>
+      </div>
+    </section>
+    <!-- 5 MENU ITEMS -->
+    <section class="main-content">
+      <div class="main-content-part-one main-content-flex 5" id="main-part-one">
+        <div class="main-content-karl-bulla main-content-container" data-aos="zoom-in-left" id="content-karl-bulla"
+          data-aos-duration="1000" data-aos-anchor="#main-part-one" data-aos-anchor-placement="top-center">
+          <div class="main-content-karl-bulla__preview">
+            <button class="main-content-karl-bulla__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/pageBulla/index.html'">
+              <img src="./img/Karl-bulla-preview.jpg" alt="Karl Bulla Preview"
+                class="main-content-karl-bulla__preview-img main-content-img">
+              <img src="./img/karl-bulla-title.png" alt="Karl Bulla Title"
+                class="main-content-karl-bulla__title-img main-content__title-img">
+            </button>
+          </div>
+          <!-- <div class="main-content-karl-bulla__title">
+            <button class="main-content-karl-bulla__button" type="button">
+              <img src="./img/karl-bulla-title.png" alt="Karl Bulla Title"
+                 class="main-content-karl-bulla__title-img">
+            </button>
+          </div> -->
+        </div>
+        <div class="main-content-gallery main-content-container" data-aos="zoom-in-right" id="content-gallery"
+          data-aos-duration="1000" data-aos-anchor="#main-part-one" data-aos-anchor-placement="top-center">
+          <div class="main-content-gallery__preview">
+            <button class="main-content-gallery__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/pageGallery/index.html'">
+              <img src="./img/gallery-preview.jpg" alt="Gallery Preview"
+                 class="main-content-gallery__preview-img main-content-img">
+              <img src="./img/gallery-title.png" alt="Gallery Title"
+                 class="main-content-gallery__title-img main-content__title-img">  
+            </button>
+          </div>
+          <!-- <div class="main-content-gallery__title">
+            <button class="main-content-gallery__button" type="button">
+              <img src="./img/gallery-title.png" alt="Gallery Title"
+                 class="main-content-gallery__title-img">
+            </button>
+          </div> -->
+        </div>
+      </div>
+      <!-- Part 2 -->
+      <div class="main-content-part-two main-content-flex 6" id="main-part-two">
+        <div class="main-content-time-travel main-content-container" data-aos="zoom-in-left" id="content-time-travel"
+          data-aos-duration="1000" data-aos-anchor="#main-part-two" data-aos-anchor-placement="top-center">
+          <div class="main-content-time-travel__preview">
+            <button class="main-content-time-travel__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/pageTravel/index.html'">
+              <img src="./img/time-travel-preview.jpg" alt="Time travel Preview"
+                class="main-content-time-travel__preview-img main-content-img">
+              <img src="./img/time-travel-title.png" alt="Time travel Title"
+                class="main-content-time-travel__title-img main-content__title-img">
+            </button>
+          </div>
+          <!-- <div class="main-content-time-travel__title">
+            <button class="main-content-time-travel__button" type="button">
+              <img src="./img/time-travel-title.png" alt="Time travel Title"
+                class="main-content-time-travel__title-img">
+            </button>
+          </div> -->
+        </div>
+        <div class="main-content-museum main-content-container" data-aos="zoom-in-right" id="content-museum"
+          data-aos-duration="1000" data-aos-anchor="#main-part-two" data-aos-anchor-placement="top-center">
+          <div class="main-content-museum__preview">
+            <button class="main-content-museum__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/page360/index.html'">
+              <img src="./img/museum-preview.jpg" alt="Museum Preview"
+                 class="main-content-museum__preview-img main-content-img">
+              <img src="./img/museum-title.png" alt="Museum Title"
+                 class="main-content-museum__title-img main-content__title-img">
+            </button>
+          </div>
+          <!-- <div class="main-content-museum__title">
+            <button class="main-content-museum__button" type="button">
+              <img src="./img/museum-title.png" alt="Museum Title"
+                 class="main-content-museum__title-img">
+            </button>
+          </div> -->
+        </div>
+      </div>
+      <!-- Part 3 -->
+      <div class="main-content-part-three main-content-flex 7" id="main-part-three">
+        <div class="main-content-photo-art main-content-container" data-aos="zoom-in-left" id="content-photo-art"
+          data-aos-duration="1000" data-aos-anchor="#main-part-three" data-aos-anchor-placement="top-center">
+          <div class="main-content-photo-art__preview">
+            <button class="main-content-photo-art__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/pagePhotoArt/index.html'">
+              <img src="./img/photo-art-preview.jpg" alt="Photo Art Preview"
+                class="main-content-photo-art__preview-img main-content-img">
+              <img src="./img/photo-art-title.png" alt="Photo Art Title"
+                class="main-content-photo-art__title-img main-content__title-img">
+            </button>
+          </div>
+          <!-- <div class="main-content-photo-art__title">
+            <button class="main-content-photo-art__button" type="button">
+              <img src="./img/photo-art-title.png" alt="Photo Art Title"
+                 class="main-content-photo-art__title-img">
+            </button>
+          </div> -->
+        </div>
+        <div class="main-content-fond main-content-container" data-aos="zoom-in-right" id="content-fond"
+          data-aos-duration="1000" data-aos-anchor="#main-part-three" data-aos-anchor-placement="top-center">
+          <div class="main-content-fond__preview">
+            <button class="main-content-fond__button main-content-btn-shadow" type="button"
+              onclick="window.location.href='/pageFond/index.html'">
+              <img src="./img/fond-preview.jpg" alt="Fond Preview"
+                 class="main-content-fond__preview-img main-content-img">
+              <img src="./img/fond-title.png" alt="Fond Title"
+                 class="main-content-fond__title-img main-content__title-img">
+            </button>
+          </div>
+          <!-- <div class="main-content-fond__title">
+            <button class="main-content-fond__button" type="button">
+              <img src="./img/fond-title.png" alt="Fond Title"
+                 class="main-content-fond__title-img">
+            </button>
+          </div> -->
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <!-- AOS Settings -->
+  <script src="./lib/AOS/dist/aos.js"></script>
+  <script>
+    // Global settings
+    AOS.init({
+      //  data-aos-anchor="#example-anchor"  - which element trigger
+      // offset: 200,   // data-aos-offset="500" in px when to trigger
+      // duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+      // once: false,
+      once: true,
+    });
+  </script>
+  <!-- AOS End -->
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Искусство Фотографии</title>
+
+    <!-- PACKAGES -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!-- CSS -->
+
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- AOS CSS Settings before closing body tag-->
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://css-tricks.com/aos-css-driven-scroll-animation-library/ -->
+    <link rel="stylesheet" href="../lib/AOS/dist/aos.css">
+    <!-- Aimate CSS -->
+    <!-- https://animate.style/ -->
+    <!-- class="animate__animated animate__bounce animate__delay-1s animate__infinite" etc -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="../lib/animate.css-main/animate.css" />
+    <!-- Favicon Icon of the cite-->
+    <link rel="shortcut icon" href="../img/cursor-hover.png" type="image/x-icon">
+    <link rel="icon" href="../img/cursor-hover.png" type="image/x-icon">
+
+    <!-- JS Scripts -->
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+
+    <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+
+    <!-- Youtube API webframe -->
+    <script type="text/javascript" src="js/youtube.js"></script>
+
+</head>
+
+<body class="photo-art-body">
+
+    <section class="main" id="main">
+
+        <div class="main-header" id="main-header">
+            <div class="main-header__btn-left-wrapper main-header__btn-wrapper">
+                <button class="button main-header__btn-left" type="button" onclick="goBack()">
+                    <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
+                </button>
+            </div>
+            <div class="main-header__title">
+                <!-- <h1 class="main-header__title-text" id="header-title">
+                        Путешествие в прошлое
+                    </h1>
+                    <div class="main-header__title-pattern">
+                        <img src="img/header-pattern.png" alt="Header pattern" class="main-header__title-pattern-img">
+                    </div> -->
+            </div>
+            <div class="main-header__btn-right-wrapper main-header__btn-wrapper">
+                <button class="button main-header__btn-right" id="tip-button" type="button">
+                    <img src="img/tip.png" alt="Tip button icon" class="main-header__btn-right-icon" id="tip-img">
+                </button>
+                <button class="button main-header__btn-right sound-button--off" id="sound-button"
+                    onclick="changeSoundImage()" type="button">
+                    <img src="img/soundoff.png" alt="Sound button icon" class="main-header__btn-right-icon"
+                        id="sound-img">
+                </button>
+            </div>
+        </div>
+
+        <div class="video-wrapper">
+            <!-- The video -->
+            <video autoplay muted loop id="video-background">
+                <source src="content/video-background.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="footer-wrapper">
+            <div class="footer">
+                <div class="footer__btn-left">
+                    <!-- <div class="footer__btn-left-wrapper">
+                        <button id="footer-btn-left" class="footer__btn" type="button" onclick="">
+                            <img src="img/up.png" alt="Btn left" class="footer__icon-left">
+                        </button>
+                    </div> -->
+                </div>
+                <div class="footer__span">
+
+                </div>
+                <div class="footer__btn-right">
+                    <div class="footer__btn-right-wrapper">
+                        <button id="footer-btn-right" class="footer__btn" type="button" onclick="">
+                            <img src="img/lang.png" alt="Language right" class="footer__icon-right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about 2">
+        <div class="about__wrapper">
+            <h1 class="about__title" id="about-1">
+                О разделе
+            </h1>
+            <div class="about__pattern-wrapper">
+                <img src="img/pattern.png" alt="About pattern" class="about__pattern">
+            </div>
+            <div class="about__text-wrapper">
+                <p class="about__text" id="about-2">
+                    В данном разделе находится фильм о человеке, который создает фотографии на стекле и бумаге по
+                    старинным
+                    технологиям.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="content__img-wrapper">
+            <img src="img/rope.png" alt="Rope" class="content__img rope-img">
+        </div>
+
+        <div class="video-version">
+            <div class="frame 3">
+                <div class="video-intro__frame" id="video-frame">
+                    <div class="video-intro__item" id="video-item">
+                        <!-- Youtube API video FRAME -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__ambr-wrapper">
+            <img src="img/ambrotip.png" alt="Ambrotip" class="content__img ambr-img">
+        </div>
+
+        <div class="black-footer 4">
+
+        </div>
+    </section>
+
+
+    <!-- HIDDEN CONTENT  -->
+    <div class="info-content" id="tip-content" style="display: none;">
+        <img src="img/tip-content.jpg" alt="Info content">
+    </div>
+
+    <!-- AOS Settings -->
+    <script type="text/javascript" src="../lib/AOS/dist/aos.js"></script>
+    <script>
+        // Global settings
+        AOS.init({
+            //  data-aos-anchor="#example-anchor"  - which element trigger
+            // offset: 200,   // data-aos-offset="500" in px when to trigger
+            // duration: 600,
+            easing: 'ease-in-sine',
+            delay: 100,
+            // once: false,
+            once: true,
+        });
+    </script>
+    <!-- AOS End -->
+</body>
+
+</html>

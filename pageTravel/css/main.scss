@@ -1,0 +1,25 @@
+// REMEBER BROTHER
+//           /   = Root directory
+//           .   = This location
+//           ..  = Up a directory
+//          ./  = Current directory
+//           ../ = Parent of current directory
+//           ../../ = Two directories backwards
+
+@import "../../components/various.scss";
+@import "../../components/general.scss";
+@import "../../components/fonts.scss";   // Better Load from the root main.css
+@import "../../components/animations.scss";
+// @import "../../components/infoModal.scss";
+
+// Page Gallery
+
+@import "../components/pageTravel.scss";
+@import "../components/start.scss";
+@import "../components/header.scss";
+@import "../components/about.scss";
+@import "../components/content.scss";
+@import "../components/slider.scss";
+@import "../components/video.scss";
+@import "../components/footer.scss";
+
