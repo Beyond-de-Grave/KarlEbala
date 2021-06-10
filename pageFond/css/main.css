@@ -277,10 +277,9 @@ body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duratio
 
 .main-header__btn-right {
   width: 50%;
-  padding-left: 15%;
 }
 .main-header__btn-right:last-child {
-  padding-left: 0;
+  padding-right: 16%;
 }
 
 .main-header__btn-left-icon {
@@ -288,7 +287,7 @@ body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .main-header__btn-right-icon {
-  width: 65%;
+  width: 70%;
 }
 
 #tip-img {
