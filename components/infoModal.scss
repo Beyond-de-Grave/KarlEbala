@@ -3,7 +3,7 @@
     position: fixed;
     top: 5%;
     left: 5%;
-    bottom: 25%;
+    bottom: 8%;
     right: 5%;
     z-index: 99999;
     border-radius: 10px;
@@ -12,13 +12,20 @@
 // Editing Part
 
 .modal-info{
-    background: url("/img/tip-info.png") center center no-repeat;
+    // background: url("/img/tip-info.png") center center no-repeat;
+    background-image: url("/img/tip-info.png");
+    background-position: center center;
+    background-repeat: no-repeat;
     background-color: rgb(0, 0, 0);
     background-size: 65% auto;
+    bottom: 25%;
 }
 
 .modal-start{
-    background: url("/img/tip-start.png") center center no-repeat;
+    // background: url("/img/tip-start.png") center center no-repeat;
+    background-image: url("/img/tip-start.png");
+    background-position: center center;
+    background-repeat: no-repeat;
     background-color: rgb(0, 0, 0);
     background-size: 80% auto;
 }

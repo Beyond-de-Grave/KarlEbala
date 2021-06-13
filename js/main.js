@@ -144,3 +144,115 @@ function findSection(numberOfSections){
         };
     };
 };
+
+//   L A N G U A G E
+var translated = false;
+window.selectedLanguage = "ru";
+// var selectedLanguage = "eng";
+document.addEventListener('DOMContentLoaded', function() {    
+    $("#ru-lang-button").click(function (event) {
+        event.preventDefault();
+        translated = false;
+        clickSoundThree.play();
+        window.selectedLanguage = "ru";
+        translatePage(translated);
+    });
+    $("#eng-lang-button").click(function (event) {
+        event.preventDefault();
+        translated = true;
+        clickSoundThree.play();
+        window.selectedLanguage = "eng";
+        translatePage(translated);
+    });
+    $("#lang-button").click(function () {
+        translated = !translated;
+        clickSoundThree.play();
+        if (translated) {
+            window.selectedLanguage = "eng";
+            translatePage(translated);
+            // alert("Page translated!")
+        } else {
+            translatePage(translated);
+            window.selectedLanguage = "ru";
+        };
+    });
+});
+
+function translatePage(translated){
+    if(!translated){   
+        document.getElementById("content-1").textContent = "Наследие Карла Буллы";
+        document.getElementById("content-2").textContent = "Главная";
+        document.getElementById("content-3").textContent = "Карл Булла";
+        document.getElementById("content-4").textContent = "Галерея";
+        document.getElementById("content-5").textContent = "Путешествие в прошлое";
+        document.getElementById("content-6").textContent = "Искусство фотографии";
+        document.getElementById("content-7").textContent = "Виртуальная экскурсия";
+        document.getElementById("content-8").textContent = "Фонд Карла Буллы";
+        document.getElementById("modal-info").style.backgroundImage = "url('img/tip-info.png')";
+        document.getElementById("modal-start").style.backgroundImage = "url('img/tip-start.png')";
+        
+        document.getElementById("button-1").src = "img/karl-bulla-title.png";
+        document.getElementById("button-2").src = "img/gallery-title.png";
+        document.getElementById("button-3").src = "img/time-travel-title.png";
+        document.getElementById("button-4").src = "img/museum-title.png";
+        document.getElementById("button-5").src = "img/photo-art-title.png";
+        document.getElementById("button-6").src = "img/fond-title.png";
+
+    }else if(translated){  
+        document.getElementById("content-1").textContent = "Legacy of Karl Bulla";
+        document.getElementById("content-2").textContent = "Main";
+        document.getElementById("content-3").textContent = "Karl Bulla";
+        document.getElementById("content-4").textContent = "Gallery";
+        document.getElementById("content-5").textContent = "Travel to the past";
+        document.getElementById("content-6").textContent = "Photo Art";
+        document.getElementById("content-7").textContent = "Virtual tour";
+        document.getElementById("content-8").textContent = "Karl Bulla Foundation";
+        document.getElementById("modal-info").style.backgroundImage = "url('img/tip-info-eng.png')";
+        document.getElementById("modal-start").style.backgroundImage = "url('img/tip-start-eng.png')";
+
+        document.getElementById("button-1").src = "img/karl-bulla-title-eng.png";
+        document.getElementById("button-2").src = "img/gallery-title-eng.png";
+        document.getElementById("button-3").src = "img/time-travel-title-eng.png";
+        document.getElementById("button-4").src = "img/museum-title-eng.png";
+        document.getElementById("button-5").src = "img/photo-art-title-eng.png";
+        document.getElementById("button-6").src = "img/fond-title-eng.png";
+
+    }; 
+};
+
+
+// //   L A N G U A G E
+// var translated = false;
+// window.selectedLanguage = "ru";
+// // var selectedLanguage = "eng";
+// document.addEventListener('DOMContentLoaded', function() {    
+//     $("#lang-button").click(function () {
+//         translated = !translated;
+//         clickSoundThree.play();
+//         if (translated) {
+//             window.selectedLanguage = "eng";
+//             translatePage(translated);
+//             // alert("Page translated!")
+//         } else {
+//             translatePage(translated);
+//             window.selectedLanguage = "ru";
+//         };
+//     });
+// });
+
+// function translatePage(translated){
+//     if(!translated){
+//         // document.querySelector(".main-city__title-text").textContent = "Галерея";
+        
+//         document.getElementById("header-title").textContent = "ФОНД ИСТОРИЧЕСКОЙ ФОТОГРАФИИ ИМЕНИ КАРЛА БУЛЛЫ";
+
+
+//     }else if(translated){
+
+//         // document.querySelector(".main-city__title-text").textContent = "Gallery";
+        
+//         document.getElementById("header-title").textContent = "Karl Bulla Foundation for Historical Photography";
+
+
+//     };
+// };

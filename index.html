@@ -131,10 +131,10 @@
           </li>
           <li class="start__lang-item">
             <h1 class="start__lang-text__chose">
-              <a href="#" class="lang lang-rus">Русский</a>
+              <a href="#" class="lang lang-rus" id="ru-lang-button">Русский</a>
             </h1>
             <h1 class="start__lang-text__chose">
-              <a href="#" class="lang lang-eng">English</a>
+              <a href="#" class="lang lang-eng" id="eng-lang-button">English</a>
             </h1>
           </li>
 
@@ -181,7 +181,7 @@
             <!-- NAVI BUTTON -->
             <!-- TITLE -->
             <div class="main-city__title" id="main-city__title">
-              <h1 class="main-city__title-text">
+              <h1 class="main-city__title-text" id="content-1">
                 Наследие Карла Буллы
               </h1>
               <div class="main-city__title-pattern-container">
@@ -190,8 +190,11 @@
             </div>
             <!-- INFO BUTTON -->
             <div class="main-city__menu-info">
+              <button class="main-city__menu-lang-link">
+                <img src="img/lang.png" alt="Menu lang icon" class="main-city__menu-lang-icon" id="lang-button">
+              </button>
               <button class="main-city__menu-info-link">
-                <img src="/img/menu-info.png" alt="Menu info icon" class="main-city__menu-info-icon">
+                <img src="img/menu-info.png" alt="Menu info icon" class="main-city__menu-info-icon">
               </button>
             </div>
             <!-- INFO BUTTON -->
@@ -206,21 +209,21 @@
                 <div class="main-city__navigation-row">
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-main-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text">
+                      <h1 class="main-city__navigation-text" id="content-2">
                         Главная
                       </h1>
                     </button>
                   </div>
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-karl-bulla-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text">
+                      <h1 class="main-city__navigation-text" id="content-3">
                         Карл Булла
                       </h1>
                     </button>
                   </div>
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-gallery-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text">
+                      <h1 class="main-city__navigation-text" id="content-4">
                         Галерея
                       </h1>
                     </button>
@@ -230,14 +233,14 @@
                 <div class="main-city__navigation-row">
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-time-travel-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text make-me-smaller">
+                      <h1 class="main-city__navigation-text make-me-smaller" id="content-5">
                         Путешествие в прошлое
                       </h1>
                     </button>
                   </div>
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-photo-art-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text make-me-smaller">
+                      <h1 class="main-city__navigation-text make-me-smaller" id="content-6">
                         Искусство фотографии
                       </h1>
                     </button>
@@ -247,14 +250,14 @@
                 <div class="main-city__navigation-row">
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-museum-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text make-me-smaller">
+                      <h1 class="main-city__navigation-text make-me-smaller" id="content-7">
                         Виртуальная экскурсия
                       </h1>
                     </button>
                   </div>
                   <div class="main-city__navigation-item">
                     <button type="button" id="content-fond-btn" class="main-city__navigation-link">
-                      <h1 class="main-city__navigation-text make-me-smaller">
+                      <h1 class="main-city__navigation-text make-me-smaller" id="content-8">
                         Фонд Карла Буллы
                       </h1>
                     </button>
@@ -278,12 +281,12 @@
         <div class="main-content-karl-bulla main-content-container" data-aos="zoom-in-left" id="content-karl-bulla"
           data-aos-duration="1000" data-aos-anchor="#main-part-one" data-aos-anchor-placement="top-center">
           <div class="main-content-karl-bulla__preview">
-            <button class="main-content-karl-bulla__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-karl-bulla__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/pageBulla/index.html'">
               <img src="./img/Karl-bulla-preview.jpg" alt="Karl Bulla Preview"
                 class="main-content-karl-bulla__preview-img main-content-img">
               <img src="./img/karl-bulla-title.png" alt="Karl Bulla Title"
-                class="main-content-karl-bulla__title-img main-content__title-img">
+                class="main-content-karl-bulla__title-img main-content__title-img" id="button-1">
             </button>
           </div>
           <!-- <div class="main-content-karl-bulla__title">
@@ -296,12 +299,12 @@
         <div class="main-content-gallery main-content-container" data-aos="zoom-in-right" id="content-gallery"
           data-aos-duration="1000" data-aos-anchor="#main-part-one" data-aos-anchor-placement="top-center">
           <div class="main-content-gallery__preview">
-            <button class="main-content-gallery__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-gallery__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/pageGallery/index.html'">
               <img src="./img/gallery-preview.jpg" alt="Gallery Preview"
                  class="main-content-gallery__preview-img main-content-img">
               <img src="./img/gallery-title.png" alt="Gallery Title"
-                 class="main-content-gallery__title-img main-content__title-img">  
+                 class="main-content-gallery__title-img main-content__title-img" id="button-2">  
             </button>
           </div>
           <!-- <div class="main-content-gallery__title">
@@ -317,12 +320,12 @@
         <div class="main-content-time-travel main-content-container" data-aos="zoom-in-left" id="content-time-travel"
           data-aos-duration="1000" data-aos-anchor="#main-part-two" data-aos-anchor-placement="top-center">
           <div class="main-content-time-travel__preview">
-            <button class="main-content-time-travel__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-time-travel__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/pageTravel/index.html'">
               <img src="./img/time-travel-preview.jpg" alt="Time travel Preview"
                 class="main-content-time-travel__preview-img main-content-img">
               <img src="./img/time-travel-title.png" alt="Time travel Title"
-                class="main-content-time-travel__title-img main-content__title-img">
+                class="main-content-time-travel__title-img main-content__title-img" id="button-3">
             </button>
           </div>
           <!-- <div class="main-content-time-travel__title">
@@ -335,12 +338,12 @@
         <div class="main-content-museum main-content-container" data-aos="zoom-in-right" id="content-museum"
           data-aos-duration="1000" data-aos-anchor="#main-part-two" data-aos-anchor-placement="top-center">
           <div class="main-content-museum__preview">
-            <button class="main-content-museum__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-museum__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/page360/index.html'">
               <img src="./img/museum-preview.jpg" alt="Museum Preview"
                  class="main-content-museum__preview-img main-content-img">
               <img src="./img/museum-title.png" alt="Museum Title"
-                 class="main-content-museum__title-img main-content__title-img">
+                 class="main-content-museum__title-img main-content__title-img" id="button-4">
             </button>
           </div>
           <!-- <div class="main-content-museum__title">
@@ -356,12 +359,12 @@
         <div class="main-content-photo-art main-content-container" data-aos="zoom-in-left" id="content-photo-art"
           data-aos-duration="1000" data-aos-anchor="#main-part-three" data-aos-anchor-placement="top-center">
           <div class="main-content-photo-art__preview">
-            <button class="main-content-photo-art__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-photo-art__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/pagePhotoArt/index.html'">
               <img src="./img/photo-art-preview.jpg" alt="Photo Art Preview"
                 class="main-content-photo-art__preview-img main-content-img">
               <img src="./img/photo-art-title.png" alt="Photo Art Title"
-                class="main-content-photo-art__title-img main-content__title-img">
+                class="main-content-photo-art__title-img main-content__title-img" id="button-5">
             </button>
           </div>
           <!-- <div class="main-content-photo-art__title">
@@ -374,12 +377,12 @@
         <div class="main-content-fond main-content-container" data-aos="zoom-in-right" id="content-fond"
           data-aos-duration="1000" data-aos-anchor="#main-part-three" data-aos-anchor-placement="top-center">
           <div class="main-content-fond__preview">
-            <button class="main-content-fond__button main-content-btn-shadow" type="button"
+            <button class="main-content-button main-content-fond__button main-content-btn-shadow" type="button"
               onclick="window.location.href='/pageFond/index.html'">
               <img src="./img/fond-preview.jpg" alt="Fond Preview"
                  class="main-content-fond__preview-img main-content-img">
               <img src="./img/fond-title.png" alt="Fond Title"
-                 class="main-content-fond__title-img main-content__title-img">
+                 class="main-content-fond__title-img main-content__title-img" id="button-6">
             </button>
           </div>
           <!-- <div class="main-content-fond__title">

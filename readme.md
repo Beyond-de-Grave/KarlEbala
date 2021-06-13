@@ -12,8 +12,9 @@ git clone git@github.com:Beyond-de-Grave/KarlEbala.git
 
 ## Полная версия сайта 
 
-Сайт доступен для ознакомления на удаленном сервере по следующим адресам: [здесь][citeDomain] и [здесь][citeIp].
+Сайт доступен для ознакомления на нашем удаленном [ресурсе][citeDomain]
+
 Для максимального погружения рекомендуется открывать сайт с персонального компьютера (PC).
 
-[citeIp]: http://141.95.1.217/ "Karl Bulla life"
-[citeDomain]: http://www.karl-bulla.life/ "Karl Bulla life"
+<!-- [citeIp]: http://141.95.1.217/ "Karl Bulla life" -->
+[citeDomain]: https://karl-bulla.life:80/ "Karl Bulla life"

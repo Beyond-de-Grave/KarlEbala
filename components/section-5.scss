@@ -15,20 +15,36 @@
     // transform: translateY(-12%);
 }
 
+.main-content-button{
+    filter: grayscale(1);
+    transition: filter 2s, transform 2s;
+    &:hover{
+        overflow: visible;
+        transform: scale(1.1);
+        filter: none;
+    }
+}
+
 // https://www.w3schools.com/css/css3_transitions.asp
 .main-content-img{
     position: relative;
     z-index: 100;
     border: solid 20px white;
-    filter: grayscale(1);
-    // transition: filter 2s;
-    transition: filter 2s, transform 2s, border 2s;
-    &:hover{
-        overflow: visible;
-        border: solid 40px white;
-        transform: scale(1.05);
-        filter: none;
-    }
+
+    // box-sizing: content-box | border-box | padding-box;
+    box-sizing: padding-box;
+    // box-sizing: border-box;
+    // box-sizing: content-box;
+
+    // filter: grayscale(1);
+    // // transition: filter 2s;
+    // transition: filter 2s, transform 2s, border 2s;
+    // &:hover{
+    //     overflow: visible;
+    //     border: solid 20px white;
+    //     transform: scale(1.05);
+    //     filter: none;
+    // }
 }
 
 .main-content-btn-shadow{
