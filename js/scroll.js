@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (event.code == 'ArrowDown') {
             event.preventDefault(); // Disable default action
+
+            // Check for undefined value in Google Chrome
+            if (checkCurrentSection == undefined){checkCurrentSection = 3;};
+
             if (checkCurrentSection < numberOfSections){checkCurrentSection += 1;};
             // Escape UNICODE symbol
             // https://stackoverflow.com/questions/20306204/using-queryselector-with-ids-that-are-numbers
@@ -114,6 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (event.code == 'ArrowUp') {
             event.preventDefault(); // Disable default action
+
+            // Check for undefined value in Google Chrome
+            if (checkCurrentSection == undefined){checkCurrentSection = 5;};
+
             if (checkCurrentSection > 1){checkCurrentSection -= 1;};
             // var currentSection = document.getElementById(checkCurrentSection.toString(10));
             var currentSection = document.querySelector(".\\3"+checkCurrentSection.toString(10));
