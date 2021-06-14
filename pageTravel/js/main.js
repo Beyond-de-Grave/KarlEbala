@@ -168,6 +168,7 @@ function translatePage(translated) {
     document.getElementById("content-6").textContent =
       "Невский проспект возле Большого Гостиного двора";
 
+    $("img#tip-data").attr("src", "img/tip-content.jpg");
     // document.getElementById("modal-info").style.backgroundImage =
     //   "url('img/tip-info.png')";
     // document.getElementById("modal-start").style.backgroundImage =
@@ -196,6 +197,7 @@ function translatePage(translated) {
     document.getElementById("content-6").textContent =
       "Nevsky Prospect near Bolshoy Gostiny Dvor";
 
+    $("img#tip-data").attr("src", "img/tip-content-eng.png");
     // document.getElementById("modal-info").style.backgroundImage =
     //   "url('img/tip-info-eng.png')";
     // document.getElementById("modal-start").style.backgroundImage =

@@ -159,6 +159,9 @@ function translatePage(translated) {
     document.getElementById("map-text").textContent =
       "Санкт-Петербург, Невский проспект 54.";
     document.getElementById("add-1").textContent = "Музеи Фонда";
+    $("img#button-1").attr("src", "img/button-one.jpg");
+    $("img#button-2").attr("src", "img/button-two.jpg");
+    $("img#button-3").attr("src", "img/button-three.jpg");
   } else if (translated) {
     // document.querySelector(".main-city__title-text").textContent = "Gallery";
 
@@ -186,5 +189,8 @@ function translatePage(translated) {
     document.getElementById("map-text").textContent =
       "Saint-Petersburg, Nevsky prospect 54.";
     document.getElementById("add-1").textContent = "Foundation Museums";
+    $("img#button-1").attr("src", "img/button-one-eng.jpg");
+    $("img#button-2").attr("src", "img/button-two-eng.jpg");
+    $("img#button-3").attr("src", "img/button-three-eng.jpg");
   }
 }

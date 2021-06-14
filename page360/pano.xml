@@ -20,7 +20,7 @@
       <label background="1" textalpha="1" border="1" width="180" wordwrap="1" borderradius="1" bordercolor="0x000000" enabled="1" textcolor="0x000000" height="20" borderalpha="1" backgroundcolor="0xffffff" backgroundalpha="1"/>
       <polystyle handcursor="1" bordercolor="0x0000ff" mode="0" borderalpha="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>
       <hotspot skinid="ht_node" tilt="-19.78" description="" pan="-237.49" target="" url="{node2}" id="Point01" title="Панорамный зал"/>
-      <hotspot skinid="ht_node" tilt="-1.13" description="" pan="-139.52" target="" url="{node1}" id="Point02" title="Циклорама"/>
+      <hotspot skinid="ht_node" tilt="-1.13" description="" pan="-139.52" target="" url="{node1}" id="Point02" title="Световой павильон"/>
       <hotspot skinid="ht_node" tilt="-10.01" description="" pan="-123.76" target="" url="{node6}" id="Point03" title="Главный зал 2"/>
     </hotspots>
     <media/>
@@ -43,7 +43,7 @@
       <min tilt="-90" fovpixel="2" pan="0"/>
       <max tilt="90" scaletofit="1" pan="360" fovstereographic="270" fovfisheye="360" fov="120"/>
     </view>
-    <userdata description="" latitude="" copyright="" tags="Обработанные панорамы" datetime="03.02.2021 12:26" author="" source="" customnodeid="" comment="" title="Циклорама" info="" longitude=""/>
+    <userdata description="" latitude="" copyright="" tags="Обработанные панорамы" datetime="03.02.2021 12:26" author="" source="" customnodeid="" comment="" title="Световой павильон" info="" longitude=""/>
     <hotspots width="180" wordwrap="1" height="20">
       <label background="1" textalpha="1" border="1" width="180" wordwrap="1" borderradius="1" bordercolor="0x000000" enabled="1" textcolor="0x000000" height="20" borderalpha="1" backgroundcolor="0xffffff" backgroundalpha="1"/>
       <polystyle handcursor="1" bordercolor="0x0000ff" mode="0" borderalpha="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098"/>

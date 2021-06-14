@@ -60,7 +60,7 @@
 
     <section class="bulla-intro">
         <!-- HEADER -->
-        <div class="bulla-header-wrapper">
+        <div class="bulla-header-wrapper" id="header-image">
             <div class="main-header" id="main-header">
                 <div class="main-header__btn-left-wrapper">
                     <button class="main-header__btn-left" type="button" onclick="goBack()">
@@ -74,7 +74,7 @@
                     <button class="main-header__btn-right" id="tip-button" type="button">
                         <img src="img/tip.png" alt="Tip button icon" class="main-header__btn-right-icon" id="tip-img">
                     </button>
-                    <button class="main-header__btn-right" id="lang-btn" type="button">
+                    <button class="main-header__btn-right" id="lang-button" type="button">
                         <img src="img/language.png" alt="Language button icon" class="main-header__btn-right-icon"
                             id="lang-img">
                     </button>
@@ -83,11 +83,11 @@
         </div>
         <div class="bulla-content">
             <div class="bulla-content__text">
-                <h1 class="bulla-content__text-title">
+                <h1 class="bulla-content__text-title" id="about-1">
                     О разделе:
                 </h1>
                 <img src="img/pattern-one-up.png" alt="pattern-one-up" class="bulla-content__text-pattern">
-                <h2 class="bulla-content__text-desc">
+                <h2 class="bulla-content__text-desc" id="about-2">
                     В данном разделе содержится информация о биографии, жизни и творчестве Карла Буллы и
                     его сыновей.
                 </h2>
@@ -95,7 +95,7 @@
             <div class="bulla-content__music">
                 <button class="bulla-content__music-btn" type="button">
                     <img class="bulla-content__music-img" src="img/music.png" alt="Music bulla">
-                    <img class="bulla-content__music-title-img" src="img/music-title.png" alt="Music title bulla">
+                    <img class="bulla-content__music-title-img" src="img/music-title.png" alt="Music title bulla" id="music-title">
                 </button>
             </div>
         </div>
@@ -105,7 +105,7 @@
                     <!-- <h1 class="button-button-panel__text">
                         Начало пути
                     </h1> -->
-                    <img src="img/button-1.png" alt="Button 1" class="button-panel__img">
+                    <img src="img/button-1.png" alt="Button 1" class="button-panel__img" id="button-1">
                 </button>
             </div>
             <div class="bulla-button-panel__item">
@@ -113,7 +113,7 @@
                     <!-- <h1 class="button-button-panel__text">
                         Расцвет карьеры
                     </h1> -->
-                    <img src="img/button-2.png" alt="Button 2" class="button-panel__img">
+                    <img src="img/button-2.png" alt="Button 2" class="button-panel__img" id="button-2">
                 </button>
             </div>
             <div class="bulla-button-panel__item">
@@ -121,7 +121,7 @@
                     <!-- <h1 class="button-button-panel__text">
                         Эмиграция
                     </h1> -->
-                    <img src="img/button-3.png" alt="Button 3" class="button-panel__img">
+                    <img src="img/button-3.png" alt="Button 3" class="button-panel__img" id="button-3">
                 </button>
             </div>
         </div>
@@ -137,7 +137,7 @@
     </section>
 
     <section class="video-version 3">
-        <div class="frame">
+        <div class="frame" id="frame-video-frame">
             <div class="video-intro__frame" id="video-frame">
                 <div class="video-intro__item" id="video-item">
                   <!-- Youtube API video FRAME -->
@@ -148,7 +148,7 @@
 
     <!-- HIDDEN CONTENT  -->
     <div class="info-content" id="info-content" style="display: none;">
-        <img src="img/tip-content.jpg" alt="Info content">
+        <img src="img/tip-content.jpg" alt="Info content" id="tip-data">
     </div>
 
     <!-- AOS Settings -->
