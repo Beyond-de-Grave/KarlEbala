@@ -4,8 +4,6 @@
 // x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
 // // this would turn the 1st iframe in document blue.
 
-
-
 // var e = jQuery.Event("keydown");
 // // e.which is used to set the keycode
 // // e.which = 38; // it is up
@@ -22,106 +20,109 @@
 
 // https://betacode.net/12319/javascript-keyboardevent
 // document.dispatchEvent(new KeyboardEvent('keydown',{'code':40}));
-// const downArrowEvent = new KeyboardEvent('keydown', {'keyCode':40, 'which':40}); 
-// document.dispatchEvent(downArrowEvent); 
+// const downArrowEvent = new KeyboardEvent('keydown', {'keyCode':40, 'which':40});
+// document.dispatchEvent(downArrowEvent);
 // window.parent.document.dispatchEvent(downArrowEvent);
 
-var player, playing = false;
+var player,
+  playing = false;
 
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video-item', {
-        height: '480',
-        width: '800',
-        videoId: 'a6ujrnph2cs',
-        playerVars: {
-            autoplay: 0, // none, 1 - start after player downloading
-            frameborder: 0,
-            wmode: "transparent",
-            cc_load_policy: 0, // hiden titles
-            color: "white", // red \ white
-            controls: 1, // 0 - not shown in player , 1-2 same (2 - faster) 
-            disablekb: 1, // 0\1 control buttons (space=play, -> = 10%, |^ = louder etc ) 
-            enablejsapi: 1, // enable API Javascript
-            // end: 10, // Positive int in sec when end video
-            fs: 1, // 1 - show fullscreen button
-            // hl: ru, // ru\en Interface language of the player
-            iv_load_policy: 3, // 1 - show annotation , 3 - hide
-            // list: , // search => поисковый запрос,  user_uploads => канал из которого загружаются видео, playlist => list=PLC77007E23FF423C6 e.g. PL + Id of the playlist   
-            // listType: , //  playlist, search и user_uploads. If use list -- no need for videoId
-            loop: 0, // 1 - infinite loop
-            modestbranding: 1, // 1 - not show Youtube logo
-            // origin: , // Указывать свой домен при использовании iFrame API
-            // playlist: , // Разделенные запятой videoId
-            // playsinline: , // Непониль ...
-            rel: 0, // 1 -Play related video after playback
-            showinfo: 0, // show author
-            // start: 0, // 
-        },
-        events: {
-            'onStateChange': onPlayerStateChange
-            // 'onkeydown': youTubeKeyDown    // custom event 
-        }
-    });
+  player = new YT.Player("video-item", {
+    height: "480",
+    width: "800",
+    videoId: "a6ujrnph2cs",
+    playerVars: {
+      autoplay: 0, // none, 1 - start after player downloading
+      frameborder: 0,
+      wmode: "transparent",
+      cc_load_policy: 0, // hiden titles
+      color: "white", // red \ white
+      controls: 1, // 0 - not shown in player , 1-2 same (2 - faster)
+      disablekb: 1, // 0\1 control buttons (space=play, -> = 10%, |^ = louder etc )
+      enablejsapi: 1, // enable API Javascript
+      // end: 10, // Positive int in sec when end video
+      fs: 1, // 1 - show fullscreen button
+      // hl: ru, // ru\en Interface language of the player
+      iv_load_policy: 3, // 1 - show annotation , 3 - hide
+      // list: , // search => поисковый запрос,  user_uploads => канал из которого загружаются видео, playlist => list=PLC77007E23FF423C6 e.g. PL + Id of the playlist
+      // listType: , //  playlist, search и user_uploads. If use list -- no need for videoId
+      loop: 0, // 1 - infinite loop
+      modestbranding: 1, // 1 - not show Youtube logo
+      // origin: , // Указывать свой домен при использовании iFrame API
+      // playlist: , // Разделенные запятой videoId
+      // playsinline: , // Непониль ...
+      rel: 0, // 1 -Play related video after playback
+      showinfo: 0, // show author
+      // start: 0, //
+    },
+    events: {
+      onStateChange: onPlayerStateChange,
+      // 'onkeydown': youTubeKeyDown    // custom event
+    },
+  });
 }
 // video ---> id of div
 // https://developers.google.com/youtube/iframe_api_reference
-      // 5. The API calls this function when the player's state changes.
-      // The function indicates that when playing a video (state=1),
-      // -1 unstarted 
-      // 0 ended 
-      // 1 playing
-      // 2 paused
-      // 3 buffering
-      // 5 video cued
+// 5. The API calls this function when the player's state changes.
+// The function indicates that when playing a video (state=1),
+// -1 unstarted
+// 0 ended
+// 1 playing
+// 2 paused
+// 3 buffering
+// 5 video cued
 
-    //   YT.PlayerState.ENDED
-    //   YT.PlayerState.PLAYING
-    //   YT.PlayerState.PAUSED
-    //   YT.PlayerState.BUFFERING
-    //   YT.PlayerState.CUED
+//   YT.PlayerState.ENDED
+//   YT.PlayerState.PLAYING
+//   YT.PlayerState.PAUSED
+//   YT.PlayerState.BUFFERING
+//   YT.PlayerState.CUED
 
-    //   var done = false;
+//   var done = false;
 
 function onPlayerStateChange(event) {
-    console.log(event);
-    if (event.data == YT.PlayerState.PLAYING){
-        if (audioclicked) {
-            audio.pause();
-        }
-        spinningFilmSound.pause();
-    };
+  console.log(event);
+  if (event.data == YT.PlayerState.PLAYING) {
+    if (audioClicked) {
+      audio.pause();
+    }
+    spinningFilmSound.pause();
+  }
 
-    if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED) {
-        if (audioclicked) {
-            audio.play();
-        };
-   
-        // const videoFrame = window.parent.document.getElementById("video-frame");
-        // videoFrame.focus();
-        // videoFrame.click();
-        // document.dispatchEvent(downArrowEvent); 
-        // window.parent.document.dispatchEvent(downArrowEvent);
-        // window.parent.document.getElementById('video-frame').click();
-        // $("#video-frame").trigger(e);
-        // $(document).trigger(e);
-        // $('#video-frame').focus();
-        // $(document).trigger('click');
-        // $('#video-frame').trigger('click');
-    };
-};
+  if (
+    event.data == YT.PlayerState.ENDED ||
+    event.data == YT.PlayerState.PAUSED
+  ) {
+    if (audioClicked) {
+      audio.play();
+    }
+
+    // const videoFrame = window.parent.document.getElementById("video-frame");
+    // videoFrame.focus();
+    // videoFrame.click();
+    // document.dispatchEvent(downArrowEvent);
+    // window.parent.document.dispatchEvent(downArrowEvent);
+    // window.parent.document.getElementById('video-frame').click();
+    // $("#video-frame").trigger(e);
+    // $(document).trigger(e);
+    // $('#video-frame').focus();
+    // $(document).trigger('click');
+    // $('#video-frame').trigger('click');
+  }
+}
 
 // On blur event ??
 
 // window.addEventListener('blur',function(){
-//     // const targetBlock = document.getElementById("video-frame");	
-//     window.setTimeout(function () {	
+//     // const targetBlock = document.getElementById("video-frame");
+//     window.setTimeout(function () {
 //     if (document.activeElement instanceof HTMLIFrameElement) {
 //         console.log("iframe click");
 //         body.focus();
 //     }
 //     }, 0);
 // });
-
 
 // $(document).ready(function(){
 //     $("iframe").load(function(){
@@ -131,7 +132,6 @@ function onPlayerStateChange(event) {
 //         });
 //     });
 // });
-
 
 // var iframeMouseOver = false;
 // $("#video-item")
@@ -152,7 +152,7 @@ function onPlayerStateChange(event) {
 //     if (!playing) {
 //         // alert('onPlay is clicked'); //Just to check
 
-//         if (audioclicked) {
+//         if (audioClicked) {
 //             audio.pause();
 //         }
 //         spinningFilmSound.pause();
@@ -166,7 +166,7 @@ function onPlayerStateChange(event) {
 
 //     } else if (playing) {
 
-//         if (audioclicked) {
+//         if (audioClicked) {
 //             audio.play();
 //         }
 
@@ -181,9 +181,8 @@ function onPlayerStateChange(event) {
 //         // $('#video-frame').trigger('click');
 //         // $('.video-intro').trigger('click');
 
-//         // Using JavaScript: 
+//         // Using JavaScript:
 //         // document.getElementById('video-frame').click();
-
 
 //         // // Slow Fade
 //         // document.getElementById("video-item").style.setProperty('--animate-duration', '4s');
@@ -202,7 +201,6 @@ function onPlayerStateChange(event) {
 //         //         });
 //         //         // document.getElementById("main-city__title").scrollIntoView({block: "center", behavior: "smooth"});
 //         // });
-
 
 //     };
 // };
@@ -237,7 +235,6 @@ function onPlayerStateChange(event) {
 //         });
 //     };
 // };
-
 
 // function YTDownKey(event) {
 //     // if (checkCurrentSection == 4){
@@ -289,8 +286,6 @@ function onPlayerStateChange(event) {
 //     });
 // });
 
-
-
 ///    !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // <div id="video"></div>
@@ -310,7 +305,7 @@ function onPlayerStateChange(event) {
 // function fastforward() {
 //     var currentTime = player.getCurrentTime();
 //     player.seekTo(currentTime + 30, true);
-//     player.playVideo();  
+//     player.playVideo();
 // }
 
 // $(function(){
@@ -333,10 +328,7 @@ function onPlayerStateChange(event) {
 //     });
 // });
 
-
-
 ////    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
 // var addYoutubeEventListener = (function() {
 
@@ -386,7 +378,6 @@ function onPlayerStateChange(event) {
 //         });
 //     }
 // })();
-
 
 // addYoutubeEventListener(document.getElementById("player"), function(e) {
 

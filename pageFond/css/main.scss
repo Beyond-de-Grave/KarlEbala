@@ -1,4 +1,4 @@
-// REMEBER BROTHER
+// REMEMBER BROTHER
 //           /   = Root directory
 //           .   = This location
 //           ..  = Up a directory
@@ -8,7 +8,7 @@
 
 @import "../../components/various.scss";
 @import "../../components/general.scss";
-@import "../../components/fonts.scss";   // Better Load from the root main.css
+@import "../../components/fonts.scss"; // Better Load from the root main.css
 @import "../../components/animations.scss";
 // @import "../../components/infoModal.scss";
 
@@ -23,12 +23,12 @@
 @import "../components/end.scss";
 @import "../components/additional.scss";
 
-html, body {
-    display: flex;
-    flex-direction: column;
-}
-  
-body > * {
-    flex-shrink: 0;
+html,
+body {
+  display: flex;
+  flex-direction: column;
 }
 
+body > * {
+  flex-shrink: 0;
+}
