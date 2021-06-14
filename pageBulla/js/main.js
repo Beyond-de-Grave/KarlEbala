@@ -158,8 +158,8 @@ function translatePage(translated) {
       "url('img/head.png')";
     $("img#music-title").attr("src", "img/music-title.png");
     $("img#button-1").attr("src", "img/button-1.png");
-    $("img#button-2").attr("src", "img/button-1.png");
-    $("img#button-3").attr("src", "img/button-1.png");
+    $("img#button-2").attr("src", "img/button-2.png");
+    $("img#button-3").attr("src", "img/button-3.png");
     bookImageArray[0].src = "content/book/1.jpg";
     bookImageArray[1].src = "content/book/2.jpg";
     bookImageArray[14].src = "content/book/15.jpg";
@@ -178,8 +178,8 @@ function translatePage(translated) {
       "url('img/head-eng.png')";
     $("img#music-title").attr("src", "img/music-title-eng.png");
     $("img#button-1").attr("src", "img/button-1-eng.png");
-    $("img#button-2").attr("src", "img/button-1-eng.png");
-    $("img#button-3").attr("src", "img/button-1-eng.png");
+    $("img#button-2").attr("src", "img/button-2-eng.png");
+    $("img#button-3").attr("src", "img/button-3-eng.png");
     bookImageArray[0].src = "content/book-eng/1.jpg";
     bookImageArray[1].src = "content/book-eng/2.jpg";
     bookImageArray[14].src = "content/book-eng/15.jpg";
