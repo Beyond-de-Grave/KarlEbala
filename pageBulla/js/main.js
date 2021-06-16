@@ -160,12 +160,11 @@ function translatePage(translated) {
     $("img#button-1").attr("src", "img/button-1.png");
     $("img#button-2").attr("src", "img/button-2.png");
     $("img#button-3").attr("src", "img/button-3.png");
-    bookImageArray[0].src = "content/book/1.jpg";
-    bookImageArray[1].src = "content/book/2.jpg";
-    bookImageArray[14].src = "content/book/15.jpg";
-    bookImageArray[15].src = "content/book/16.jpg";
-    bookImageArray[46].src = "content/book/47.jpg";
-    bookImageArray[47].src = "content/book/48.jpg";
+
+    // Translate a book
+    for (let i = 0; i < bookImageArray.length; i++) {
+      bookImageArray[i].src = `content/book/${i + 1}.jpg`;
+    }
     document.getElementById("frame-video-frame").style.backgroundImage =
       "url('img/video-frame.png')";
   } else if (translated) {
@@ -180,12 +179,13 @@ function translatePage(translated) {
     $("img#button-1").attr("src", "img/button-1-eng.png");
     $("img#button-2").attr("src", "img/button-2-eng.png");
     $("img#button-3").attr("src", "img/button-3-eng.png");
-    bookImageArray[0].src = "content/book-eng/1.jpg";
-    bookImageArray[1].src = "content/book-eng/2.jpg";
-    bookImageArray[14].src = "content/book-eng/15.jpg";
-    bookImageArray[15].src = "content/book-eng/16.jpg";
-    bookImageArray[46].src = "content/book-eng/47.jpg";
-    bookImageArray[47].src = "content/book-eng/48.jpg";
+
+    // Translate a book
+    for (let i = 0; i < bookImageArray.length; i++) {
+      bookImageArray[i].src = `content/book-eng/${i + 1}.jpg`;
+      // alert(`content/book-eng/${i + 1}.jpg`);
+    }
+
     document.getElementById("frame-video-frame").style.backgroundImage =
       "url('img/video-frame-eng.png')";
   }
