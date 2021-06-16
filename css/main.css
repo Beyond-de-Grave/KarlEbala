@@ -985,10 +985,10 @@ iframe {
 
 .volume-slider {
   position: absolute;
-  top: 48%;
+  top: 70%;
   right: 10%;
   z-index: 9999;
-  width: 250px;
+  width: 210px;
   height: 35px;
   display: flex;
   align-items: center;
@@ -998,7 +998,7 @@ iframe {
 /* The slider itself */
 .vSlider {
   /* Override default CSS styles */
-  width: 200px;
+  width: 160px;
   /* Full-width */
   height: 5px;
   /* Specified height */

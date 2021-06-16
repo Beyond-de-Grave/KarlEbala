@@ -1,4 +1,4 @@
-$sliderWidth: 200px;
+$sliderWidth: 160px;
 $sliderHeight: 5px;
 $thumbWidth: 15px;
 $thumbHeight: 25px;
@@ -6,7 +6,7 @@ $thumbHeight: 25px;
 
 .volume-slider{
     position: absolute;
-    top: 48%;
+    top: 70%;
     right: 10%;
     z-index: 9999;
     width: $sliderWidth + 50px;
