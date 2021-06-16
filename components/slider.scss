@@ -1,103 +1,147 @@
-$sliderWidth: 160px;
+$sliderWidth: 140px;
 $sliderHeight: 5px;
 $thumbWidth: 15px;
 $thumbHeight: 25px;
 
-
-.volume-slider{
-    position: absolute;
-    top: 70%;
-    right: 10%;
-    z-index: 9999;
-    width: $sliderWidth + 50px;
-    height: $sliderHeight + 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.volume-slider {
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  z-index: 9999;
+  width: $sliderWidth + 50px;
+  height: $sliderHeight + 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 //  Mozilla Vertical slider
 // <input type="range" id="volume-control" class="vSlider" orient="vertical">
-// IE \ Chrome 
+// IE \ Chrome
 // writing-mode: bt-lr; /* IE */
 // -webkit-appearance: slider-vertical; /* WebKit */
 
 /* The slider itself */
 .vSlider {
-    // -webkit-appearance: none;
-    /* Override default CSS styles */
-    // appearance: none;
-
-    // writing-mode: bt-lr; /* IE */
-    // -webkit-appearance: slider-vertical; /* WebKit */
-
-    width: $sliderWidth; // for horizontal
-    // width: 5px; // For vertical
-    /* Full-width */
-    height: $sliderHeight; // For horizontal
-    // height: 200px; // for vertical
-
-    /* Specified height */
-    background: #181818;
-    /* Grey background */
-    outline: none;
-    /* Remove outline */
-    opacity: 0;
-    /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: 1s;
-    /* 0.2 seconds transition on hover */
-    transition: opacity 1s;
+  opacity: 0;
+  /* Set transparency (for mouse-over effects on hover) */
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 1s;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
-/* Mouse-over effects */
-.vSlider:hover {
-    opacity: 1;
-    /* Fully shown on mouse-over */
+// From The Guide
+
+// Override Basic Appearance
+
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.vSlider::-webkit-slider-thumb {
-    // -webkit-appearance: none;
-    /* Override default look */
-    // appearance: none;
-
-    width: $thumbWidth;
-    // width: $imageWidth/50;
-    /* Set a specific slider handle width */
-    height: $thumbHeight;
-    // height: 1px;
-    /* Slider handle height */
-    background: #1d1d1d;
-
-    border: none;
-    // border: 5px solid white;
-    /* Green background */
-    cursor: pointer;
-    // cursor: url("img/cursor.png"), auto;
-    /* Cursor on hover */
-    border-radius: 20%;
+// Styling the thumb
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight + 5px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
 }
 
-.vSlider::-moz-range-thumb {
-    // -moz-appearance: none;
-    /* Override default look */
-    // appearance: none;
+// Styling the track
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  //   width: $sliderWidth;
+  height: $sliderHeight;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #181818;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #181818;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  //   width: $sliderWidth;
+  height: $sliderHeight;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #181818;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
 
-    width: $thumbWidth;
-    // width: $imageWidth/50;
-    /* Set a specific slider handle width */
-    height: $thumbHeight;
-    // height: 1px;
-    /* Slider handle height */
-    background: #1d1d1d;
-
-    border: none;
-    // border: 1px solid rgba(34, 33, 33, 0.7);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-    /* Green background */
-    cursor: pointer;
-    // cursor: url("img/cursor.png"), auto;
-    /* Cursor on hover */
-    border-radius: 20%;
+input[type="range"]::-ms-track {
+  //   width: $sliderWidth;
+  width: 100%;
+  height: $sliderHeight;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #181818;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #181818;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #181818;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #181818;
 }

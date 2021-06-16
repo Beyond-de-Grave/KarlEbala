@@ -1,3 +1,7 @@
+// Volume Slider on Hover
+// https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave
+// https://developer.mozilla.org/ru/docs/Web/API/Element/mouseenter_event
+
 // const startItem = document.querySelectorAll(".start__item")[2];
 const soundButton = document.getElementById("sound-button");
 const volumeSliderWrapper = document.querySelector("#vSliderWrapper");
