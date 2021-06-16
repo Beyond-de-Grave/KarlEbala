@@ -1,0 +1,156 @@
+$sliderWidth: 120px;
+$sliderHeight: 5px;
+$thumbWidth: 15px;
+$thumbHeight: 25px;
+
+.volume-slider {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  // z-index: 9999;
+  z-index: 1000;
+  width: $sliderWidth + 50px;
+  height: $sliderHeight + 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//  Mozilla Vertical slider
+// <input type="range" id="volume-control" class="vSlider" orient="vertical">
+// IE \ Chrome
+// writing-mode: bt-lr; /* IE */
+// -webkit-appearance: slider-vertical; /* WebKit */
+
+/* The slider itself */
+.vSlider {
+  opacity: 0;
+  /* Set transparency (for mouse-over effects on hover) */
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 1s;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+// From The Guide
+
+// Override Basic Appearance
+
+.vSlider {
+  -webkit-appearance: none !important; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent !important; /* Otherwise white in Chrome */
+}
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+}
+.vSlider:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+.vSlider::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+// Styling the thumb
+/* Special styling for WebKit/Blink */
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight + 5px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+/* All the same stuff for Firefox */
+.vSlider::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+/* All the same stuff for IE */
+.vSlider::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: $thumbWidth;
+  height: $thumbHeight;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+
+// Styling the track
+.vSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  //   width: $sliderWidth;
+  height: $sliderHeight;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #050505;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+.vSlider:focus::-webkit-slider-runnable-track {
+  background: #050505;
+}
+.vSlider::-moz-range-track {
+  width: 100%;
+  //   width: $sliderWidth;
+  height: $sliderHeight;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #050505;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.vSlider::-ms-track {
+  //   width: $sliderWidth;
+  width: 100%;
+  height: $sliderHeight;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+.vSlider::-ms-fill-lower {
+  background: #050505;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.vSlider:focus::-ms-fill-lower {
+  background: #050505;
+}
+.vSlider::-ms-fill-upper {
+  background: #050505;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.vSlider:focus::-ms-fill-upper {
+  background: #050505;
+}
+
+
+input[type="range"]::-moz-range-progress{
+  background: #050505;
+}
+.vSlider::-moz-range-progress{
+  background: #050505;
+}

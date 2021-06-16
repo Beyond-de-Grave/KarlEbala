@@ -14,8 +14,7 @@ body {
 }
 
 .main-body {
-  -webkit-animation: scroll 70s linear infinite;
-          animation: scroll 70s linear infinite;
+  animation: scroll 70s linear infinite;
   background: url("../img/texture-background.png"), url("/img/textureofshit.jpg");
   background-size: 100vw auto;
   background-repeat: repeat-y;
@@ -61,7 +60,6 @@ section {
 button, a {
   cursor: url("/img/cursor.png"), auto;
 }
-
 button:hover, a:hover {
   cursor: url("/img/cursor-hover.png"), auto;
 }
@@ -77,235 +75,131 @@ button {
   padding: 0;
 }
 
-body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000'] {
-  -webkit-transition-duration: 4000ms;
-          transition-duration: 4000ms;
+body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duration="4000"] {
+  transition-duration: 4000ms;
 }
 
 @font-face {
-  font-family: 'Colatemta';
+  font-family: "Colatemta";
   src: url("/font/webfonts_Colatemta/Colatemta.ttf.woff") format("woff"), url("/font/webfonts_Colatemta/Colatemta.ttf.svg#Colatemta") format("svg"), url("/font/webfonts_Colatemta/Colatemta.ttf.eot"), url("/font/webfonts_Colatemta/Colatemta.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Wooden Ship Decorated';
+  font-family: "Wooden Ship Decorated";
   src: url("/font/WoodenShip/WoodenShipDecorated.woff2") format("woff2"), url("/font/WoodenShip/WoodenShipDecorated.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'English Rose';
+  font-family: "English Rose";
   src: url("/font/English-rose/EnglishRose.woff2") format("woff2"), url("/font/English-rose/EnglishRose.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Arkadia';
+  font-family: "Arkadia";
   src: url("/font/Arkadia/Arkadia.woff2") format("woff2"), url("/font/Arkadia/Arkadia.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Columbina';
+  font-family: "Columbina";
   src: url("/font/Columbina/Columbina.woff2") format("woff2"), url("/font/Columbina/Columbina.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Aragonia Modern';
+  font-family: "Aragonia Modern";
   src: url("/font/Aragonia/AragoniaModern.woff2") format("woff2"), url("/font/Aragonia/AragoniaModern.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Italiano Decor';
+  font-family: "Italiano Decor";
   src: url("/font/ItalianoDecor/ItalianoDecor.woff2") format("woff2"), url("/font/ItalianoDecor/ItalianoDecor.woff") format("woff"), url("/font/ItalianoDecor/ItalianoDecor.ttf") format("truetype"), url("/font/ItalianoDecor/ItalianoDecor.svg#ItalianoDecor") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'B52';
+  font-family: "B52";
   src: url("/font/B52/B52.woff2") format("woff2"), url("/font/B52/B52.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Algeria One';
+  font-family: "Algeria One";
   src: url("/font/AllegriaOne/AlgeriaOne.woff2") format("woff2"), url("/font/AllegriaOne/AlgeriaOne.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-@-webkit-keyframes clock {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes clock {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-@-webkit-keyframes contraclock {
-  from {
-    -webkit-transform: rotate(3600deg);
-            transform: rotate(3600deg);
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
 @keyframes contraclock {
   from {
-    -webkit-transform: rotate(3600deg);
-            transform: rotate(3600deg);
+    transform: rotate(3600deg);
   }
   to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
-@-webkit-keyframes wiggleY {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(0, 10%);
-            transform: translate(0, 10%);
-  }
-  100% {
-    -webkit-transform: translate(0, -10%);
-            transform: translate(0, -10%);
-  }
-}
-
 @keyframes wiggleY {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   50% {
-    -webkit-transform: translate(0, 10%);
-            transform: translate(0, 10%);
+    transform: translate(0, 10%);
   }
   100% {
-    -webkit-transform: translate(0, -10%);
-            transform: translate(0, -10%);
+    transform: translate(0, -10%);
   }
 }
-
-@-webkit-keyframes bg-animation {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-  }
-}
-
 @keyframes bg-animation {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
+    transform: translate(0, -100%);
   }
 }
-
-@-webkit-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
-
 @keyframes scroll {
   100% {
     background-position: 0px -3000px;
   }
 }
-
 @media (prefers-reduced-motion) {
   .wrapper {
-    -webkit-animation: scroll 200s linear infinite;
-            animation: scroll 200s linear infinite;
+    animation: scroll 200s linear infinite;
   }
 }
-
-@-webkit-keyframes rotateX_InPlane {
-  0% {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(0, 0, 1, 0deg);
-  }
-  25% {
-    -webkit-transform: rotate3d(0, 0, 1, 3deg);
-            transform: rotate3d(0, 0, 1, 3deg);
-  }
-  50% {
-    -webkit-transform: rotate3d(0, 0, 1, -2deg);
-            transform: rotate3d(0, 0, 1, -2deg);
-  }
-  100% {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(0, 0, 1, 0deg);
-  }
-}
-
 @keyframes rotateX_InPlane {
   0% {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
   }
   25% {
-    -webkit-transform: rotate3d(0, 0, 1, 3deg);
-            transform: rotate3d(0, 0, 1, 3deg);
+    transform: rotate3d(0, 0, 1, 3deg);
   }
   50% {
-    -webkit-transform: rotate3d(0, 0, 1, -2deg);
-            transform: rotate3d(0, 0, 1, -2deg);
+    transform: rotate3d(0, 0, 1, -2deg);
   }
   100% {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-            transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }
-
 .gallery-body {
   background-image: url("../img/texture-gallery.jpg");
   position: relative;
@@ -335,15 +229,10 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .button {
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
 }
-
 .button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .main-footer {
@@ -352,31 +241,16 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
   position: relative;
   z-index: 100;
   background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .main-footer__btn-right-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .main-footer__btn-right-icon {
@@ -387,24 +261,14 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
   position: absolute;
   top: 20vh;
   padding: 0 10% 0 10%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .gallery-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin-top: 5vh;
 }
 
@@ -413,16 +277,9 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .gallery-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gallery-item__image-wrapper {
@@ -430,79 +287,46 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .gallery-item__image {
-  -webkit-box-shadow: 20px 20px 20px black;
-          box-shadow: 20px 20px 20px black;
+  box-shadow: 20px 20px 20px black;
   width: 100%;
 }
-
 .gallery-item__image:hover {
-  -webkit-animation: rotateX_InPlane;
   animation: rotateX_InPlane;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  transform-origin: top center;
 }
 
 .gallery-item__text {
-  font-family: 'Colatemta';
+  font-family: "Colatemta";
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .about-wrapper {
   margin-top: 5%;
   padding: 0 3% 0 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__text-wrapper {
   padding: 1% 3% 3% 3%;
   border: 5px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__title {
-  font-family: 'Colatemta';
+  font-family: "Colatemta";
   text-transform: uppercase;
   font-size: 6vh;
 }
@@ -511,7 +335,7 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
   margin-top: 1vh;
   margin-bottom: 1vh;
   font-size: 4.2vh;
-  font-family: 'Columbina';
+  font-family: "Columbina";
 }
 
 .about__text + .about__text {
@@ -520,18 +344,10 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 
 .about__image-wrapper {
   width: 100%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: flex-end;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
   width: 70%;
   margin-bottom: 5vh;
 }
@@ -546,66 +362,52 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
   position: relative;
   z-index: 100;
   background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: stretch;
+}
+
+.main-header__brn-right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
 }
 
 .main-header__btn-left-wrapper,
 .main-header__btn-right-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 15%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header__btn-left-wrapper {
+  width: 20%;
+}
+
+.main-header__btn-right-wrapper {
+  width: 90%;
 }
 
 .main-header__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 70%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-city__title-text {
   margin: 0;
-  font-family: 'Arkadia';
+  font-family: "Arkadia";
   font-size: calc(10vh);
   color: white;
   font-weight: normal;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 @media (max-width: 599px) {
   .main-city__title-text {
     font-size: 4vh;
@@ -613,11 +415,11 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .main-header__btn-left-icon {
-  width: 50%;
+  width: 70%;
 }
 
 .main-header__btn-right-icon {
-  width: 70%;
+  width: 65%;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -636,17 +438,11 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 #bp_container img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  -webkit-transition: -webkit-filter 2s !important;
-  transition: -webkit-filter 2s !important;
+  filter: grayscale(1);
   transition: filter 2s !important;
-  transition: filter 2s, -webkit-filter 2s !important;
 }
-
 #bp_container img:hover {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .bp-lr {
@@ -655,9 +451,160 @@ body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 h3 {
-  font-family: 'Columbina';
+  font-family: "Columbina";
   font-size: 3.8vh;
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
-/*# sourceMappingURL=main.css.map */
+
+.volume-slider {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  z-index: 1000;
+  width: 170px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slider itself */
+.vSlider {
+  opacity: 0;
+  /* Set transparency (for mouse-over effects on hover) */
+  /* 0.2 seconds transition on hover */
+  transition: opacity 1s;
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.vSlider {
+  -webkit-appearance: none !important;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent !important;
+  /* Otherwise white in Chrome */
+}
+
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+}
+
+.vSlider:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.vSlider::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 30px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+.vSlider::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 25px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.vSlider::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 25px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+
+.vSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #050505;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.vSlider:focus::-webkit-slider-runnable-track {
+  background: #050505;
+}
+
+.vSlider::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #050505;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.vSlider::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.vSlider::-ms-fill-lower {
+  background: #050505;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.vSlider:focus::-ms-fill-lower {
+  background: #050505;
+}
+
+.vSlider::-ms-fill-upper {
+  background: #050505;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.vSlider:focus::-ms-fill-upper {
+  background: #050505;
+}
+
+input[type=range]::-moz-range-progress {
+  background: #050505;
+}
+
+.vSlider::-moz-range-progress {
+  background: #050505;
+}

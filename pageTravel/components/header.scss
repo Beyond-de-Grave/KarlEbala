@@ -31,7 +31,9 @@ $headerHeight: 25vh;
 // Give em borders
 
 .main-header__btn-left-wrapper {
+    margin-top: 1%;
     width: 15%;
+    margin-left: 1%;
 }
 
 .main-header__btn-right-wrapper {
@@ -108,7 +110,7 @@ $headerHeight: 25vh;
 }
 
 .main-header__btn-left-icon {
-    width: 50%;
+    width: 75%;
 }
 
 .main-header__btn-right-icon {

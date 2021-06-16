@@ -257,7 +257,9 @@ body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .main-header__btn-left-wrapper {
+  margin-top: 1%;
   width: 15%;
+  margin-left: 1%;
 }
 
 .main-header__btn-right-wrapper {
@@ -319,7 +321,7 @@ body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duratio
 }
 
 .main-header__btn-left-icon {
-  width: 50%;
+  width: 75%;
 }
 
 .main-header__btn-right-icon {
@@ -754,4 +756,148 @@ iframe {
 .footer__icon-right {
   width: 40%;
   height: 100%;
+}
+
+.volume-slider {
+  position: absolute;
+  top: 2%;
+  right: 2.5%;
+  z-index: 9999;
+  width: 160px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slider itself */
+.vSlider {
+  opacity: 0;
+  /* Set transparency (for mouse-over effects on hover) */
+  /* 0.2 seconds transition on hover */
+  transition: opacity 1s;
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.vSlider {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+}
+
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.vSlider:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.vSlider::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+.vSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 30px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+.vSlider::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 25px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.vSlider::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  width: 15px;
+  height: 25px;
+  border-radius: 20%;
+  background: #1d1d1d;
+  cursor: pointer;
+}
+
+.vSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #181818;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.vSlider:focus::-webkit-slider-runnable-track {
+  background: #181818;
+}
+
+.vSlider::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #181818;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+.vSlider::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.vSlider::-ms-fill-lower {
+  background: #181818;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.vSlider:focus::-ms-fill-lower {
+  background: #181818;
+}
+
+.vSlider::-ms-fill-upper {
+  background: #181818;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.vSlider:focus::-ms-fill-upper {
+  background: #181818;
 }

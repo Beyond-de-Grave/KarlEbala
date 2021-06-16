@@ -5,7 +5,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player("video-item", {
     height: "600",
     width: "1200",
-    videoId: "a6ujrnph2cs",
+    videoId: "SflPR3Bsn1s",
     playerVars: {
       autoplay: 0, // none, 1 - start after player downloading
       frameborder: 0,
@@ -50,31 +50,31 @@ function onPlayerStateChange(event) {
     if (audioClicked) {
       audio.play();
     }
-    // Slow Fade
-    document
-      .getElementById("video-item")
-      .style.setProperty("--animate-duration", "4s");
-    animateCSS("#video-item", "fadeOut").then((message) => {
-      document
-        .getElementById("video-frame")
-        .style.setProperty("transition", "opacity 2s");
-      setTimeout(function () {
-        document.getElementById("video-frame").style.opacity = 0;
-      }, 0);
-      // Do something after the animation
-      // Smooooooth & slow scroll into view
-      $(document).ready(function () {
-        $("html, body").animate(
-          {
-            scrollTop: $("#main-city__title").offset().top,
-          },
-          10000
-        );
-      });
-      // document.getElementById("main-city__title").scrollIntoView({block: "center", behavior: "smooth"});
-    });
+    // // Slow Fade
+    // document
+    //   .getElementById("video-item")
+    //   .style.setProperty("--animate-duration", "4s");
+    // animateCSS("#video-item", "fadeOut").then((message) => {
+    //   document
+    //     .getElementById("video-frame")
+    //     .style.setProperty("transition", "opacity 2s");
+    //   setTimeout(function () {
+    //     document.getElementById("video-frame").style.opacity = 0;
+    //   }, 0);
+    //   // Do something after the animation
+    //   // Smooooooth & slow scroll into view
+    //   $(document).ready(function () {
+    //     $("html, body").animate(
+    //       {
+    //         scrollTop: $("#main-city__title").offset().top,
+    //       },
+    //       10000
+    //     );
+    //   });
+    //   // document.getElementById("main-city__title").scrollIntoView({block: "center", behavior: "smooth"});
+    // });
 
-    setTimeout(() => (playing = false), 5000);
+    // setTimeout(() => (playing = false), 5000);
     // playing = false;
   }
 }

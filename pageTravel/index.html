@@ -41,6 +41,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/slider.js" defer></script>
+    <script type="text/javascript" src="js/vSlider.js" defer></script>
 
     <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
 
@@ -70,6 +71,9 @@
                     <button class="button main-header__btn-left" type="button" onclick="goBack()">
                         <img src="img/left-button.png" alt="Left button icon" class="main-header__btn-left-icon">
                     </button>
+                    <button id="lang-button" class="button main-header__btn-left" type="button">
+                        <img src="img/lang.png" alt="Language right" class="main-header__btn-left-icon">
+                    </button>
                 </div>
                 <div class="main-header__title">
                     <!-- <h1 class="main-header__title-text" id="header-title">
@@ -89,6 +93,11 @@
                             id="sound-img">
                     </button>
                 </div>
+                <!-- SLIDER -->
+                <div class="volume-slider" id="vSliderWrapper">
+                    <input type="range" id="volume-control" class="vSlider">
+                </div>
+                <!-- SLIDER -->
             </div>
 
             <div class="about">
