@@ -1,0 +1,103 @@
+$sliderWidth: 200px;
+$sliderHeight: 5px;
+$thumbWidth: 15px;
+$thumbHeight: 25px;
+
+
+.volume-slider{
+    position: absolute;
+    top: 48%;
+    right: 10%;
+    z-index: 9999;
+    width: $sliderWidth + 50px;
+    height: $sliderHeight + 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//  Mozilla Vertical slider
+// <input type="range" id="volume-control" class="vSlider" orient="vertical">
+// IE \ Chrome 
+// writing-mode: bt-lr; /* IE */
+// -webkit-appearance: slider-vertical; /* WebKit */
+
+/* The slider itself */
+.vSlider {
+    // -webkit-appearance: none;
+    /* Override default CSS styles */
+    // appearance: none;
+
+    // writing-mode: bt-lr; /* IE */
+    // -webkit-appearance: slider-vertical; /* WebKit */
+
+    width: $sliderWidth; // for horizontal
+    // width: 5px; // For vertical
+    /* Full-width */
+    height: $sliderHeight; // For horizontal
+    // height: 200px; // for vertical
+
+    /* Specified height */
+    background: #181818;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: 1s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity 1s;
+}
+
+/* Mouse-over effects */
+.vSlider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.vSlider::-webkit-slider-thumb {
+    // -webkit-appearance: none;
+    /* Override default look */
+    // appearance: none;
+
+    width: $thumbWidth;
+    // width: $imageWidth/50;
+    /* Set a specific slider handle width */
+    height: $thumbHeight;
+    // height: 1px;
+    /* Slider handle height */
+    background: #1d1d1d;
+
+    border: none;
+    // border: 5px solid white;
+    /* Green background */
+    cursor: pointer;
+    // cursor: url("img/cursor.png"), auto;
+    /* Cursor on hover */
+    border-radius: 20%;
+}
+
+.vSlider::-moz-range-thumb {
+    // -moz-appearance: none;
+    /* Override default look */
+    // appearance: none;
+
+    width: $thumbWidth;
+    // width: $imageWidth/50;
+    /* Set a specific slider handle width */
+    height: $thumbHeight;
+    // height: 1px;
+    /* Slider handle height */
+    background: #1d1d1d;
+
+    border: none;
+    // border: 1px solid rgba(34, 33, 33, 0.7);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    /* Green background */
+    cursor: pointer;
+    // cursor: url("img/cursor.png"), auto;
+    /* Cursor on hover */
+    border-radius: 20%;
+}
